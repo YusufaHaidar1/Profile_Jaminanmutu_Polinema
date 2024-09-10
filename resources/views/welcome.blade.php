@@ -3,218 +3,108 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon">
-    
+
     <!-- Map CSS -->
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css">
-    
+
     <!-- Libs CSS -->
     <link rel="stylesheet" href="./assets/css/libs.bundle.css">
-    
+
     <!-- Theme CSS -->
     <link rel="stylesheet" href="./assets/css/theme.bundle.css">
-    
+
     <!-- Title -->
     <title>Landkit</title>
   </head>
   <body>
 
-        <title>Laravel</title>
+    <!-- MODALS -->
+    <!-- Example -->
+    <div class="modal fade" id="modalExample" tabindex="-1" role="dialog" aria-labelledby="modalExampleTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+            <!-- Close -->
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
-        <!-- Styles -->
-        <style>
-            /* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree, sans-serif;font-feature-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::-webkit-backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.relative{position:relative}.mx-auto{margin-left:auto;margin-right:auto}.mx-6{margin-left:1.5rem;margin-right:1.5rem}.ml-4{margin-left:1rem}.mt-16{margin-top:4rem}.mt-6{margin-top:1.5rem}.mt-4{margin-top:1rem}.-mt-px{margin-top:-1px}.mr-1{margin-right:0.25rem}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.h-16{height:4rem}.h-7{height:1.75rem}.h-6{height:1.5rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-auto{width:auto}.w-16{width:4rem}.w-7{width:1.75rem}.w-6{width:1.5rem}.w-5{width:1.25rem}.max-w-7xl{max-width:80rem}.shrink-0{flex-shrink:0}.scale-100{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.items-center{align-items:center}.justify-center{justify-content:center}.gap-6{gap:1.5rem}.gap-4{gap:1rem}.self-center{align-self:center}.rounded-lg{border-radius:0.5rem}.rounded-full{border-radius:9999px}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity))}.bg-dots-darker{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E")}.from-gray-700\/50{--tw-gradient-from:rgb(55 65 81 / 0.5);--tw-gradient-to:rgb(55 65 81 / 0);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0);--tw-gradient-stops:var(--tw-gradient-from), transparent, var(--tw-gradient-to)}.bg-center{background-position:center}.stroke-red-500{stroke:#ef4444}.stroke-gray-400{stroke:#9ca3af}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.text-center{text-align:center}.text-right{text-align:right}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-gray-500\/20{--tw-shadow-color:rgb(107 114 128 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.selection\:bg-red-500 *::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.selection\:bg-red-500::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}.focus\:rounded-sm:focus{border-radius:0.125rem}.focus\:outline:focus{outline-style:solid}.focus\:outline-2:focus{outline-width:2px}.focus\:outline-red-500:focus{outline-color:#ef4444}.group:hover .group-hover\:stroke-gray-600{stroke:#4b5563}.z-10{z-index: 10}@media (prefers-reduced-motion: no-preference){.motion-safe\:hover\:scale-\[1\.01\]:hover{--tw-scale-x:1.01;--tw-scale-y:1.01;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}}@media (prefers-color-scheme: dark){.dark\:bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.dark\:bg-gray-800\/50{background-color:rgb(31 41 55 / 0.5)}.dark\:bg-red-800\/20{background-color:rgb(153 27 27 / 0.2)}.dark\:bg-dots-lighter{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E")}.dark\:bg-gradient-to-bl{background-image:linear-gradient(to bottom left, var(--tw-gradient-stops))}.dark\:stroke-gray-600{stroke:#4b5563}.dark\:text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:shadow-none{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.dark\:ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.dark\:ring-inset{--tw-ring-inset:inset}.dark\:ring-white\/5{--tw-ring-color:rgb(255 255 255 / 0.05)}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.group:hover .dark\:group-hover\:stroke-gray-400{stroke:#9ca3af}}@media (min-width: 640px){.sm\:fixed{position:fixed}.sm\:top-0{top:0px}.sm\:right-0{right:0px}.sm\:ml-0{margin-left:0px}.sm\:flex{display:flex}.sm\:items-center{align-items:center}.sm\:justify-center{justify-content:center}.sm\:justify-between{justify-content:space-between}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:gap-8{gap:2rem}.lg\:p-8{padding:2rem}}
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-            @if (Route::has('login'))
-                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-                    @auth
-                        <a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="max-w-7xl mx-auto p-6 lg:p-8">
-                <div class="flex justify-center">
-                    <svg viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto bg-gray-100 dark:bg-gray-900">
-                        <path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 29.0614C61.6675 29.2132 61.5409 29.3392 61.3887 29.4265L49.9104 36.0351V49.1337C49.9104 49.4902 49.7209 49.8192 49.4118 49.9987L25.4519 63.7916C25.3971 63.8227 25.3372 63.8427 25.2774 63.8639C25.255 63.8714 25.2338 63.8851 25.2101 63.8913C25.0426 63.9354 24.8666 63.9354 24.6991 63.8913C24.6716 63.8838 24.6467 63.8689 24.6205 63.8589C24.5657 63.8389 24.5084 63.8215 24.456 63.7916L0.501061 49.9987C0.348882 49.9113 0.222437 49.7853 0.134469 49.6334C0.0465019 49.4816 0.000120578 49.3092 0 49.1337L0 8.10652C0 8.01678 0.0124642 7.92953 0.0348998 7.84477C0.0423783 7.8161 0.0598282 7.78993 0.0697995 7.76126C0.0884958 7.70891 0.105946 7.65531 0.133367 7.6067C0.152063 7.5743 0.179485 7.54812 0.20192 7.51821C0.230588 7.47832 0.256763 7.43719 0.290416 7.40229C0.319084 7.37362 0.356476 7.35243 0.388883 7.32751C0.425029 7.29759 0.457436 7.26518 0.498568 7.2415L12.4779 0.345059C12.6296 0.257786 12.8015 0.211853 12.9765 0.211853C13.1515 0.211853 13.3234 0.257786 13.475 0.345059L25.4531 7.2415H25.4556C25.4955 7.26643 25.5292 7.29759 25.5653 7.32626C25.5977 7.35119 25.6339 7.37362 25.6625 7.40104C25.6974 7.43719 25.7224 7.47832 25.7523 7.51821C25.7735 7.54812 25.8021 7.5743 25.8196 7.6067C25.8483 7.65656 25.8645 7.70891 25.8844 7.76126C25.8944 7.78993 25.9118 7.8161 25.9193 7.84602C25.9423 7.93096 25.954 8.01853 25.9542 8.10652V33.7317L35.9355 27.9844V14.8846C35.9355 14.7973 35.948 14.7088 35.9704 14.6253C35.9792 14.5954 35.9954 14.5692 36.0053 14.5405C36.0253 14.4882 36.0427 14.4346 36.0702 14.386C36.0888 14.3536 36.1163 14.3274 36.1375 14.2975C36.1674 14.2576 36.1923 14.2165 36.2272 14.1816C36.2559 14.1529 36.292 14.1317 36.3244 14.1068C36.3618 14.0769 36.3942 14.0445 36.4341 14.0208L48.4147 7.12434C48.5663 7.03694 48.7383 6.99094 48.9133 6.99094C49.0883 6.99094 49.2602 7.03694 49.4118 7.12434L61.3899 14.0208C61.4323 14.0457 61.4647 14.0769 61.5021 14.1055C61.5333 14.1305 61.5694 14.1529 61.5981 14.1803C61.633 14.2165 61.6579 14.2576 61.6878 14.2975C61.7103 14.3274 61.7377 14.3536 61.7551 14.386C61.7838 14.4346 61.8 14.4882 61.8199 14.5405C61.8312 14.5692 61.8474 14.5954 61.8548 14.6253ZM59.893 27.9844V16.6121L55.7013 19.0252L49.9104 22.3593V33.7317L59.8942 27.9844H59.893ZM47.9149 48.5566V37.1768L42.2187 40.4299L25.953 49.7133V61.2003L47.9149 48.5566ZM1.99677 9.83281V48.5566L23.9562 61.199V49.7145L12.4841 43.2219L12.4804 43.2194L12.4754 43.2169C12.4368 43.1945 12.4044 43.1621 12.3682 43.1347C12.3371 43.1097 12.3009 43.0898 12.2735 43.0624L12.271 43.0586C12.2386 43.0275 12.2162 42.9888 12.1887 42.9539C12.1638 42.9203 12.1339 42.8916 12.114 42.8567L12.1127 42.853C12.0903 42.8156 12.0766 42.7707 12.0604 42.7283C12.0442 42.6909 12.023 42.656 12.013 42.6161C12.0005 42.5688 11.998 42.5177 11.9931 42.4691C11.9881 42.4317 11.9781 42.3943 11.9781 42.3569V15.5801L6.18848 12.2446L1.99677 9.83281ZM12.9777 2.36177L2.99764 8.10652L12.9752 13.8513L22.9541 8.10527L12.9752 2.36177H12.9777ZM18.1678 38.2138L23.9574 34.8809V9.83281L19.7657 12.2459L13.9749 15.5801V40.6281L18.1678 38.2138ZM48.9133 9.14105L38.9344 14.8858L48.9133 20.6305L58.8909 14.8846L48.9133 9.14105ZM47.9149 22.3593L42.124 19.0252L37.9323 16.6121V27.9844L43.7219 31.3174L47.9149 33.7317V22.3593ZM24.9533 47.987L39.59 39.631L46.9065 35.4555L36.9352 29.7145L25.4544 36.3242L14.9907 42.3482L24.9533 47.987Z" fill="#FF2D20"/>
-                    </svg>
-                </div>
-
-                <div class="mt-16">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                        <a href="https://laravel.com/docs" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Documentation</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
-                                </p>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <a href="https://laracasts.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laracasts</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </p>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <a href="https://laravel-news.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laravel News</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </p>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <div class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Forge</a>, <a href="https://vapor.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Vapor</a>, <a href="https://nova.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Nova</a>, and <a href="https://envoyer.io" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Telescope</a>, and more.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex justify-center mt-16 px-0 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm sm:text-left">
-                        &nbsp;
-                    </div>
-
-                    <div class="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </div>
-                </div>
+            <!-- Image -->
+            <div class="text-center">
+              <img src="./assets/img/illustrations/illustration-1.png" alt="..." class="img-fluid mb-3" style="width: 200px;">
             </div>
-    
+
             <!-- Heading -->
             <h2 class="fw-bold text-center mb-1" id="modalExampleTitle">
               Schedule a demo with us
             </h2>
-    
+
             <!-- Text -->
             <p class="fs-lg text-center text-body-secondary mb-6 mb-md-8">
               We can help you solve company communication.
             </p>
-    
+
             <!-- Form -->
             <form>
               <div class="row">
                 <div class="col-12 col-md-6">
-    
+
                   <!-- First name -->
                   <div class="form-floating">
                     <input type="text" class="form-control form-control-flush" id="registrationFirstNameModal" placeholder="First name">
                     <label for="registrationFirstNameModal">First name</label>
                   </div>
-    
+
                 </div>
                 <div class="col-12 col-md-6">
-    
+
                   <!-- Last name -->
                   <div class="form-floating">
                     <input type="text" class="form-control form-control-flush" id="registrationLastNameModal" placeholder="Last name">
                     <label for="registrationLastNameModal">Last name</label>
                   </div>
-    
+
                 </div>
               </div>
               <div class="row">
                 <div class="col-12 col-md-6">
-    
+
                   <!-- Email -->
                   <div class="form-floating">
                     <input type="email" class="form-control form-control-flush" id="registrationEmailModal" placeholder="Email">
                     <label for="registrationEmailModal">Email</label>
                   </div>
-    
+
                 </div>
                 <div class="col-12 col-md-6">
-    
+
                   <!-- Password -->
                   <div class="form-floating">
                     <input type="password" class="form-control form-control-flush" id="registrationPasswordModal" placeholder="Password">
                     <label for="registrationPasswordModal">Password</label>
                   </div>
-    
+
                 </div>
               </div>
               <div class="row">
                 <div class="col-12">
-    
+
                   <!-- Submit -->
                   <button class="btn w-100 btn-primary mt-3 lift">
                     Request a demo
                   </button>
-    
+
                 </div>
               </div>
             </form>
-    
+
           </div>
         </div>
       </div>
     </div>
-    
+
     <!-- Signup: Horizontal  -->
     <div class="modal fade" id="modalSignupHorizontal" tabindex="-1" role="dialog" aria-labelledby="modalSignupHorizontalTitle" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -222,34 +112,34 @@
           <div class="card card-row">
             <div class="row gx-0">
               <div class="col-12 col-md-6 bg-cover card-img-start" style="background-image: url(./assets/img/photos/photo-8.jpg);">
-    
+
                 <!-- Image (placeholder) -->
                 <img src="./assets/img/photos/photo-8.jpg" alt="..." class="img-fluid d-md-none invisible">
-    
+
                 <!-- Shape -->
                 <div class="shape shape-end shape-fluid-y text-white d-none d-md-block">
                   <svg viewBox="0 0 112 690" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M116 0H51v172C76 384 0 517 0 517v173h116V0z" fill="currentColor"/></svg>            </div>
-    
+
               </div>
               <div class="col-12 col-md-6">
                 <div class="card-body">
-    
+
                   <!-- Close -->
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    
+
                   <!-- Heading -->
                   <h2 class="mb-0 fw-bold text-center" id="modalSignupHorizontalTitle">
                     Sign Up
                   </h2>
-    
+
                   <!-- Text -->
                   <p class="mb-6 text-center text-body-secondary">
                     Simplify your workflow in minutes.
                   </p>
-    
+
                   <!-- Form -->
                   <form class="mb-6">
-    
+
                     <!-- Email -->
                     <div class="form-group">
                       <label class="visually-hidden" for="modalSignupHorizontalEmail">
@@ -257,7 +147,7 @@
                       </label>
                       <input type="email" class="form-control" id="modalSignupHorizontalEmail" placeholder="Your email">
                     </div>
-    
+
                     <!-- Password -->
                     <div class="form-group mb-5">
                       <label class="visually-hidden" for="modalSignupHorizontalPassword">
@@ -265,62 +155,62 @@
                       </label>
                       <input type="password" class="form-control" id="modalSignupHorizontalPassword" placeholder="Create a password">
                     </div>
-    
+
                     <!-- Submit -->
                     <button class="btn w-100 btn-primary" type="submit">
                       Sign up
                     </button>
-    
+
                   </form>
-    
+
                   <!-- Text -->
                   <p class="mb-0 fs-sm text-center text-body-secondary">
                     Already have an account? <a href="./signin-illustration.html">Log in</a>.
                   </p>
-    
+
                 </div>
               </div>
-    
+
             </div> <!-- / .row -->
           </div>
         </div>
       </div>
     </div>
-    
+
     <!-- Signup: Vertical  -->
     <div class="modal fade" id="modalSignupVertical" tabindex="-1" role="dialog" aria-labelledby="modalSignupVerticalTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="card">
-    
+
             <!-- Close -->
             <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
-    
+
             <!-- Image -->
             <img src="./assets/img/photos/photo-7.jpg" alt="..." class="card-img-top">
-    
+
             <!-- Shape -->
             <div class="position-relative">
               <div class="shape shape-bottom shape-fluid-x text-white">
                 <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"/></svg>          </div>
             </div>
-    
+
             <!-- Body -->
             <div class="card-body">
-    
+
               <!-- Heading -->
               <h2 class="mb-0 fw-bold text-center" id="modalSignupVerticalTitle">
                 Sign Up
               </h2>
-    
+
               <!-- Text -->
               <p class="mb-6 text-center text-body-secondary">
                 Simplify your workflow in minutes.
               </p>
-    
+
               <!-- Form -->
               <form class="mb-6">
-    
+
                 <!-- Email -->
                 <div class="form-group">
                   <label class="visually-hidden" for="modalSignupVerticalEmail">
@@ -328,7 +218,7 @@
                   </label>
                   <input type="email" class="form-control" id="modalSignupVerticalEmail" placeholder="Your email">
                 </div>
-    
+
                 <!-- Password -->
                 <div class="form-group mb-5">
                   <label class="visually-hidden" for="modalSignupVerticalPassword">
@@ -336,26 +226,26 @@
                   </label>
                   <input type="password" class="form-control" id="modalSignupVerticalPassword" placeholder="Create a password">
                 </div>
-    
+
                 <!-- Submit -->
                 <button class="btn w-100 btn-primary" type="submit">
                   Sign up
                 </button>
-    
+
               </form>
-    
+
               <!-- Text -->
               <p class="mb-0 fs-sm text-center text-body-secondary">
                 Already have an account? <a href="./signin-illustration.html">Log in</a>.
               </p>
-    
+
             </div>
-    
+
           </div>
         </div>
       </div>
     </div>
-    
+
     <!-- Signin: Horizontal  -->
     <div class="modal fade" id="modalSigninHorizontal" tabindex="-1" role="dialog" aria-labelledby="modalSigninHorizontalTitle" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -363,34 +253,34 @@
           <div class="card card-row">
             <div class="row gx-0">
               <div class="col-12 col-md-6 bg-cover card-img-start" style="background-image: url(./assets/img/photos/photo-1.jpg);">
-    
+
                 <!-- Image (placeholder) -->
                 <img src="./assets/img/photos/photo-1.jpg" alt="..." class="img-fluid d-md-none invisible">
-    
+
                 <!-- Shape -->
                 <div class="shape shape-end shape-fluid-y text-white d-none d-md-block">
                   <svg viewBox="0 0 112 690" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M116 0H51v172C76 384 0 517 0 517v173h116V0z" fill="currentColor"/></svg>            </div>
-    
+
               </div>
               <div class="col-12 col-md-6">
                 <div class="card-body">
-    
+
                   <!-- Close -->
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    
+
                   <!-- Heading -->
                   <h2 class="mb-0 fw-bold text-center" id="modalSigninHorizontalTitle">
                     Sign In
                   </h2>
-    
+
                   <!-- Text -->
                   <p class="mb-6 text-center text-body-secondary">
                     Simplify your workflow in minutes.
                   </p>
-    
+
                   <!-- Form -->
                   <form class="mb-6">
-    
+
                     <!-- Email -->
                     <div class="form-group">
                       <label class="visually-hidden" for="modalSigninHorizontalEmail">
@@ -398,7 +288,7 @@
                       </label>
                       <input type="email" class="form-control" id="modalSigninHorizontalEmail" placeholder="Your email">
                     </div>
-    
+
                     <!-- Password -->
                     <div class="form-group mb-5">
                       <label class="visually-hidden" for="modalSigninHorizontalPassword">
@@ -406,62 +296,62 @@
                       </label>
                       <input type="password" class="form-control" id="modalSigninHorizontalPassword" placeholder="Enter your password">
                     </div>
-    
+
                     <!-- Submit -->
                     <button class="btn w-100 btn-primary" type="submit">
                       Sign in
                     </button>
-    
+
                   </form>
-    
+
                   <!-- Text -->
                   <p class="mb-0 fs-sm text-center text-body-secondary">
                     Don't have an account yet? <a href="./signin-illustration.html">Sign up</a>.
                   </p>
-    
+
                 </div>
               </div>
-    
+
             </div> <!-- / .row -->
           </div>
         </div>
       </div>
     </div>
-    
+
     <!-- Signin: Vertical  -->
     <div class="modal fade" id="modalSigninVertical" tabindex="-1" role="dialog" aria-labelledby="modalSigninVerticalTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="card">
-    
+
             <!-- Close -->
             <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
-    
+
             <!-- Image -->
             <img src="./assets/img/photos/photo-21.jpg" alt="..." class="card-img-top">
-    
+
             <!-- Shape -->
             <div class="position-relative">
               <div class="shape shape-bottom shape-fluid-x text-white">
                 <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"/></svg>          </div>
             </div>
-    
+
             <!-- Body -->
             <div class="card-body">
-    
+
               <!-- Heading -->
               <h2 class="mb-0 fw-bold text-center" id="modalSigninVerticalTitle">
                 Sign In
               </h2>
-    
+
               <!-- Text -->
               <p class="mb-6 text-center text-body-secondary">
                 Simplify your workflow in minutes.
               </p>
-    
+
               <!-- Form -->
               <form class="mb-6">
-    
+
                 <!-- Email -->
                 <div class="form-group">
                   <label class="visually-hidden" for="modalSigninVerticalEmail">
@@ -469,7 +359,7 @@
                   </label>
                   <input type="email" class="form-control" id="modalSigninVerticalEmail" placeholder="Your email">
                 </div>
-    
+
                 <!-- Password -->
                 <div class="form-group mb-5">
                   <label class="visually-hidden" for="modalSigninVerticalPassword">
@@ -477,73 +367,73 @@
                   </label>
                   <input type="password" class="form-control" id="modalSigninVerticalPassword" placeholder="Enter your password">
                 </div>
-    
+
                 <!-- Submit -->
                 <button class="btn w-100 btn-primary" type="submit">
                   Sign in
                 </button>
-    
+
               </form>
-    
+
               <!-- Text -->
               <p class="mb-0 fs-sm text-center text-body-secondary">
                 Don't have an account yet? <a href="./signin-illustration.html">Sign up</a>.
               </p>
-    
+
             </div>
-    
+
           </div>
         </div>
       </div>
     </div>
-    
+
     <!-- Payment -->
     <div class="modal fade" id="modalPayment" tabindex="-1" role="dialog" aria-labelledby="modalPaymentTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-body">
-    
+
             <!-- Close -->
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    
+
             <!-- Heading -->
             <h2 class="fw-bold text-center mb-1" id="modalPaymentTitle">
               Add Payment
             </h2>
-    
+
             <!-- Text -->
             <p class="fs-lg text-center text-body-secondary mb-6 mb-md-8">
               Simplify your workflow in minutes.
             </p>
-    
+
             <!-- Form -->
             <form>
-    
+
               <!-- Name -->
               <div class="form-group">
                 <label class="form-label" for="modalPaymentName">Name on card</label>
                 <input class="form-control" id="modalPaymentName" type="text" placeholder="First Last">
               </div>
-    
+
               <!-- Name -->
               <div class="form-group">
                 <label class="form-label" for="modalPaymentNumbber">Card number</label>
                 <input class="form-control" id="modalPaymentNumbber" type="number" placeholder="4242 4242 4242 4242">
               </div>
-    
+
               <!-- Name -->
               <div class="form-group">
                 <label class="form-label" for="modalPaymentDate">Exp. Date</label>
                 <input class="form-control" id="modalPaymentDate" type="text" placeholder="03/2023">
               </div>
-    
+
               <!-- Submit -->
               <button class="btn w-100 btn-primary mt-3 lift">
                 Add Payment Method
               </button>
-    
+
             </form>
-    
+
           </div>
         </div>
       </div>
@@ -552,25 +442,25 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-white">
       <div class="container">
-    
+
         <!-- Brand -->
         <a class="navbar-brand" href="./index.html">
           <img src="./assets/img/brand.svg" class="navbar-brand-img" alt="...">
         </a>
-    
+
         <!-- Toggler -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-    
+
         <!-- Collapse -->
         <div class="collapse navbar-collapse" id="navbarCollapse">
-    
+
           <!-- Toggler -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fe fe-x"></i>
           </button>
-    
+
           <!-- Navigation -->
           <ul class="navbar-nav ms-auto">
             <li class="nav-item dropdown">
@@ -581,34 +471,34 @@
                 <div class="row gx-0">
                   <div class="col-12 col-lg-6">
                     <div class="dropdown-img-start" style="background-image: url(./assets/img/photos/photo-3.jpg);">
-    
+
                       <!-- Heading -->
                       <h4 class="fw-bold text-white mb-0">
                         Want to see an overview?
                       </h4>
-    
+
                       <!-- Text -->
                       <p class="fs-sm text-white">
                         See all the pages at once.
                       </p>
-    
+
                       <!-- Button -->
                       <a href="./overview.html" class="btn btn-sm btn-white shadow-dark fonFt-size-sm">
                         View all pages
                       </a>
-    
+
                     </div>
                   </div>
                   <div class="col-12 col-lg-6">
                     <div class="dropdown-body">
                       <div class="row gx-0">
                         <div class="col-6">
-    
+
                           <!-- Heading -->
                           <h6 class="dropdown-header">
                             Services
                           </h6>
-    
+
                           <!-- List -->
                           <a class="dropdown-item" href="./coworking.html">
                             Coworking
@@ -619,12 +509,12 @@
                           <a class="dropdown-item mb-5" href="./job.html">
                             Job Listing
                           </a>
-    
+
                           <!-- Heading -->
                           <h6 class="dropdown-header">
                             Apps
                           </h6>
-    
+
                           <!-- List -->
                           <a class="dropdown-item" href="./desktop-app.html">
                             Desktop
@@ -632,15 +522,15 @@
                           <a class="dropdown-item" href="./mobile-app.html">
                             Mobile
                           </a>
-    
+
                         </div>
                         <div class="col-6">
-    
+
                           <!-- Heading -->
                           <h6 class="dropdown-header">
                             Web
                           </h6>
-    
+
                           <!-- List -->
                           <a class="dropdown-item" href="./index.html">
                             Basic
@@ -663,7 +553,7 @@
                           <a class="dropdown-item" href="./framework.html">
                             Framework
                           </a>
-    
+
                         </div>
                       </div> <!-- / .row -->
                     </div>
@@ -680,12 +570,12 @@
                   <div class="col-6">
                     <div class="row gx-0">
                       <div class="col-12 col-lg-6">
-    
+
                         <!-- Heading -->
                         <h6 class="dropdown-header">
                           Career
                         </h6>
-    
+
                         <!-- List -->
                         <a class="dropdown-item" href="./careers.html">
                           Listing
@@ -693,12 +583,12 @@
                         <a class="dropdown-item mb-5" href="./career-single.html">
                           Opening
                         </a>
-    
+
                         <!-- Heading -->
                         <h6 class="dropdown-header">
                           Company
                         </h6>
-    
+
                         <!-- List -->
                         <a class="dropdown-item" href="./about.html">
                           About
@@ -709,15 +599,15 @@
                         <a class="dropdown-item mb-5 mb-lg-0" href="./terms-of-service.html">
                           Terms
                         </a>
-    
+
                       </div>
                       <div class="col-12 col-lg-6">
-    
+
                         <!-- Heading -->
                         <h6 class="dropdown-header">
                           Help center
                         </h6>
-    
+
                         <!-- List -->
                         <a class="dropdown-item" href="./help-center.html">
                           Overview
@@ -725,12 +615,12 @@
                         <a class="dropdown-item mb-5" href="./help-center-article.html">
                           Article
                         </a>
-    
+
                         <!-- Heading -->
                         <h6 class="dropdown-header">
                           Contact
                         </h6>
-    
+
                         <!-- List -->
                         <a class="dropdown-item" href="./contact.html">
                           Basic
@@ -738,19 +628,19 @@
                         <a class="dropdown-item" href="./contact-alt.html">
                           Cover
                         </a>
-    
+
                       </div>
                     </div>
                   </div>
                   <div class="col-6">
                     <div class="row gx-0">
                       <div class="col-12 col-lg-6">
-    
+
                         <!-- Heading -->
                         <h6 class="dropdown-header">
                           Blog
                         </h6>
-    
+
                         <!-- List -->
                         <a class="dropdown-item" href="./blog.html">
                           Rich View
@@ -764,15 +654,15 @@
                         <a class="dropdown-item mb-5 mb-lg-0" href="./blog-search.html">
                           Search
                         </a>
-    
+
                       </div>
                       <div class="col-12 col-lg-6">
-    
+
                         <!-- Heading -->
                         <h6 class="dropdown-header">
                           Portfolio
                         </h6>
-    
+
                         <!-- List -->
                         <a class="dropdown-item" href="./portfolio-masonry.html">
                           Masonry
@@ -795,7 +685,7 @@
                         <a class="dropdown-item" href="./portfolio-grid.html">
                           Basic Grid
                         </a>
-    
+
                       </div>
                     </div>
                   </div>
@@ -914,104 +804,101 @@
               <div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDocumentation">
                 <div class="list-group list-group-flush">
                   <a class="list-group-item" href="./docs/index.html">
-    
+
                     <!-- Icon -->
                     <div class="icon icon-sm text-primary">
                       <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M8 3v.5A1.5 1.5 0 009.5 5h5A1.5 1.5 0 0016 3.5V3h2a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V5a2 2 0 012-2h2z" fill="#335EEA" opacity=".3"/><path d="M11 2a1 1 0 012 0h1.5a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-5a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5H11z" fill="#335EEA"/><rect fill="#335EEA" opacity=".3" x="7" y="10" width="5" height="2" rx="1"/><rect fill="#335EEA" opacity=".3" x="7" y="14" width="9" height="2" rx="1"/></g></svg>                </div>
-    
+
                     <!-- Content -->
                     <div class="ms-4">
-    
+
                       <!-- Heading -->
                       <h6 class="fw-bold text-uppercase text-primary mb-0">
                         Documentation
                       </h6>
-    
+
                       <!-- Text -->
                       <p class="fs-sm text-gray-700 mb-0">
                         Customizing and building
                       </p>
-    
+
                     </div>
-    
+
                   </a>
                   <a class="list-group-item" href="./docs/alerts.html">
-    
+
                     <!-- Icon -->
                     <div class="icon icon-sm text-primary">
                       <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><rect fill="#335EEA" x="4" y="4" width="7" height="7" rx="1.5"/><path d="M5.5 13h4a1.5 1.5 0 011.5 1.5v4A1.5 1.5 0 019.5 20h-4A1.5 1.5 0 014 18.5v-4A1.5 1.5 0 015.5 13zm9-9h4A1.5 1.5 0 0120 5.5v4a1.5 1.5 0 01-1.5 1.5h-4A1.5 1.5 0 0113 9.5v-4A1.5 1.5 0 0114.5 4zm0 9h4a1.5 1.5 0 011.5 1.5v4a1.5 1.5 0 01-1.5 1.5h-4a1.5 1.5 0 01-1.5-1.5v-4a1.5 1.5 0 011.5-1.5z" fill="#335EEA" opacity=".3"/></g></svg>                </div>
-    
+
                     <!-- Content -->
                     <div class="ms-4">
-    
+
                       <!-- Heading -->
                       <h6 class="fw-bold text-uppercase text-primary mb-0">
                         Components
                       </h6>
-    
+
                       <!-- Text -->
                       <p class="fs-sm text-gray-700 mb-0">
                         Full list of components
                       </p>
-    
+
                     </div>
-    
+
                   </a>
                   <a class="list-group-item" href="./docs/changelog.html">
-    
+
                     <!-- Icon -->
                     <div class="icon icon-sm text-primary">
                       <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M5.857 2h7.88a1.5 1.5 0 01.968.355l4.764 4.029A1.5 1.5 0 0120 7.529v12.554c0 1.79-.02 1.917-1.857 1.917H5.857C4.02 22 4 21.874 4 20.083V3.917C4 2.127 4.02 2 5.857 2z" fill="#335EEA" opacity=".3"/><rect fill="#335EEA" x="6" y="11" width="9" height="2" rx="1"/><rect fill="#335EEA" x="6" y="15" width="5" height="2" rx="1"/></g></svg>                </div>
-    
+
                     <!-- Content -->
                     <div class="ms-4">
-    
+
                       <!-- Heading -->
                       <h6 class="fw-bold text-uppercase text-primary mb-0">
                         Changelog
                       </h6>
-    
+
                       <!-- Text -->
                       <p class="fs-sm text-gray-700 mb-0">
                         Keep track of changes
                       </p>
-    
+
                     </div>
-    
+
                     <!-- Badge -->
                     <span class="badge rounded-pill text-bg-primary-subtle ms-auto">
                       2.3.0
                     </span>
-    
+
                   </a>
                 </div>
               </div>
             </li>
           </ul>
-    
+
           <!-- Button -->
           <a class="navbar-btn btn btn-sm btn-primary lift ms-auto" href="https://themes.getbootstrap.com/product/landkit/" target="_blank">
             Buy now
           </a>
-    
+
         </div>
-    
+
       </div>
     </nav>
-
-    <!-- WELCOME -->
-    <section class="pt-4 pt-md-11">
+    
+     <!-- WELCOME -->
+     <section class="pt-4 pt-md-11">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-12 col-md-5 col-lg-6 order-md-2">
-
-            <!-- Image -->
-            <img src="assets/img/illustrations/illustration-2.png" class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
-
-          </div>
-          <div class="col-12 col-md-7 col-lg-6 order-md-1" data-aos="fade-up">
-
-            <!-- Heading -->
+             <!-- Image -->
+             <img src="assets/img/illustrations/illustration-2.png" class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
+            </div>
+            <div class="col-12 col-md-7 col-lg-6 order-md-1" data-aos="fade-up">
+              <!-- Heading -->
             <h1 class="display-3 text-center text-md-start">
               Welcome to <span class="text-primary">Landkit</span>. <br>
               Develop anything.
@@ -1068,9 +955,8 @@
             <h3>
               Designed to be modern
             </h3>
-
-            <!-- Text -->
-            <p class="text-body-secondary mb-6 mb-md-0">
+             <!-- Text -->
+             <p class="text-body-secondary mb-6 mb-md-0">
               Designed with the latest design trends in mind. Landkit feels modern, minimal, and beautiful.
             </p>
 
@@ -1334,7 +1220,6 @@
               </div>
 
             </div>
-
           </div>
           <div class="col-12 col-md-5 col-lg-6">
 
@@ -1423,11 +1308,9 @@
                               <!-- Logo -->
                               <div class="img-fluid" style="color: #FF5A5F;">
                                 <svg viewBox="0 0 2761 991" xmlns="http://www.w3.org/2000/svg"><path d="M1447.629 301.83c0 28.119-22.658 50.76-50.777 50.76-28.118 0-50.76-22.641-50.76-50.76s21.87-50.76 50.76-50.76c28.915.78 50.777 23.43 50.777 50.76zm-209.316 102.317v12.5s-24.202-31.256-75.75-31.256c-85.121 0-151.517 64.828-151.517 154.638 0 89.037 65.615 154.638 151.517 154.638 52.328 0 75.75-32.02 75.75-32.02v13.271c0 6.25 4.697 10.923 10.939 10.923h63.252V393.177h-63.252c-6.242.024-10.939 5.5-10.939 10.97zm0 188.21c-11.703 17.189-35.14 32.028-63.251 32.028-49.98 0-88.258-31.24-88.258-84.356 0-53.11 38.277-84.349 88.258-84.349 27.338 0 52.328 15.62 63.251 32.02v104.658zm121.058-199.156h74.97v293.664h-74.97V393.2zm1119.954-7.818c-51.548 0-75.766 31.255-75.766 31.255V251.85h-74.97v435.015h63.267c6.25 0 10.923-5.47 10.923-10.94v-13.27s24.218 32.02 75.75 32.02c85.137 0 151.518-65.585 151.518-154.623s-66.38-154.669-150.722-154.669zm-12.499 238.214c-28.906 0-51.548-14.824-63.267-32.02V486.92c11.719-15.62 36.709-32.02 63.267-32.02 49.98 0 88.25 31.24 88.25 84.349 0 53.109-38.261 84.348-88.25 84.348zm-177.28-110.891v174.939h-74.985V521.288c0-48.412-15.62-67.949-57.767-67.949-22.642 0-46.08 11.72-60.942 28.907v204.626h-74.955V393.21h59.335c6.25 0 10.938 5.469 10.938 10.938v12.5c21.87-22.658 50.76-31.256 79.652-31.256 32.808 0 60.147 9.386 82.016 28.126 26.543 21.87 36.709 49.98 36.709 99.189zm-450.65-127.323c-51.532 0-75.75 31.255-75.75 31.255V251.85h-74.97v435.015h63.251c6.25 0 10.939-5.47 10.939-10.94v-13.27s24.218 32.02 75.75 32.02c85.137 0 151.518-65.585 151.518-154.623.78-89.045-65.6-154.669-150.737-154.669zm-12.498 238.214c-28.891 0-51.533-14.824-63.252-32.02V486.92c11.719-15.62 36.709-32.02 63.252-32.02 49.996 0 88.257 31.24 88.257 84.349 0 53.109-38.261 84.348-88.257 84.348zm-203.05-238.214c22.641 0 34.36 3.917 34.36 3.917v69.5s-62.48-21.088-101.52 23.438v205.399H1481.2V393.2h63.267c6.25 0 10.923 5.469 10.923 10.938v12.5c14.075-16.409 44.535-31.256 67.957-31.256zM844.705 660.306c-3.901-9.37-7.81-19.52-11.711-28.119-6.258-14.051-12.507-27.338-17.96-39.83l-.781-.78c-53.897-117.156-111.68-235.858-172.606-352.999l-2.34-4.696a1536.65 1536.65 0 01-18.734-36.71c-7.817-14.067-15.62-28.89-28.119-42.958-24.99-31.24-60.918-48.427-99.18-48.427-39.057 0-74.198 17.188-99.96 46.859-11.72 14.052-20.317 28.891-28.12 42.958a1695.173 1695.173 0 01-18.732 36.71l-2.349 4.696c-60.138 117.141-118.709 235.85-172.598 353l-.788 1.552c-5.462 12.514-11.719 25.786-17.968 39.83-3.901 8.597-7.803 17.968-11.704 28.118-10.158 28.892-13.287 56.23-9.37 84.357 8.59 58.578 47.632 107.763 101.529 129.647 20.309 8.598 41.398 12.5 63.26 12.5 6.249 0 14.051-.78 20.308-1.569 25.779-3.12 52.33-11.703 78.107-26.543 32.02-17.968 62.48-43.73 96.84-81.22 34.36 37.49 65.6 63.252 96.84 81.22 25.786 14.84 52.329 23.422 78.1 26.543 6.249.796 14.066 1.568 20.316 1.568 21.87 0 43.73-3.9 63.252-12.499 54.677-21.884 92.938-71.85 101.536-129.647 6.203-27.331 3.082-54.654-7.068-83.56zm-352.219 40.61c-42.178-53.109-69.517-103.09-78.88-145.252-3.9-17.968-4.688-33.588-2.34-47.647 1.553-12.5 6.25-23.438 12.499-32.808 14.84-21.074 39.83-34.36 68.729-34.36 28.907 0 54.677 12.498 68.736 34.36 6.25 9.37 10.931 20.316 12.507 32.808 2.333 14.067 1.553 30.46-2.348 47.647-9.402 41.383-36.74 91.37-78.903 145.252zm311.6 36.71c-5.46 40.61-32.8 75.765-71.06 91.385-18.742 7.802-39.058 10.15-59.352 7.802-19.52-2.348-39.057-8.598-59.35-20.3-28.119-15.636-56.23-39.83-89.038-75.767 51.54-63.252 82.78-121.058 94.5-172.59 5.469-24.218 6.257-46.08 3.9-66.397-3.113-19.52-10.15-37.489-21.081-53.109-24.226-35.156-64.843-55.45-110.127-55.45-45.283 0-85.901 21.09-110.111 55.45-10.93 15.62-17.968 33.588-21.09 53.11-3.12 20.316-2.348 42.958 3.902 66.395 11.71 51.533 43.73 110.112 94.491 173.371-32.02 35.929-60.919 60.147-89.037 75.766-20.31 11.72-39.822 17.969-59.343 20.302a124.96 124.96 0 01-59.359-7.803c-38.261-15.62-65.6-50.776-71.061-91.386-2.341-19.52-.788-39.042 7.03-60.91 2.332-7.819 6.249-15.62 10.15-24.991 5.47-12.499 11.703-25.786 17.96-39.057l.788-1.553c53.882-116.376 111.672-235.085 171.81-350.666l2.341-4.697c6.258-11.703 12.507-24.202 18.749-35.92 6.25-12.5 13.271-24.219 21.87-34.377 16.4-18.725 38.26-28.891 62.478-28.891 24.218 0 46.08 10.166 62.48 28.891 8.598 10.182 15.62 21.9 21.87 34.376 6.256 11.719 12.506 24.218 18.74 35.921l2.348 4.697a10341.109 10341.109 0 01171.038 351.446v.78c6.257 12.515 11.719 26.559 17.968 39.073 3.901 9.355 7.81 17.157 10.15 24.975 6.235 20.285 8.575 39.822 5.447 60.123z" fill="currentColor" fill-rule="nonzero"/></svg>                              </div>
-
-                            </div>
-                          </div> <!-- / .row -->
-
-                          <!-- Text -->
+                              </div>
+                            </div> <!-- / .row -->
+                             <!-- Text -->
                           <p class="mb-5 mb-md-7">
                             “Landkit is hands down the most useful front end Bootstrap theme I've ever used. I can't wait to use it again for my next project.”
                           </p>
@@ -1439,7 +1322,6 @@
 
                         </blockquote>
                       </div>
-
                     </div>
                     <div class="w-100">
 
@@ -1454,130 +1336,127 @@
                               <!-- Logo -->
                               <div class="img-fluid" style="color: #3F5D87;">
                                 <svg viewBox="0 0 2761 991" xmlns="http://www.w3.org/2000/svg"><path d="M273.497 198.251c-22.863 0-52.502 24.245-69.987 40.383-38.441 34.122-73.259 96.865-73.259 147.225 0 71.56 60.859 98.571 76.252 98.571 5.075 0 9.401-2.617 9.401-9.504 0-5.398-3.423-9.89-6.829-14.505-14.094-21.546-18.621-42.11-18.621-69.845 0-57.825 26.67-110.828 48.791-135.082 4.08-4.39 13.296-13.872 16.054-13.872 2.738 0 3.416 2.23 3.416 9.122l-2.57 378.481c0 59.167-17.072 82.67-17.072 96.602 0 6.121 2.65 7.71 7.71 7.71 23.959 0 47.835-29.202 54.6-39.852 20.976-36.232 26.12-64.515 26.12-146.097V229.55c0-8.609-2.414-12.33-10.592-17.638-11.96-7.595-25.664-13.66-43.414-13.66zm685.043 1.056c-11.268 0-16.086 5.891-16.619 24.12l-2.5 75.475-66.008-2.287c-4.004-.103-5.814 1.163-7.565 4.682-5.606 10.51-8.556 18.746-8.556 32.46 0 11.166 5.062 12.357 9.577 12.357l68.678 1.972-.21 144.197c0 30.583-19.3 70.258-53.543 103.256 0 0 2.945-9.963 2.777-20.415 0-29.588-19.041-56.4-44.427-75.373l-61.96-46.612c12.989-15.025 34.993-44.825 34.993-69.988 0-19.51-12.267-27.705-35.135-27.705-32.275 0-69.705 29.56-69.705 73.401 0 15.981 7.11 30.365 17.918 41.366-14.922 28.314-36.036 65.566-51.714 92.095-11.842 20.313-31.874 51.434-43.726 51.434-8.739 0-12.778-13.749-12.778-66.571 0-43.887 3.118-91.602 4.682-137.403 0-10.498-1.722-20.183-15.35-29.677-12.538-8.033-28.02-19.252-43.97-19.252-35.455 0-59.609 32.625-76.178 64.527-17.147 33.063-26.419 60.926-39.5 101.352l1.444-139.127c.446-9.92-2.06-13.772-9.997-17.147-10.298-4.367-25.456-9.402-38.901-9.402-11.237 0-12.603 4.845-12.603 16.651l-1.512 166.94-.172 64.387c0 58.05 7.27 67.73 41.716 67.73 19.072 0 25.18-2.24 25.559-18.093.523-10.485 5.538-35.888 12.322-61.364 19.842-75.195 43.353-134.67 83.891-180 4.227-4.4 7.495-2.825 6.83 3.413 0 0-6.41 101.765-6.41 143.389 0 74.03 11.392 112.658 48.227 112.658 36.15 0 71.656-46.45 91.038-77.806l62.175-103.994c40.288 34.33 68.4 60.946 68.4 93.326 0 20.125-12.697 39.815-32.039 39.815-24.171 0-39.614-25.49-55.94-25.49-13.552 0-30.944 26.16-30.944 41.016 0 14.024 30.603 33.863 85.513 33.863 81.059 0 124.542-55.628 150.638-117.23 4.995 73.114 34.127 115.822 79.562 115.822 29.803 0 64.247-37.653 79.915-83.647 0 0 1.547 11.94 13.446 36.402 16.38 31.944 41.28 46.611 72.208 46.611 38.468 0 71.371-23.32 91.459-62.452 3.045 29.652 27.943 62.307 67.98 62.307 25.133 0 48.046-19.257 63.086-50.976 0 0 19.482 52.388 75.83 52.388 31.65 0 69.127-29.32 78.084-50.623l.986 30.98-83.606 77.1c-24.277 23.566-50.1 57.425-50.1 94.913 0 47.677 45.015 75.092 84.63 75.092 41.178 0 68.5-26.088 83.468-47.948 18.836-28.285 26.792-81.596 26.792-133.708l-1.867-78.361c56.349-61.94 100.45-147.553 120.083-208.129l42.772-1.126c8.286-.558 7.873 2.705 6.727 7.535-7.517 31.767-14.082 67.743-14.082 103.571 0 59.192 13.634 84.95 33.231 106.001 17.04 17.638 33.984 23.587 51.82 23.587 34.88 0 56.776-28.804 63.72-46.962 16.38 31.944 40.509 46.821 71.43 46.821 38.47 0 71.374-23.32 91.464-62.452 3.045 29.652 27.938 62.307 67.978 62.307 29.912 0 47.262-17.26 60.906-49.78.275 10.46.678 21.612.986 32.068.36 5.41 4.685 8.833 8.556 10.245 12.715 4.812 23.876 7.22 33.901 7.22 26.147 0 31.825-5.37 31.825-22.463 0-28.19.826-72.733 8.836-108.496 8.504-35.606 21.337-75.914 39.044-103.96 1.594-2.897 5.5-2.136 5.67 1.375 2.543 60.007 6.557 161.589 22.32 187.885 7.779 12.543 19.808 21.685 37.809 21.685 8.44 0 18.788-3.6 21.436-5.844 2.683-2.092 4.034-4.417 3.871-8.729 0-76.711 23.924-150.978 47.88-200.91.659-1.482 2.526-1.597 2.463.352l-1.336 55.273c0 90.78 6.544 148.133 51.89 175.706a59.42 59.42 0 0029.184 7.565c23.2 0 44.239-12.958 54.637-33.796 8.47-16.194 16.406-47.363 16.406-65.018 0-6.834.08-17.958-11.123-17.958-6.144 0-9.835 4.53-11.304 11.371-3.571 14.83-6.502 27.548-12.042 42.21-5.296 13.997-13.198 22.147-22.568 22.147-11.006 0-16.591-8.66-19.785-14.014-14.044-21.421-15.17-70.63-15.17-111.704l3.381-105.718c0-8.747-3.651-19.215-17.147-26.932-9.06-5.215-31.972-15.033-46.011-15.033-13.018 0-19.32 7.373-24.012 18.196-8.811 19.44-38.255 95.688-46.15 157.68-.284 1.634-2.32 1.98-2.463-.105-4.104-43.839-6.21-96.66-6.164-132.295 0-10.773-2.635-26.173-25.488-36.153-11.106-4.608-20.293-7.428-31.512-7.428-13.919 0-16.912 6.812-21.897 15.838-15.768 29.135-26.671 67.128-43.015 115.05l.248-109.66c0-5.127-3.143-11.848-12.147-13.658-22.325-5.13-32.668-7.46-41.47-7.46-6.408 0-9.93 5.108-9.93 10.63l-1.198 186.973c-4.32 22.888-21.82 77.52-46.647 77.52-20.378 0-29.887-20.646-29.887-106.947l3.698-140.258c0-8.859-5.815-12.58-14.291-16.331-12.12-4.815-21.762-6.727-34.08-6.727-15.46 0-20.765 7.4-17.637 25.175-16.995-22.993-33.984-35.7-64-35.7-60.26 0-105.682 72.485-105.682 177.82-.591 29.537 6.546 58.894 6.546 58.894-5.453 24.515-18.27 44.497-35.978 44.497-22.34 0-36.577-31.584-36.577-86.321 0-54.9 20.91-116.82 20.91-133.602 0-19.512-12.784-31.856-35.415-31.856-11.336 0-53.39 9.54-74.95 12.67 0 0 2.433-10.268 2.253-18.341 0-19.24-9.027-31.296-31.437-31.296-27.385 0-47.492 19.554-47.492 52.915 0 14.967 8.62 28.816 20.032 36.256-14.812 61.782-38.896 107.728-74.387 159.057l2.99-207.848c0-6.757-1.799-10.954-15.034-16.091-6.997-3.023-18.401-6.514-32.776-6.514-20.833 0-19.454 14.877-18.34 26.016-9.533-16.902-30.4-36.965-62.596-36.965-87.732 0-114.667 133.784-101.459 228.794 0 11.584-11.311 52.703-36.86 52.703-20.377 0-29.887-20.646-29.887-106.947l3.734-140.258c0-8.861-5.856-12.582-14.332-16.331-12.12-4.815-21.726-6.727-34.044-6.727-15.463 0-20.768 7.4-17.64 25.173-16.994-22.993-34.019-35.701-64.036-35.701-60.26 0-106.284 66.291-106.284 171.622 0 40.208-34.62 101.564-58.897 101.564-13.486 0-27.845-24.757-27.845-88.01.067-43.116 5.948-189.893 5.948-189.893l84.738-1.374c4.044-.038 6.386-4.457 7.885-7.18 3.891-7.895 5.773-13.153 5.773-22.6 0-8.523-1.706-11.637-12.637-12.252l-84.457-5.07 3.593-78.679c.253-4.967-2.745-8.206-8.168-10.63-16.349-6.394-36.399-12.578-49.097-12.58zm256.462 206.157c22.593 0 45.518 20.605 45.518 93.711 0 92.047-33.533 134.872-59.32 134.872-24.173 0-42.524-34.121-42.524-101.143 0-67.746 17.92-127.44 56.326-127.44zm813.642 0c22.593 0 45.518 20.605 45.518 93.711 0 92.047-33.533 134.872-59.32 134.872-24.173 0-42.527-34.121-42.527-101.143.003-67.746 17.923-127.44 56.329-127.44zm-516.059.423c29.484 0 42.528 30.39 42.528 89.309 0 88.831-26.407 139.41-58.476 139.41-20.473 0-44.015-33.617-42.773-99.735 0-42.275 13.783-128.984 58.721-128.984zm49.917 297.162v34.99c0 116.106-30.938 135.924-55.798 135.924-9.42 0-32.492-7.115-32.492-35.839 0-40.152 41.98-85.83 55.025-99.945l33.265-35.13z" fill="currentColor" fill-rule="nonzero"/></svg>                              </div>
+                              </div> <!-- / .row -->
 
-                            </div>
-                          </div> <!-- / .row -->
-
-                          <!-- Text -->
-                          <p class="mb-5 mb-md-7">
-                            “I've never used a theme as versatile and flexible as Landkit. It's my go to for building landing sites on almost any project.”
-                          </p>
-
-                          <!-- Footer -->
-                          <footer class="blockquote-footer">
-                            <span class="h6 text-uppercase">Russ D'Sa</span>
-                          </footer>
-
-                        </blockquote>
+                              <!-- Text -->
+                              <p class="mb-5 mb-md-7">
+                                “I've never used a theme as versatile and flexible as Landkit. It's my go to for building landing sites on almost any project.”
+                              </p>
+    
+                              <!-- Footer -->
+                              <footer class="blockquote-footer">
+                                <span class="h6 text-uppercase">Russ D'Sa</span>
+                              </footer>
+    
+                            </blockquote>
+                          </div>
+    
+                        </div>
                       </div>
-
+    
                     </div>
-                  </div>
-
+                  </div> <!-- / .row -->
                 </div>
-              </div> <!-- / .row -->
-            </div>
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
-
-    <!-- SHAPE -->
-    <div class="position-relative mt-n8">
-      <div class="shape shape-bottom shape-fluid-x text-gray-200">
-        <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"/></svg>      </div>
-    </div>
-
-    <!-- STATS -->
-    <section class="pt-12 pt-md-13 bg-gray-200">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-12 col-md-5 col-lg-6 order-md-2">
-
-            <!-- Image -->
-            <img src="assets/img/illustrations/illustration-8.png" alt="..." class="img-fluid mb-6 mb-md-0">
-
-          </div>
-          <div class="col-12 col-md-7 col-lg-6 order-md-1">
-
-            <!-- Heading -->
-            <h2>
-              Stay focused on your business. <br>
-              <span class="text-primary">Let us handle the design</span>.
-            </h2>
-
-            <!-- Text -->
-            <p class="fs-lg text-gray-700 mb-6">
-              You have a business to run. Stop worring about cross-browser bugs, designing new pages, keeping your components up to date. Let us do that for you.
-            </p>
-
-            <!-- Stats -->
-            <div class="d-flex">
-              <div class="pe-5">
-                <h3 class="mb-0">
-                  <span data-countup='{"startVal": 0}' data-to="100" data-aos data-aos-id="countup:in"></span>%
-                </h3>
-                <p class="text-gray-700 mb-0">
-                  Satisfaction
+    
+              </div>
+            </div> <!-- / .row -->
+          </div> <!-- / .container -->
+        </section>
+    
+        <!-- SHAPE -->
+        <div class="position-relative mt-n8">
+          <div class="shape shape-bottom shape-fluid-x text-gray-200">
+            <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"/></svg>      </div>
+        </div>
+    
+        <!-- STATS -->
+        <section class="pt-12 pt-md-13 bg-gray-200">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-12 col-md-5 col-lg-6 order-md-2">
+    
+                <!-- Image -->
+                <img src="assets/img/illustrations/illustration-8.png" alt="..." class="img-fluid mb-6 mb-md-0">
+    
+              </div>
+              <div class="col-12 col-md-7 col-lg-6 order-md-1">
+    
+                <!-- Heading -->
+                <h2>
+                  Stay focused on your business. <br>
+                  <span class="text-primary">Let us handle the design</span>.
+                </h2>
+    
+                <!-- Text -->
+                <p class="fs-lg text-gray-700 mb-6">
+                  You have a business to run. Stop worring about cross-browser bugs, designing new pages, keeping your components up to date. Let us do that for you.
                 </p>
+    
+                <!-- Stats -->
+                <div class="d-flex">
+                  <div class="pe-5">
+                    <h3 class="mb-0">
+                      <span data-countup='{"startVal": 0}' data-to="100" data-aos data-aos-id="countup:in"></span>%
+                    </h3>
+                    <p class="text-gray-700 mb-0">
+                      Satisfaction
+                    </p>
+                  </div>
+                  <div class="border-start border-gray-300"></div>
+                  <div class="px-5">
+                    <h3 class="mb-0">
+                      <span data-countup='{"startVal": 0}' data-to="24" data-aos data-aos-id="countup:in"></span>/
+                      <span data-countup='{"startVal": 0}' data-to="7" data-aos data-aos-id="countup:in"></span>
+                    </h3>
+                    <p class="text-gray-700 mb-0">
+                      Support
+                    </p>
+                  </div>
+                  <div class="border-start border-gray-300"></div>
+                  <div class="ps-5">
+                    <h3 class="mb-0">
+                      <span data-countup='{"startVal": 0}' data-to="100" data-aos data-aos-id="countup:in"></span>k+
+                    </h3>
+                    <p class="text-gray-700 mb-0">
+                      Sales
+                    </p>
+                  </div>
+                </div>
+    
               </div>
-              <div class="border-start border-gray-300"></div>
-              <div class="px-5">
-                <h3 class="mb-0">
-                  <span data-countup='{"startVal": 0}' data-to="24" data-aos data-aos-id="countup:in"></span>/
-                  <span data-countup='{"startVal": 0}' data-to="7" data-aos data-aos-id="countup:in"></span>
-                </h3>
-                <p class="text-gray-700 mb-0">
-                  Support
+            </div> <!-- / .row -->
+          </div> <!-- / .container -->
+        </section>
+    
+        <!-- PRICING -->
+        <section class="pt-9 pt-md-12 bg-gray-200">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-10 col-lg-8 text-center">
+    
+                <!-- Heading -->
+                <h1>
+                  Fair, simple pricing for all.
+                </h1>
+    
+                <!-- Text -->
+                <p class="lead text-gray-700">
+                  All types of businesses need access to development resources, so we give you the option to decide how much you need to use.
                 </p>
-              </div>
-              <div class="border-start border-gray-300"></div>
-              <div class="ps-5">
-                <h3 class="mb-0">
-                  <span data-countup='{"startVal": 0}' data-to="100" data-aos data-aos-id="countup:in"></span>k+
-                </h3>
-                <p class="text-gray-700 mb-0">
-                  Sales
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
-
-    <!-- PRICING -->
-    <section class="pt-9 pt-md-12 bg-gray-200">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-10 col-lg-8 text-center">
-
-            <!-- Heading -->
-            <h1>
-              Fair, simple pricing for all.
-            </h1>
-
-            <!-- Text -->
-            <p class="lead text-gray-700">
-              All types of businesses need access to development resources, so we give you the option to decide how much you need to use.
-            </p>
-
-            <!-- Form -->
-            <form class="d-flex align-items-center justify-content-center mb-7 mb-md-9">
-
-              <!-- Label -->
-              <span class="text-body-secondary">
-                Annual
-              </span>
-
-              <!-- Switch -->
-              <div class="form-check form-switch mx-3">
-                <input class="form-check-input" type="checkbox" id="billingSwitch" data-toggle="price" data-target=".price">
-              </div>
-
-              <!-- Label -->
+    
+                <!-- Form -->
+                <form class="d-flex align-items-center justify-content-center mb-7 mb-md-9">
+    
+                  <!-- Label -->
+                  <span class="text-body-secondary">
+                    Annual
+                  </span>
+    
+                  <!-- Switch -->
+                  <div class="form-check form-switch mx-3">
+                    <input class="form-check-input" type="checkbox" id="billingSwitch" data-toggle="price" data-target=".price">
+                  </div>
+                  <!-- Label -->
               <span class="text-body-secondary">
                 Monthly
               </span>
@@ -1603,14 +1482,12 @@
                         <span class="h6 fw-bold text-uppercase">Standard</span>
                       </span>
                     </div>
-
-                    <!-- Price -->
-                    <div class="d-flex justify-content-center">
+                     <!-- Price -->
+                     <div class="d-flex justify-content-center">
                       <span class="h2 mb-0 mt-2">$</span>
                       <span class="price display-2 mb-0" data-annual="29" data-monthly="49">29</span>
                       <span class="h2 align-self-end mb-1">/mo</span>
                     </div>
-
                     <!-- Text -->
                     <p class="text-center text-body-secondary mb-6 mb-md-8">
                       per seat
@@ -1693,7 +1570,6 @@
               </a>
 
             </div>
-
           </div>
           <div class="col-12 col-md-6 ms-md-n3">
 
@@ -1891,15 +1767,15 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-4 col-lg-3">
-    
+
             <!-- Brand -->
             <img src="./assets/img/brand.svg" alt="..." class="footer-brand img-fluid mb-2">
-    
+
             <!-- Text -->
             <p class="text-gray-700 mb-2">
               A better way to build.
             </p>
-    
+
             <!-- Social -->
             <ul class="list-unstyled list-inline list-social mb-6 mb-md-0">
               <li class="list-inline-item list-social-item me-3">
@@ -1923,15 +1799,15 @@
                 </a>
               </li>
             </ul>
-    
+
           </div>
           <div class="col-6 col-md-4 col-lg-2">
-    
+
             <!-- Heading -->
             <h6 class="fw-bold text-uppercase text-gray-700">
               Products
             </h6>
-    
+
             <!-- List -->
             <ul class="list-unstyled text-body-secondary mb-6 mb-md-8 mb-lg-0">
               <li class="mb-3">
@@ -1960,15 +1836,15 @@
                 </a>
               </li>
             </ul>
-    
+
           </div>
           <div class="col-6 col-md-4 col-lg-2">
-    
+
             <!-- Heading -->
             <h6 class="fw-bold text-uppercase text-gray-700">
               Services
             </h6>
-    
+
             <!-- List -->
             <ul class="list-unstyled text-body-secondary mb-6 mb-md-8 mb-lg-0">
               <li class="mb-3">
@@ -1992,15 +1868,15 @@
                 </a>
               </li>
             </ul>
-    
+
           </div>
           <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
-    
+
             <!-- Heading -->
             <h6 class="fw-bold text-uppercase text-gray-700">
               Connect
             </h6>
-    
+
             <!-- List -->
             <ul class="list-unstyled text-body-secondary mb-0">
               <li class="mb-3">
@@ -2039,15 +1915,15 @@
                 </a>
               </li>
             </ul>
-    
+
           </div>
           <div class="col-6 col-md-4 col-lg-2">
-    
+
             <!-- Heading -->
             <h6 class="fw-bold text-uppercase text-gray-700">
               Legal
             </h6>
-    
+
             <!-- List -->
             <ul class="list-unstyled text-body-secondary mb-0">
               <li class="mb-3">
@@ -2066,7 +1942,7 @@
                 </a>
               </li>
             </ul>
-    
+
           </div>
         </div> <!-- / .row -->
       </div> <!-- / .container -->
@@ -2075,10 +1951,10 @@
     <!-- JAVASCRIPT -->
     <!-- Map JS -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-    
+
     <!-- Vendor JS -->
     <script src="./assets/js/vendor.bundle.js"></script>
-    
+
     <!-- Theme JS -->
     <script src="./assets/js/theme.bundle.js"></script>
 
