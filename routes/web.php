@@ -20,3 +20,11 @@ Route::get('/', function () {
 Route::get('/berita1', function () {
     return view('Beranda.berita1');
 });
+
+Route::get('/SPMI', function () {
+    return view('SPMI.standar');
+});
+
+Route::get('/test', function () {
+    return view('SPMI.test');
+});
