@@ -17,10 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/header', function () {
-    return view('header');
-});
-
-Route::get('/footer', function () {
-    return view('footer');
+Route::get('/berita1', function () {
+    return view('Beranda.berita1');
 });
