@@ -49,7 +49,6 @@
         }
         .signup {
             text-align: center;
-            
             padding: 5%
         }
 
