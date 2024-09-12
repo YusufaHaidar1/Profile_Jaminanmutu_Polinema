@@ -43,10 +43,10 @@
                                     <!-- Dropdown (Select) -->
                                     <select class="form-control border-0 px-1" aria-label="Pilih Tahun" id="yearSelect">
                                         <option value="" disabled selected>Pilih Tahun</option>
-                                        <option value="2020">2020</option>
-                                        <option value="2021">2021</option>
-                                        <option value="2022">2022</option>
                                         <option value="2023">2023</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
                                     </select>
                                     <!-- Text -->
                                     <span class="input-group-text border-0 py-0 ps-1 pe-3">
@@ -61,7 +61,7 @@
                                     <div class="me-auto">
                                         <!-- Heading -->
                                         <p class="fw-bold mb-1 text-center" style="background-color: #B5D3FF;">
-                                            GRAFIK PROSENTASI KEPUASAN PARTNER
+                                            GRAFIK PROSENTASE KEPUASAN PARTNER
                                         </p>
                                         <!-- Image Container -->
                                         <div id="imageContainer" class="figure" style="background-color: #B5D3FF; margin: 0; padding: 0;">
