@@ -17,7 +17,7 @@
         .box {
             background-color: #B5D3FF;
             border-radius: 15px;
-            padding: 20px;
+            padding: 10px;
             margin: 10px;
             text-align: left; /* Align text to the left */
             flex: 1; /* Allow boxes to grow */
