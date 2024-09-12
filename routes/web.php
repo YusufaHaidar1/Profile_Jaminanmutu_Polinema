@@ -30,6 +30,10 @@ Route::get('/signin', function () {
     return view('login.signin');
 });
 
+Route::get('/homepage', function () {
+    return view('Beranda.homepage');
+});
+
 Route::get('/berita1', function () {
     return view('Beranda.berita1');
 });
