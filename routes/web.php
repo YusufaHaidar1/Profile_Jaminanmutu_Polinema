@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/mitra', function () {
+    return view('Pelayanan.Kepuasan Pelanggan.mitra');
+});
+
 Route::get('/signin', function () {
     return view('login.signin');
 });

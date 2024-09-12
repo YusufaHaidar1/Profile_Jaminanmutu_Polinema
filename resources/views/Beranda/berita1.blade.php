@@ -36,7 +36,7 @@
               <div class="row justify-content-center">
                 <div class="col-12 col-md-10 col-lg-9 col-xl-8">
       
-                  <!-- Figure -->
+                <!-- Figure -->
                 <figure class="figure mb-7">
                     <img class="figure-img img-fluid rounded lift lift-lg" src="assets/img/berita/berita1.png" alt="...">
                 </figure>
