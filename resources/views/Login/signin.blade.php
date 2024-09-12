@@ -12,6 +12,8 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            
+            margin: 0;
         }
 
         .container {
@@ -20,6 +22,7 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             width: 350px;
+            
         }
 
         h1 {
@@ -61,20 +64,32 @@
             text-decoration: none;
         }
 
-        .footer {
+        .footer, .header {
             background-color: #1B2A4E;
             color: #fff;
             padding: 10px;
             text-align: center;
-            position: fixed;
-            bottom: 0;
-            left: 0;
             width: 100%;
+            position: fixed;
+            left: 0;
+        }
+
+        .footer {
+            bottom: 0;
+        }
+
+        .header {
+            top: 0;
         }
 
     </style>
 </head>
 <body>
+
+    <header class="header">
+        
+    </header>
+
     <div class="container">
         <h1>Masuk</h1>
         <h2>Silahkan masuk terlebih dahulu!</h2>
@@ -93,11 +108,11 @@
             </div>
             <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Masuk</button>
         </form>
-        
     </div>
 
     <footer class="footer">
         ©Copyright P2MPP Polinema 2024
     </footer>
+
 </body>
 </html>
