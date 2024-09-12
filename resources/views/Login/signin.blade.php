@@ -41,6 +41,8 @@
         }
         .remember {
             text-align: end;
+            color: #F5C149;
+            padding: 2%
         }
         input[type="email"],
         input[type="password"] {
