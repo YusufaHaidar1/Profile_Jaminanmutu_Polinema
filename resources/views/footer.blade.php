@@ -110,22 +110,22 @@
                 <ul class="list-unstyled list-inline list-social mb-6 mb-md-0">
                     <li class="list-inline-item list-social-item me-3">
                     <a href="#!" class="text-decoration-none">
-                        <img src="./assets/img/icons/social/instagram.svg" class="list-social-icon" alt="...">
+                        <img src="{{asset('./assets/img/icons/social/instagram.svg')}}" class="list-social-icon" alt="...">
                     </a>
                     </li>
                     <li class="list-inline-item list-social-item me-3">
                     <a href="#!" class="text-decoration-none">
-                        <img src="./assets/img/icons/social/facebook.svg" class="list-social-icon" alt="...">
+                        <img src="{{asset('./assets/img/icons/social/facebook.svg')}}" class="list-social-icon" alt="...">
                     </a>
                     </li>
                     <li class="list-inline-item list-social-item me-3">
                     <a href="#!" class="text-decoration-none">
-                        <img src="./assets/img/icons/social/twitter.svg" class="list-social-icon" alt="...">
+                        <img src="{{asset('./assets/img/icons/social/twitter.svg')}}" class="list-social-icon" alt="...">
                     </a>
                     </li>
                     <li class="list-inline-item list-social-item">
                     <a href="#!" class="text-decoration-none">
-                        <img src="./assets/img/icons/social/pinterest.svg" class="list-social-icon" alt="...">
+                        <img src="{{asset('./assets/img/icons/social/pinterest.svg')}}" class="list-social-icon" alt="...">
                     </a>
                     </li>
                 </ul>
