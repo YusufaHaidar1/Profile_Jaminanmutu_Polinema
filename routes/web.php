@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KepuasanPelangganController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/mitra', function () {
-    return view('Pelayanan.Kepuasan Pelanggan.mitra');
+Route::prefix('kepuasanpelanggan')->group(function () {
+    Route::get('/mahasiswa', [KepuasanPelangganController::class, 'mahasiswa'])->name('kepuasanpelanggan.mahasiswa');
+    Route::get('/orangtua', [KepuasanPelangganController::class, 'orangtua'])->name('kepuasanpelanggan.orangtua');
+    Route::get('/dosenstaff', [KepuasanPelangganController::class, 'dosenstaff'])->name('kepuasanpelanggan.dosenstaff');
+    Route::get('/mitra', [KepuasanPelangganController::class, 'mitra'])->name('kepuasanpelanggan.mitra');
+    Route::get('/alumni', [KepuasanPelangganController::class, 'alumni'])->name('kepuasanpelanggan.alumni');
 });
 
 Route::get('/signin', function () {

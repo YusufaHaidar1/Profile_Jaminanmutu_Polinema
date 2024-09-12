@@ -27,7 +27,7 @@
   
           <!-- Brand -->
           <a class="navbar-brand" href="./index.html">
-            <img src="./assets/img/brand.png" class="navbar-brand-img" alt="...">
+            <img src="{{asset('./assets/img/brand.png')}}" class="navbar-brand-img" alt="...">
           </a>
   
           <!-- Toggler -->
@@ -112,21 +112,11 @@
                       Kepuasan Pelanggan
                     </a>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="./Pelayanan/Kepuasan Pelanggan/mahasiswa.html">
-                        Mahasiswa
-                      </a>
-                      <a class="dropdown-item" href="./Pelayanan/Kepuasan Pelanggan/orangtua.html">
-                        Orangtua
-                      </a>
-                      <a class="dropdown-item" href="./Pelayanan/Kepuasan Pelanggan/dosenstaff.html">
-                        Dosen & Staff Pendidikan
-                      </a>
-                      <a class="dropdown-item" href="./Pelayanan/Kepuasan Pelanggan/mitra.html">
-                        Mitra
-                      </a>
-                      <a class="dropdown-item" href="./Pelayanan/Kepuasan Pelanggan/alumni.html">
-                        Alumni
-                      </a>
+                      <a class="dropdown-item" href="{{ route('kepuasanpelanggan.mahasiswa') }}">Mahasiswa</a>
+                      <a class="dropdown-item" href="{{ route('kepuasanpelanggan.orangtua') }}">Orangtua</a>
+                      <a class="dropdown-item" href="{{ route('kepuasanpelanggan.dosenstaff') }}">Dosen & Staff Pendidikan</a>
+                      <a class="dropdown-item" href="{{ route('kepuasanpelanggan.mitra') }}">Mitra</a>
+                      <a class="dropdown-item" href="{{ route('kepuasanpelanggan.alumni') }}">Alumni</a>
                     </div>
                   </li>
                   <li class="dropdown-item dropend">
