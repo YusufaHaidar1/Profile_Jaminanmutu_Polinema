@@ -60,15 +60,9 @@
                       <div class="row gx-0">
                         <div class="col-5 col-lg-2">  
                           <!-- List -->
-                          <a class="dropdown-item" href="./profil/visimisi.html">
-                            Visi Misi
-                          </a>
-                          <a class="dropdown-item" href="./profil/kebijakanmutu.html">
-                            Kebijakan Mutu
-                          </a>
-                          <a class="dropdown-item" href="./profil/tugasdanfungsi.html">
-                            Tugas dan Fungsi Utama
-                          </a>
+                          <a class="dropdown-item" href="./profil/visimisi.html"> Visi Misi </a>
+                          <a class="dropdown-item" href="./profil/kebijakanmutu.html"> Kebijakan Mutu </a>
+                          <a class="dropdown-item" href="./profil/tugasdanfungsi.html"> Tugas dan Fungsi Utama </a>
                         </div>
                     </div>
                     </div>

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KepuasanPelangganController;
+use App\Http\Controllers\ProfilController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +28,11 @@ Route::prefix('kepuasanpelanggan')->group(function () {
     Route::get('/alumni', [KepuasanPelangganController::class, 'alumni'])->name('kepuasanpelanggan.alumni');
 });
 
+Route::prefix('profil')->group(function () {
+    
+    
+});
+
 Route::get('/signin', function () {
     return view('login.signin');
 });
@@ -33,6 +40,15 @@ Route::get('/signin', function () {
 Route::get('/homepage', function () {
     return view('Beranda.homepage');
 });
+
+Route::get('/visimisi', function () {
+    return view('Profil.visi_misi');
+});
+
+Route::get('/kebijakan mutu', function () {
+    return view('Profil.kebijakan_mutu');
+});
+
 
 Route::get('/berita1', function () {
     return view('Beranda.berita1');
