@@ -13,7 +13,7 @@
     {{-- Include the header --}}
     @include('header')
 
-    {{-- Your main content goes here --}}
+    
 
 
 

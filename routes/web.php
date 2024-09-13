@@ -54,8 +54,11 @@ Route::get('/berita1', function () {
     return view('Beranda.berita1');
 });
 
-Route::get('/SPMI', function () {
+Route::get('/standarkualitas', function () {
     return view('SPMI.standar');
+});
+Route::get('/SPMI', function () {
+    return view('SPMI.SPMI');
 });
 
 Route::get('/test', function () {
