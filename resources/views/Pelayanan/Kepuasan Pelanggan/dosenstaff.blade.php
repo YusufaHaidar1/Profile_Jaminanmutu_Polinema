@@ -26,7 +26,7 @@
                     <h2>UNSUR IKM</h2>
                     <!-- Figure -->
                     <figure class="figure mb-7">
-                        <img class="figure-img img-fluid rounded lift lift-lg" src="{{ asset('assets/img/kepuasan pelanggan/dosen&staff/hrm/Unsur_IKM_2023.png') }}" id="unsurImage">
+                        <img class="figure-img img-fluid rounded lift lift-lg" src="{{ asset('assets/img/kepuasan pelanggan/dosen&staff/hrm/Unsur_IKM_2023.png') }}" id="unsurImage" alt="Tidak Ada Informasi">
                     </figure>
                 </div>
                 <div class="col-12 col-md-6 order-md-1">
@@ -86,7 +86,7 @@
                                         </p>
                                         <!-- Image Container -->
                                         <div id="imageContainer" class="figure" style="background-color: #B5D3FF; margin: 0; padding: 0;">
-                                            <img id="dosenImage" src="{{ asset('assets/img/kepuasan pelanggan/dosen&staff/hrm/Dosen_2023.png') }}" alt="" class="figure-img img-fluid rounded" style="display: block; margin: 0; padding: 0; border: none;">
+                                            <img id="dosenImage" src="{{ asset('assets/img/kepuasan pelanggan/dosen&staff/hrm/Dosen_2023.png') }}" alt="Tidak Ada Informasi" class="figure-img img-fluid rounded" style="display: block; margin: 0; padding: 0; border: none;">
                                         </div>
                                     </div>
                                 </div>
@@ -101,7 +101,7 @@
                                         </p>
                                         <!-- Image Container -->
                                         <div id="imageContainer" class="figure" style="background-color: #B5D3FF; margin: 0; padding: 0;">
-                                            <img id="tendikImage" src="{{ asset('assets/img/kepuasan pelanggan/dosen&staff/hrm/Tendik_2023.png') }}" alt="" class="figure-img img-fluid rounded" style="display: block; margin: 0; padding: 0; border: none;">
+                                            <img id="tendikImage" src="{{ asset('assets/img/kepuasan pelanggan/dosen&staff/hrm/Tendik_2023.png') }}" alt="Tidak Ada Informasi" class="figure-img img-fluid rounded" style="display: block; margin: 0; padding: 0; border: none;">
                                         </div>
                                     </div>
                                 </div>
