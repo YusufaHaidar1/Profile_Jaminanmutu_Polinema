@@ -61,6 +61,14 @@ Route::get('/SPMI', function () {
     return view('SPMI.SPMI');
 });
 
+Route::get('/Program', function () {
+    return view('Akreditasi.prostud');
+});
+
+Route::get('/Akreditasi', function () {
+    return view('Akreditasi.prostud');
+});
+
 Route::get('/test', function () {
     return view('SPMI.test');
 });
