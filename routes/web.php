@@ -55,18 +55,19 @@ Route::get('/berita1', function () {
 
 Route::get('/standarkualitas', function () {
     return view('SPMI.standar');
-});
+}) ->name('standar');
+
 Route::get('/SPMI', function () {
     return view('SPMI.SPMI');
-});
+})->name('SPMI');
 
 Route::get('/Program', function () {
     return view('Akreditasi.prostud');
-});
+}) ->name('program');
 
 Route::get('/Akreditasi', function () {
     return view('Akreditasi.akreditasi');
-});
+})->name('akreditasi');
 
 Route::get('/test', function () {
     return view('SPMI.test');
