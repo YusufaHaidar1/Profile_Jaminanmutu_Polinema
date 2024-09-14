@@ -50,7 +50,7 @@
                 <!-- Navigation -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" id="navbarBeranda" href="#" aria-haspopup="true"
+                        <a class="nav-link" id="navbarBeranda" href="/homepage" aria-haspopup="true"
                             aria-expanded="false">
                             Beranda
                         </a>
@@ -66,9 +66,8 @@
                                     <div class="row gx-0">
                                         <div class="col-5 col-lg-2">
                                             <!-- List -->
-                                            <a class="dropdown-item" href="./profil/visimisi.html"> Visi Misi </a>
-                                            <a class="dropdown-item" href="./profil/kebijakanmutu.html"> Kebijakan Mutu
-                                            </a>
+                                            <a class="dropdown-item" href="/visimisi"> Visi Misi </a>
+                                            <a class="dropdown-item" href="/kebijakan mutu"> Kebijakan Mutu </a>
                                             <a class="dropdown-item" href="./profil/tugasdanfungsi.html"> Tugas dan
                                                 Fungsi Utama </a>
                                         </div>
