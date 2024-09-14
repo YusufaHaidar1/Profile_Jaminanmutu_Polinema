@@ -88,10 +88,10 @@
                                     <div class="row gx-0">
                                         <div class="col-5 col-lg-2">
                                             <!-- List -->
-                                            <a class="dropdown-item" href="./Profil/standar.html">
+                                            <a class="dropdown-item" href="./standarkualitas">
                                                 Standar Kualitas Internal
                                             </a>
-                                            <a class="dropdown-item" href="./Profil/spmi.html">
+                                            <a class="dropdown-item" href="./SPMI">
                                                 File SPMI
                                             </a>
                                         </div>
@@ -100,11 +100,28 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="navbarAkreditasi" data-bs-toggle="dropdown" href="#"
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarSPMI" data-bs-toggle="dropdown" href="#"
                             aria-haspopup="true" aria-expanded="false">
                             Akreditasi
                         </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarProfil">
+                            <div class="row gx-0">
+                                <div class="col-1">
+                                    <div class="row gx-0">
+                                        <div class="col-5 col-lg-2">
+                                            <!-- List -->
+                                            <a class="dropdown-item" href="./Akreditasi">
+                                                Akreditasi
+                                            </a>
+                                            <a class="dropdown-item" href="./Program">
+                                                Program Studi
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarPelayanan" data-bs-toggle="dropdown"
