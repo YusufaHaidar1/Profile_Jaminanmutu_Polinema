@@ -32,22 +32,23 @@ Route::prefix('profil')->group(function () {});
 
 Route::get('/signin', function () {
     return view('login.signin');
-});
+})->name('signin');
 
 Route::get('/homepage', function () {
     return view('Beranda.homepage');
-});
+})->name('homepage');
 
 Route::get('/visimisi', function () {
     return view('Profil.visi_misi');
-});
+})->name('visimisi');
 
 Route::get('/kebijakan mutu', function () {
     return view('Profil.kebijakan_mutu');
-});
+})->name('kebijakan mutu');
+
 Route::get('/tugas fungsi utama', function () {
     return view('Profil.tugas_fungsiutama');
-});
+})->name('tugas fungsi utama');
 
 Route::get('/berita1', function () {
     return view('Beranda.berita1');
@@ -55,7 +56,7 @@ Route::get('/berita1', function () {
 
 Route::get('/standarkualitas', function () {
     return view('SPMI.standar');
-}) ->name('standar');
+})->name('standar');
 
 Route::get('/SPMI', function () {
     return view('SPMI.SPMI');
@@ -63,7 +64,7 @@ Route::get('/SPMI', function () {
 
 Route::get('/Program', function () {
     return view('Akreditasi.prostud');
-}) ->name('program');
+})->name('program');
 
 Route::get('/Akreditasi', function () {
     return view('Akreditasi.akreditasi');

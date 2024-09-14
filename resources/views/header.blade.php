@@ -50,7 +50,7 @@
                 <!-- Navigation -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" id="navbarBeranda" href="/homepage" aria-haspopup="true"
+                        <a class="nav-link" id="navbarBeranda" href="{{ route('homepage') }}" aria-haspopup="true"
                             aria-expanded="false">
                             Beranda
                         </a>
@@ -66,9 +66,10 @@
                                     <div class="row gx-0">
                                         <div class="col-5 col-lg-2">
                                             <!-- List -->
-                                            <a class="dropdown-item" href="/visimisi"> Visi Misi </a>
-                                            <a class="dropdown-item" href="/kebijakan mutu"> Kebijakan Mutu </a>
-                                            <a class="dropdown-item" href="/tugas fungsi utama"> Tugas dan
+                                            <a class="dropdown-item" href="{{ route('visimisi') }}"> Visi Misi </a>
+                                            <a class="dropdown-item" href="{{ route('kebijakan mutu') }}"> Kebijakan
+                                                Mutu </a>
+                                            <a class="dropdown-item" href="{{ route('tugas fungsi utama') }}"> Tugas dan
                                                 Fungsi Utama </a>
                                         </div>
                                     </div>
@@ -140,7 +141,8 @@
                                     <a class="dropdown-item" href="{{ route('kepuasanpelanggan.dosenstaff') }}">Dosen
                                         & Staff Pendidikan</a>
                                     <a class="dropdown-item" href="{{ route('kepuasanpelanggan.mitra') }}">Mitra</a>
-                                    <a class="dropdown-item" href="{{ route('kepuasanpelanggan.alumni') }}">Alumni</a>
+                                    <a class="dropdown-item"
+                                        href="{{ route('kepuasanpelanggan.alumni') }}">Alumni</a>
                                 </div>
                             </li>
                             <li class="dropdown-item dropend">
