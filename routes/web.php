@@ -28,10 +28,7 @@ Route::prefix('kepuasanpelanggan')->group(function () {
     Route::get('/alumni', [KepuasanPelangganController::class, 'alumni'])->name('kepuasanpelanggan.alumni');
 });
 
-Route::prefix('profil')->group(function () {
-    
-    
-});
+Route::prefix('profil')->group(function () {});
 
 Route::get('/signin', function () {
     return view('login.signin');
@@ -48,7 +45,9 @@ Route::get('/visimisi', function () {
 Route::get('/kebijakan mutu', function () {
     return view('Profil.kebijakan_mutu');
 });
-
+Route::get('/tugas fungsi utama', function () {
+    return view('Profil.tugas_fungsiutama');
+});
 
 Route::get('/berita1', function () {
     return view('Beranda.berita1');

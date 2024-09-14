@@ -8,9 +8,8 @@
         <div class="container">
             <h2 class="text-center mt-5 fw-bolder">Tugas dan Fungsi Utama</h2>
             <p class="text-center" style="color: #9B9B9B">Politeknik Negeri Malang (POLINEMA) bertekad untuk memberikan
-                kepuasan kepada para
-                pemangku kepentingan dengan selalu menjaga komitmen yang tinggi terhadap kualitas melalui kebijakan di
-                bidang:</p>
+                kepuasan kepada para pemangku kepentingan dengan selalu menjaga
+                komitmen yang tinggi terhadap kualitas melalui kebijakan di bidang:</p>
 
             <div class="text-center mt-1">
                 <img src="{{ asset('assets/img/Kebijakan mutu/image.png') }}" class="img-fluid"
@@ -19,54 +18,98 @@
 
             <div class="row mt-10">
                 <div class="col-md-12">
-                    <h4 class="mb-3 fw-bolder">Pendidikan</h4>
+                    <h4 class="mb-3 fw-bolder">Pekerjaan Utama KJM</h4>
                     <ol class=" " style="color: #9B9B9B">
-                        <li>Pelaksanaan pendidikan meliputi perencanaan, pelaksanaan, pemantauan, evaluasi sistem, dan
-                            perbaikan terus-menerus.</li>
-                        <li>Peningkatan kualitas program studi secara simultan dan komprehensif yang ditunjukkan dengan
-                            peningkatan Key Performance Indicator (KPI), peringkat akreditasi nasional dan reputasi
-                            internasional.</li>
-                        <li>Meningkatkan kualitas civitas akademika dengan membangun karakter profesional.</li>
+                        <li>Meninjau dan mengembangkan layanan/produk terkait SPM.</li>
+                        <li>Melakukan evaluasi kualitas internal secara berkala di seluruh unit di
+                            POLINEMA.</li>
+                        <li>Meninjau dan mengevaluasi beberapa proses.</li>
                     </ol>
                 </div>
             </div>
 
             <div class="row mt-4">
                 <div class="col-md-12">
-                    <h4 class="mb-3 fw-bolder">Penelitian, Pengabdian kepada Masyarakat, dan Kerjasama</h4>
+                    <h4 class="mb-3 fw-bolder">Ketua KJM</h4>
                     <ol class=" " style="color: #9B9B9B">
-                        <li>Pengembangan penelitian, dan pengabdian kepada masyarakat yang inovatif, kreatif, dan
-                            berkualitas, berbasis penerapan teknologi.</li>
-                        <li>Meningkatkan jejaring dan kerjasama dengan pemangku kepentingan di bidang pendidikan,
-                            penelitian, dan pengabdian kepada masyarakat yang melibatkan sivitas akademika.</li>
+                        <li>Perencanaan kegiatan tahunan KJM.</li>
+                        <li>Mengkoordinir seluruh kegiatan KJM.</li>
+                        <li>Siapkan instrumen kuesioner bersama dengan tim.</li>
+                        <li>Verifikasi laporan dari setiap unit di KJM.</li>
+                        <li>Bertanggung jawab atas kegiatan Sistem Penjaminan Mutu POLINEMA.</li>
+                        <li>Melaporkan hasil kegiatan KJM kepada Direktur.</li>
+
                     </ol>
                 </div>
             </div>
 
             <div class="row mt-4">
                 <div class="col-md-12">
-                    <h4 class="mb-3 fw-bolder">Kemahasiswaan</h4>
+                    <h4 class="mb-3 fw-bolder">Sekretaris KJM</h4>
                     <ol class=" " style="color: #9B9B9B">
-                        <li>Peningkatan kemampuan akademik dan non akademik, serta pelayanan kesejahteraan mahasiswa.</li>
-                        <li>Meningkatkan akses dan media pengembangan diri, bakat, dan kepribadian melalui kegiatan
-                            kemahasiswaan dan pengembangan karir.</li>
-                        <li>Meningkatkan jaringan alumni dan mengoptimalkan kinerja Job Arrangement System yang ditunjukkan
-                            dengan berkurangnya masa tunggu lulusan untuk mendapatkan pekerjaan.</li>
+                        <li>Merencanakan kegiatan tahunan KJM bersama dengan Kepala KJM.</li>
+                        <li>Perencanaan pengembangan kualitas SDM internal KJM dan SDM eksternal
+                            terkait SPM.</li>
+                        <li>Mengkoordinasikan pelaksanaan kegiatan KJM bersama dengan Kepala KJM.
+                        </li>
+                        <li>Mengkoordinasikan dan menyusun laporan kelembagaan (Laporan Tahunan
+                            Direktur, Laporan Audit)</li>
+                        <li>Penjadwalan semua kegiatan KJM.</li>
+                        <li>Menyusun laporan kegiatan KJM.</li>
+
                     </ol>
                 </div>
             </div>
 
             <div class="row mt-4">
                 <div class="col-md-12">
-                    <h4 class="mb-3 fw-bolder">Manajemen, Pencitraan, dan Layanan</h4>
+                    <h4 class="mb-3 fw-bolder">Unit Kontrol Dokumen</h4>
                     <ol class=" " style="color: #9B9B9B">
-                        <li>Setiap program kerja dan rencana kegiatan harus mengacu pada sasaran mutu, rencana strategis,
-                            dan capaian mutu/kinerja POLINEMA.</li>
-                        <li>Peningkatan kualitas tata kelola melalui kejelasan SOP dan implementasinya, serta pengendalian
-                            dokumen dan catatan.</li>
-                        <li>Meningkatkan kualitas pelayanan melalui peningkatan kualitas SDM dan infrastruktur.</li>
-                        <li>Menciptakan citra merek POLINEMA sehingga mendapatkan kepercayaan pemangku kepentingan.</li>
-                        <li>Pengembangan sistem informasi yang berkualitas, informatif, akuntabel dan terintegrasi.</li>
+                        <li>Pengembangan SIM terkait SPMI.</li>
+                        <li>Melakukan inovasi dan monitoring layanan/produk seluruh unit di
+                            POLINEMA.</li>
+                        <li>Membuat laporan tahunan terkait perkembangan layanan SPMI.</li>
+                        <li>Mendokumentasikan hasil kegiatan.</li>
+
+                    </ol>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h4 class="mb-3 fw-bolder">Unit Audit Internal</h4>
+                    <ol class=" " style="color: #9B9B9B">
+                        <li>Pengembangan SIM terkait SPMI.</li>
+                        <li>Melakukan inovasi dan monitoring layanan/produk seluruh unit di
+                            POLINEMA.</li>
+                        <li>Membuat laporan tahunan terkait perkembangan layanan SPMI.</li>
+                        <li>Mendokumentasikan hasil kegiatan.</li>
+
+                    </ol>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h4 class="mb-3 fw-bolder">Unit Pengukuran Statistik Pelanggan</h4>
+                    <ol class=" " style="color: #9B9B9B">
+                        <li>Merencanakan dan melakukan evaluasi proses.</li>
+                        <li>Membentuk tim evaluasi proses.</li>
+                        <li>Menyiapkan laporan hasil evaluasi dan analisis proses.</li>
+                        <li>Mendokumentasikan hasil kegiatan.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h4 class="mb-3 fw-bolder">Staf Administrasi KJM</h4>
+                    <ol class=" " style="color: #9B9B9B">
+                        <li>Membantu semua kegiatan yang dilakukan oleh KJM.</li>
+                        <li>Membantu Sekretaris dalam menyusun laporan kegiatan.</li>
+                        <li>Mendokumentasikan setiap kegiatan dan laporan kegiatan KJM.</li>
+                        <li>Meringkas kegiatan KJM.</li>
+
                     </ol>
                 </div>
             </div>

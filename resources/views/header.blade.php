@@ -68,7 +68,7 @@
                                             <!-- List -->
                                             <a class="dropdown-item" href="/visimisi"> Visi Misi </a>
                                             <a class="dropdown-item" href="/kebijakan mutu"> Kebijakan Mutu </a>
-                                            <a class="dropdown-item" href="./profil/tugasdanfungsi.html"> Tugas dan
+                                            <a class="dropdown-item" href="/tugas fungsi utama"> Tugas dan
                                                 Fungsi Utama </a>
                                         </div>
                                     </div>
