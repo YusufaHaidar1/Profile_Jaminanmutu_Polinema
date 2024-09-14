@@ -16,10 +16,8 @@
         .container {
             max-width: auto;
             margin: 0 auto;
-            margin-bottom: 90px;
+            margin-bottom: 40px;
             flex-wrap: wrap;
-            justify-content: left;
-            
         }
 
         .box-row {

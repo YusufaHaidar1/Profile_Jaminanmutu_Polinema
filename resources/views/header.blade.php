@@ -66,7 +66,7 @@
                                     <div class="row gx-0">
                                         <div class="col-5 col-lg-2">
                                             <!-- List -->
-                                            <a class="dropdown-item" href="./profil/visimisi.html"> Visi Misi </a>
+                                            <a class="dropdown-item" href="/visimisi"> Visi Misi </a>
                                             <a class="dropdown-item" href="./profil/kebijakanmutu.html"> Kebijakan Mutu
                                             </a>
                                             <a class="dropdown-item" href="./profil/tugasdanfungsi.html"> Tugas dan
@@ -88,10 +88,10 @@
                                     <div class="row gx-0">
                                         <div class="col-5 col-lg-2">
                                             <!-- List -->
-                                            <a class="dropdown-item" href="./standarkualitas">
+                                            <a class="dropdown-item" href="{{ route('standar') }}">
                                                 Standar Kualitas Internal
                                             </a>
-                                            <a class="dropdown-item" href="./SPMI">
+                                            <a class="dropdown-item" href="{{ route('SPMI') }}">
                                                 File SPMI
                                             </a>
                                         </div>
@@ -111,10 +111,10 @@
                                     <div class="row gx-0">
                                         <div class="col-5 col-lg-2">
                                             <!-- List -->
-                                            <a class="dropdown-item" href="./Akreditasi">
+                                            <a class="dropdown-item" href="{{ route('akreditasi') }}">
                                                 Akreditasi
                                             </a>
-                                            <a class="dropdown-item" href="./Program">
+                                            <a class="dropdown-item" href="{{ route('program') }}">
                                                 Program Studi
                                             </a>
                                         </div>
