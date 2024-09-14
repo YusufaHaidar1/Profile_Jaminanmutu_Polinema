@@ -87,7 +87,7 @@
                 </div>
             </div>
 
-
+            // sijamu
             <div class="container-fluid" style="background-color: #1B2A4E; height: 350px;">
                 <div class="container">
                     <h1 class="text-center text-light mb-7 pt-3">Sistem Informasi Jaminan Mutu <span
