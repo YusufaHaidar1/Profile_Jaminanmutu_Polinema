@@ -172,13 +172,13 @@
         tendikImage.onload = function() {
             document.getElementById('tendikImage').src = tendikImage.src;
             document.getElementById('staffSection').style.display = 'block';
-            document.getElementById('dosenHeading').textContent = 'GRAFIK PROSENTASI KEPUASAN DOSEN';
+            document.getElementById('dosenHeading').textContent = 'GRAFIK PROSENTASE KEPUASAN DOSEN';
         };
         tendikImage.onerror = function() {
             // Hide the staff section if the image is not found
             document.getElementById('staffSection').style.display = 'none';
             // Update the heading if staff section is hidden
-            document.getElementById('dosenHeading').textContent = 'GRAFIK PROSENTASI KEPUASAN DOSEN & STAFF';
+            document.getElementById('dosenHeading').textContent = 'GRAFIK PROSENTASE KEPUASAN DOSEN & STAFF';
         };
     }
 
