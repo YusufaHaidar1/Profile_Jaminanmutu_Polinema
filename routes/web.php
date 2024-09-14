@@ -66,7 +66,7 @@ Route::get('/Program', function () {
 });
 
 Route::get('/Akreditasi', function () {
-    return view('Akreditasi.prostud');
+    return view('Akreditasi.akreditasi');
 });
 
 Route::get('/test', function () {
