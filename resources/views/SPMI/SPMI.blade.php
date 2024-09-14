@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <title>Standart Kualitas Internal</title>
     <style>
         .container {
             max-width: 800px;
             margin: 0 auto;
             margin-bottom: 40px;
-            flex-wrap: wrap;
-            justify-content: left;
         }
 
         .box-row {
@@ -108,51 +107,65 @@
         Berikut Sistem Penjaminan Mutu Internal di Politeknik Negeri Malang
     </p>
     <div class="container">
-    <div class="box-row">
-        <a href="./assets/files/SPMI_2013.pdf" >
-            <div class="box">
-                <div class="icon-space"></div>
-                <h3>SPMI 2013</h3>
+        <div class="row box-row">
+            <div class="col-md-3">
+                <a href="./assets/files/SPMI_2013.pdf">
+                    <div class="box">
+                        <div class="icon-space"></div>
+                        <h3>SPMI 2013</h3>
+                    </div>
+                </a>
             </div>
-        </a>
-        
-        <a href="./assets/files/SPMI_2015.pdf" >
-            <div class="box">
-                <div class="icon-space"></div>
-                <h3>SPMI 2015</h3>
+            <div class="col-md-3">
+                <a href="./assets/files/SPMI_2015.pdf">
+                    <div class="box">
+                        <div class="icon-space"></div>
+                        <h3>SPMI 2015</h3>
+                    </div>
+                </a>
             </div>
-        </a>
-        <a href="./assets/files/SPMI_2017.pdf" >
-            <div class="box">
-                <div class="icon-space"></div>
-                <h3>SPMI 2017</h3>
+            <div class="col-md-3">
+                <a href="./assets/files/SPMI_2017.pdf">
+                    <div class="box">
+                        <div class="icon-space"></div>
+                        <h3>SPMI 2017</h3>
+                    </div>
+                </a>
             </div>
-        </a>
-        <a href="./assets/files/SPMI_2020.pdf" >
-            <div class="box">
-                <div class="icon-space"></div>
-                <h3>SPMI 2020</h3>
+            <div class="col-md-3">
+                <a href="./assets/files/SPMI_2020.pdf">
+                    <div class="box">
+                        <div class="icon-space"></div>
+                        <h3>SPMI 2020</h3>
+                    </div>
+                </a>
             </div>
-        </a>
+        </div>
+        <div class="row box-row">
+            <div class="col-md-3">
+                <a href="./assets/files/SPMI_2021.pdf">
+                    <div class="box">
+                        <div class="icon-space"></div>
+                        <h3>SPMI 2021</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="./assets/files/aa.pdf">
+                    <div class="box">
+                        <div class="icon-space"></div>
+                        <h3>grgrg</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="box-row">
-        <a href="./assets/files/SPMI_2021.pdf" >
-            <div class="box">
-                <div class="icon-space"></div>
-                <h3>SPMI 2021</h3>
-            </div>
-        </a>
-        <a href="./assets/files/aa.pdf" >
-            <div class="box">
-                <div class="icon-space"></div>
-                <h3>grgrg</h3>
-            </div>
-        </a>
-    </div>
-</div>  
 
     {{-- Include the footer --}}
     @include('footer')
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
