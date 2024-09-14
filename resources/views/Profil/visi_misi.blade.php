@@ -41,14 +41,16 @@
             color: #F1F4F8;
         }
 
-        .box p2 {
-            margin-bottom: 10px;
-            color: #F1F4F8;
-        }
+        
 
         .box ul {
             list-style: none;
             padding: 0;
+            color: #F1F4F8;
+        }
+
+        .box p2 {
+            margin-bottom: 10px;
             color: #F1F4F8;
         }
 
@@ -59,14 +61,11 @@
 
         .content {
             display: flex;
+            grid-template-columns: 1fr 1fr; /* Kolom sama besar */
+            gap: 20px;
         }
-        .left-side {
-            width: 50%;
-            padding-right: 20px;
-        }
-
-        .right-side {
-            width: 50%;
+        .left-side, .right-side {
+            width: 50%; /* Membuat lebar kedua sisi sama */
         }
 
         .padding {
@@ -91,7 +90,9 @@
             <div class="left-side">
                 <div class="box">
                     <h2>Visi</h2>
+                    <ul>
                     <p2>Menjadi organisasi penjaminan mutu yang profesional dan sekaligus membantu POLINEMA menjadi lembaga pendidikan tinggi vokasi yang unggul dalam persaingan global</p2>
+                    </ul>
                 </div>
             </div>
     
