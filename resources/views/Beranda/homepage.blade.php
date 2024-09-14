@@ -5,7 +5,7 @@
 @section('content')
     <!-- Content -->
     <section class="py-6 py-md-6">
-        <div class="container-fluid">
+        <div class="container-fluid" style="width: 100%; padding: 0; margin: 0;">
             <div class="row justify-content-between">
                 <div class="col-12 col-md-6 order-md-2">
                     <img class="figure-img img-fluid rounded" src="{{ asset('assets/img/beranda/image.png') }}"
@@ -87,79 +87,127 @@
                 </div>
             </div>
 
-            // sijamu
-            <div class="container-fluid" style="background-color: #1B2A4E; height: 350px;">
-                <div class="container">
-                    <h1 class="text-center text-light mb-7 pt-3">Sistem Informasi Jaminan Mutu <span
-                            style="color: #FAD776; font-weight: normal; ">(SIJAMU)</span></h1>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="card text-light rounded-4" style="background-color: #5A80B5;">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-center mb-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
-                                            fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
-                                            <path
-                                                d="M5.5 7a.5.5 0 0 1 .5.5v5.777a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5v-5.777a.5.5 0 0 1 .5-.5zm2.5.854v3.889c0 .276.226.5.5.5h3.717c.276 0 .5-.224.5-.5V8.854c0-.276-.224-.5-.5-.5H8.5z" />
-                                            <path
-                                                d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
-                                        </svg>
-                                    </div>
-                                    <h5 class="fw-bolder card-title text-center">Kuisioner Alumni</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card text-light rounded-4" style="background-color: #5A80B5;">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-center mb-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
-                                            fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
-                                            <path
-                                                d="M5.5 7a.5.5 0 0 1 .5.5v5.777a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5v-5.777a.5.5 0 0 1 .5-.5zm2.5.854v3.889c0 .276.226.5.5.5h3.717c.276 0 .5-.224.5-.5V8.854c0-.276-.224-.5-.5-.5H8.5z" />
-                                            <path
-                                                d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
-                                        </svg>
-                                    </div>
-                                    <h5 class="fw-bolder card-title text-center">Audit Internal</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card text-light rounded-4" style="background-color: #5A80B5;">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-center mb-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
-                                            fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
-                                            <path
-                                                d="M5.5 7a.5.5 0 0 1 .5.5v5.777a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5v-5.777a.5.5 0 0 1 .5-.5zm2.5.854v3.889c0 .276.226.5.5.5h3.717c.276 0 .5-.224.5-.5V8.854c0-.276-.224-.5-.5-.5H8.5z" />
-                                            <path
-                                                d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
-                                        </svg>
-                                    </div>
-                                    <h5 class="fw-bolder card-title text-center">Document Quality Assurance</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card text-light rounded-4" style="background-color: #5A80B5;">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-center mb-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
-                                            fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
-                                            <path
-                                                d="M5.5 7a.5.5 0 0 1 .5.5v5.777a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5v-5.777a.5.5 0 0 1 .5-.5zm2.5.854v3.889c0 .276.226.5.5.5h3.717c.276 0 .5-.224.5-.5V8.854c0-.276-.224-.5-.5-.5H8.5z" />
-                                            <path
-                                                d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
-                                        </svg>
-                                    </div>
-                                    <h5 class="fw-bolder card-title text-center">Kuisioner Mitra</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- TESTIMONIALS -->
+    <section class="pt-8 pt-md-11" style="background-color: #1B2A4E; width: 100%; padding: 0; margin: 0;">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 text-center">
+  
+              <!-- Heading -->
+              <h2 class="fw-bold" style="color: white">
+                SISTEM INFORMASI PENJAMINAN MUTU (SIJAMU)
+              </h2>
+  
+              <!-- Text -->
+              <p class="text-body-secondary mb-7 mb-md-9">
+                Berikut ini adalah sistem yang terdapat dalam SIJAMU
+              </p>
+  
             </div>
+          </div> <!-- / .row -->
+          <div class="row">
+            <div class="col-12">
+  
+              <!-- Flickity -->
+              <div class="flickity-viewport-visible pt-2 pb-9" data-flickity='{"cellAlign": "center", "imagesLoaded": true, "pageDots": false, "prevNextButtons": false, "contain": true}'>
+                <div class="d-block col-12 col-md-5 col-lg-4">
+  
+                  <!-- Card -->
+                  <div class="card card-border shadow-light-lg lift lift-lg">
+                    <div class="card-body text-center">
+  
+                      <!-- Icon -->
+                      <div class="img-fluid mb-5 w-50 mx-auto" style="color: #FF5A5F;">
+                        <img src="{{ asset('assets/img/Document Icon.png') }}" class="rounded">                    
+                        </div>
+  
+                      <!-- Text -->
+                      <h3 class="text-gray-700 mb-5">
+                        Kuisioner Alumni
+                      </h3>
+  
+                      <!-- Link -->
+                      <a href="#!" style="color: #FF5A5F;">Kunjungi</a>
+  
+                    </div>
+                  </div>
+
+                </div>
+                <div class="d-block col-12 col-md-5 col-lg-4">
+  
+                    <!-- Card -->
+                    <div class="card card-border shadow-light-lg lift lift-lg">
+                      <div class="card-body text-center">
+    
+                        <!-- Icon -->
+                        <div class="img-fluid mb-5 w-50 mx-auto" style="color: #FF5A5F;">
+                          <img src="{{ asset('assets/img/Document Icon.png') }}" class="rounded">                    
+                          </div>
+    
+                        <!-- Text -->
+                        <h3 class="text-gray-700 mb-5">
+                          Audit Internal
+                        </h3>
+    
+                        <!-- Link -->
+                        <a href="#!" style="color: #FF5A5F;">Kunjungi</a>
+    
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="d-block col-12 col-md-5 col-lg-4">
+  
+                    <!-- Card -->
+                    <div class="card card-border shadow-light-lg lift lift-lg">
+                      <div class="card-body text-center">
+    
+                        <!-- Icon -->
+                        <div class="img-fluid mb-2 w-50 mx-auto" style="color: #FF5A5F;">
+                          <img src="{{ asset('assets/img/Document Icon.png') }}" class="rounded">                    
+                          </div>
+    
+                        <!-- Text -->
+                        <h3 class="text-gray-700 mb-3">
+                          Document Quality Assurance (DCKJM)   
+                        </h3>
+    
+                        <!-- Link -->
+                        <a href="#!" style="color: #FF5A5F;">Kunjungi</a>
+    
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="d-block col-12 col-md-5 col-lg-4">
+  
+                    <!-- Card -->
+                    <div class="card card-border shadow-light-lg lift lift-lg">
+                      <div class="card-body text-center">
+    
+                        <!-- Icon -->
+                        <div class="img-fluid mb-5 w-50 mx-auto" style="color: #FF5A5F;">
+                          <img src="{{ asset('assets/img/Document Icon.png') }}" class="rounded">                    
+                          </div>
+    
+                        <!-- Text -->
+                        <h3 class="text-gray-700 mb-5">
+                          Kuisioner Mitra
+                        </h3>
+    
+                        <!-- Link -->
+                        <a href="#!" style="color: #FF5A5F;">Kunjungi</a>
+    
+                      </div>
+                    </div>
+                    
+                  </div>
+              </div>
+  
+            </div>
+          </div> <!-- / .row -->
+        </div> <!-- / .container -->
+      </section>
 
 
             <div class="row py-10 justify-content-center">
