@@ -29,7 +29,7 @@
                         <img class="figure-img img-fluid rounded lift lift-lg" src="{{ asset('assets/img/kepuasan pelanggan/dosen&staff/hrm/Unsur_IKM_2023.png') }}" id="unsurImage" alt="Tidak Ada Informasi">
                     </figure>
                 </div>
-                <div class="col-12 col-md-6 order-md-1">
+                <div class="col-12 col-md-10 col-lg-7">
                     <!-- Card -->
                     <div class="card card-border shadow-lg" style="background-color: #B5D3FF;">
                         <div class="card-body">
@@ -172,13 +172,13 @@
         tendikImage.onload = function() {
             document.getElementById('tendikImage').src = tendikImage.src;
             document.getElementById('staffSection').style.display = 'block';
-            document.getElementById('dosenHeading').textContent = 'GRAFIK PROSENTASI KEPUASAN DOSEN';
+            document.getElementById('dosenHeading').textContent = 'GRAFIK PROSENTASE KEPUASAN DOSEN';
         };
         tendikImage.onerror = function() {
             // Hide the staff section if the image is not found
             document.getElementById('staffSection').style.display = 'none';
             // Update the heading if staff section is hidden
-            document.getElementById('dosenHeading').textContent = 'GRAFIK PROSENTASI KEPUASAN DOSEN & STAFF';
+            document.getElementById('dosenHeading').textContent = 'GRAFIK PROSENTASE KEPUASAN DOSEN & STAFF';
         };
     }
 
