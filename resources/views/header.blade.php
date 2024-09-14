@@ -28,7 +28,7 @@
         <div class="container">
 
             <!-- Brand -->
-            <a class="navbar-brand" href="./index.html">
+            <a class="navbar-brand" href="{{ route('homepage') }}">
                 <img src="{{ asset('./assets/img/brand.png') }}" class="navbar-brand-img" alt="...">
             </a>
 
