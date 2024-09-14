@@ -106,14 +106,14 @@
             </div>
           </div> <!-- / .row -->
           <div class="row">
-            <div class="col-12">
+            <div class="col-12" >
   
               <!-- Flickity -->
-              <div class="flickity-viewport-visible pt-2 pb-9" data-flickity='{"cellAlign": "center", "imagesLoaded": true, "pageDots": false, "prevNextButtons": false, "contain": true}'>
+              <div class="flickity-viewport-visible pt-2 pb-9" data-flickity='{"cellAlign": "center", "pageDots": false, "prevNextButtons": false, "contain": true}'>
                 <div class="d-block col-12 col-md-5 col-lg-4">
   
                   <!-- Card -->
-                  <div class="card card-border shadow-light-lg lift lift-lg">
+                  <div class="card shadow-light-lg lift lift-lg" style="background-color: #B5D3FF;">
                     <div class="card-body text-center">
   
                       <!-- Icon -->
@@ -136,7 +136,7 @@
                 <div class="d-block col-12 col-md-5 col-lg-4">
   
                     <!-- Card -->
-                    <div class="card card-border shadow-light-lg lift lift-lg">
+                    <div class="card shadow-light-lg lift lift-lg" style="background-color: #B5D3FF;">
                       <div class="card-body text-center">
     
                         <!-- Icon -->
@@ -159,7 +159,7 @@
                   <div class="d-block col-12 col-md-5 col-lg-4">
   
                     <!-- Card -->
-                    <div class="card card-border shadow-light-lg lift lift-lg">
+                    <div class="card shadow-light-lg lift lift-lg" style="background-color: #B5D3FF;">
                       <div class="card-body text-center">
     
                         <!-- Icon -->
@@ -182,7 +182,7 @@
                   <div class="d-block col-12 col-md-5 col-lg-4">
   
                     <!-- Card -->
-                    <div class="card card-border shadow-light-lg lift lift-lg">
+                    <div class="card shadow-light-lg lift lift-lg" style="background-color: #B5D3FF;">
                       <div class="card-body text-center">
     
                         <!-- Icon -->
