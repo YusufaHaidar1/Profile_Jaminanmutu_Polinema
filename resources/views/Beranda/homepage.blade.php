@@ -224,7 +224,7 @@
                             </div>
                             <h3 class="fw-bold mt-2">Polinema Terakreditasi Internasional ASIC</h3>
                             <div class="d-flex  cursor-pointer">
-                                <a class="pe-2 text-decoration-none" href="#">Selengkapnya
+                                <a class="pe-2 text-decoration-none" href="{{ route('berita') }}">Selengkapnya
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -250,7 +250,7 @@
                             </div>
                             <h3 class="fw-bold mt-2">Polinema Terakreditasi Internasional ASIC</h3>
                             <div class="d-flex  cursor-pointer">
-                                <a class="pe-2 text-decoration-none" href="#">Selengkapnya
+                                <a class="pe-2 text-decoration-none" href="{{ route('berita') }}">Selengkapnya
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -276,7 +276,7 @@
                             </div>
                             <h3 class="fw-bold mt-2">Polinema Terakreditasi Internasional ASIC</h3>
                             <div class="d-flex  cursor-pointer">
-                                <a class="pe-2 text-decoration-none" href="#">Selengkapnya
+                                <a class="pe-2 text-decoration-none" href="{{ route('berita') }}">Selengkapnya
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -289,6 +289,7 @@
                     </div>
                 </div>
             </div>
+            <div style="display: flex; justify-content: center; align-items: center;">
             <div class="row"
                 style="background-color: #F5C149; text-align: center;
                             border: none; border-radius: 8px; display: flex; width: 30%;
@@ -308,6 +309,7 @@
                             fill="white" />
                     </svg>
                 </div>
+            </div>
             </div>
         </div> <!-- / .container -->
     </section>

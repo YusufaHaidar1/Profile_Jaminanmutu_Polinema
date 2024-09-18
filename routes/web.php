@@ -52,7 +52,7 @@ Route::get('/tugas fungsi utama', function () {
 
 Route::get('/berita1', function () {
     return view('Beranda.berita1');
-});
+})->name('berita');
 
 Route::get('/standarkualitas', function () {
     return view('SPMI.standar');
