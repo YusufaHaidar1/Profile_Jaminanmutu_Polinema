@@ -28,3 +28,11 @@
 </body>
 
 </html>
+
+@extends('layouts.app')
+
+@section('title', 'Kepuasan Mahasiswa')
+
+@section('content')
+
+@endsection

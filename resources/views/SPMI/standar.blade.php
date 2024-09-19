@@ -1,3 +1,9 @@
+
+@extends('layouts.app')
+
+@section('title', 'Kepuasan Mahasiswa')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -138,10 +144,7 @@
 </head>
 
 <body>
-  {{-- Include the header --}}
-  @include('header')
-
-  {{-- Your main content goes here --}}
+  
 
   <h1 class="judul text-center">
     <span>SPMI</span>
@@ -244,26 +247,9 @@
 
 
   <!-- Icons -->
-  <ul class="d-inline list-unstyled list-inline list-social">
-    <li class="list-inline-item list-social-item me-3">
-      <a href="#!" class="text-decoration-none">
-        <img src="./assets/img/icons/social/instagram.svg" class="list-social-icon" alt="...">
-      </a>
-    </li>
-    <li class="list-inline-item list-social-item me-3">
-      <a href="#!" class="text-decoration-none">
-        <img src="./assets/img/icons/social/facebook.svg" class="list-social-icon" alt="...">
-      </a>
-    </li>
-    <li class="list-inline-item list-social-item me-3">
-      <a href="#!" class="text-decoration-none">
-        <img src="./assets/img/icons/social/twitter.svg" class="list-social-icon" alt="...">
-      </a>
-    </li>
-  </ul>
 
-  {{-- Include the footer --}}
-  @include('footer')
+
 </body>
 
 </html>
+@endsection
