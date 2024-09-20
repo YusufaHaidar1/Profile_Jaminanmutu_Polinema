@@ -1,3 +1,9 @@
+
+@extends('layouts.app')
+
+@section('title', 'Kepuasan Mahasiswa')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,8 +64,7 @@
 </head>
 
 <body>
-    {{-- Include the header --}}
-    @include('header')
+    
     <h1 class="judul text-center">
         <span>Akreditasi</span>
         <span>Akreditasi Institusi</span>
@@ -108,8 +113,8 @@
         <div class="spacer"></div>
     </div>
 
-    {{-- Include the footer --}}
-    @include('footer')
+    
 </body>
 
 </html>
+@endsection
