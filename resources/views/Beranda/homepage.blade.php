@@ -43,21 +43,21 @@
 
             <div class="container mt-5">
                 <div class="card h-100">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                        <div class="d-flex align-items-center justify-content-center rounded"
-                            style="background-color: #1B2A4E; height: 50px;">
-                            <h3 class="text-center text-white">Data & Statistik</h3>
+                    <div class="card-body d-flex flex-column align-items-center justify-content-between">
+                        <div class="d-flex align-items-center justify-content-center"
+                            style="border-radius: 25px; background-color: #1B2A4E; height: 75px; width: 600px;">
+                            <h3 class="text-center text-white fw-bolder fs-2">Data & Statistik</h3>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mt-8">
                     <div class="col-md-4 mb-3">
                         <div class="card h-100">
                             <div class="card-body d-flex flex-column justify-content-between">
-                                <h1 class="card-title text-center mb-4 fw-bolder">99</h1>
+                                <h1 class="card-title text-center mb-4 fw-bolder" style="font-size: 80px;">99</h1>
                                 <div class="d-flex align-items-center justify-content-center rounded"
                                     style="background-color: #8ECAE6; height: 50px;">
-                                    <h3 class="text-center text-white">Jurusan</h3>
+                                    <h3 class="m-0 text-white fw-bolder">Jurusan</h3>
                                 </div>
                             </div>
                         </div>
@@ -65,10 +65,10 @@
                     <div class="col-md-4 mb-3">
                         <div class="card h-100">
                             <div class="card-body d-flex flex-column justify-content-between">
-                                <h1 class="card-title text-center mb-4 fw-bolder">99</h1>
+                                <h1 class="card-title text-center mb-4 fw-bolder" style="font-size: 80px;">99</h1>
                                 <div class="d-flex align-items-center justify-content-center rounded"
                                     style="background-color: #8ECAE6; height: 50px;">
-                                    <h3 class="text-center text-white">Program Studi</h3>
+                                    <h3 class="m-0 text-white fw-bolder">Program Studi</h3>
                                 </div>
                             </div>
                         </div>
@@ -76,10 +76,10 @@
                     <div class="col-md-4 mb-3">
                         <div class="card h-100">
                             <div class="card-body d-flex flex-column justify-content-between">
-                                <h1 class="card-title text-center mb-4 fw-bolder">99</h1>
+                                <h1 class="card-title text-center mb-4 fw-bolder" style="font-size: 80px;">99</h1>
                                 <div class="d-flex align-items-center justify-content-center rounded"
                                     style="background-color: #8ECAE6; height: 50px;">
-                                    <h3 class="text-center text-white">Mahasiswa</h3>
+                                    <h3 class="m-0 text-white fw-bolder">Mahasiswa</h3>
                                 </div>
                             </div>
                         </div>
@@ -88,123 +88,96 @@
             </div>
 
             <!-- TESTIMONIALS -->
-            <section class="pt-8 pt-md-11" style="background-color: #1B2A4E; width: 100%; padding: 0; margin: 0;">
+            <section class="mt-9 pt-8 pt-md-11" style="background-color: #1B2A4E; width: 100%; padding: 0; margin: 0;">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-12 col-md-10 col-lg-8 text-center">
-
                             <!-- Heading -->
                             <h2 class="fw-bold" style="color: white">
-                                SISTEM INFORMASI PENJAMINAN MUTU (SIJAMU)
+                                SISTEM INFORMASI PENJAMINAN MUTU
+                                <span style="color: #FAD776;">(SIJAMU)</span>
                             </h2>
-
                             <!-- Text -->
                             <p class="text-body-secondary mb-7 mb-md-9">
                                 Berikut ini adalah sistem yang terdapat dalam SIJAMU
                             </p>
-
                         </div>
                     </div> <!-- / .row -->
+
                     <div class="row">
                         <div class="col-12">
-
                             <!-- Flickity -->
                             <div class="flickity-viewport-visible pt-2 pb-9"
                                 data-flickity='{"cellAlign": "center", "pageDots": false, "prevNextButtons": false, "contain": true}'>
                                 <div class="d-block col-12 col-md-5 col-lg-4">
-
                                     <!-- Card -->
                                     <div class="card shadow-light-lg lift lift-lg" style="background-color: #B5D3FF;">
                                         <div class="card-body text-center">
-
                                             <!-- Icon -->
                                             <div class="img-fluid mb-5 w-50 mx-auto" style="color: #FF5A5F;">
                                                 <img src="{{ asset('assets/img/Document Icon.png') }}" class="rounded">
                                             </div>
-
                                             <!-- Text -->
                                             <h3 class="text-gray-700 mb-5">
                                                 Kuisioner Alumni
                                             </h3>
-
                                             <!-- Link -->
                                             <a href="#!" style="color: #FF5A5F;">Kunjungi</a>
-
                                         </div>
                                     </div>
-
                                 </div>
                                 <div class="d-block col-12 col-md-5 col-lg-4">
-
                                     <!-- Card -->
                                     <div class="card shadow-light-lg lift lift-lg" style="background-color: #B5D3FF;">
                                         <div class="card-body text-center">
-
                                             <!-- Icon -->
                                             <div class="img-fluid mb-5 w-50 mx-auto" style="color: #FF5A5F;">
                                                 <img src="{{ asset('assets/img/Document Icon.png') }}" class="rounded">
                                             </div>
-
                                             <!-- Text -->
                                             <h3 class="text-gray-700 mb-5">
                                                 Audit Internal
                                             </h3>
-
                                             <!-- Link -->
                                             <a href="#!" style="color: #FF5A5F;">Kunjungi</a>
-
                                         </div>
                                     </div>
-
                                 </div>
                                 <div class="d-block col-12 col-md-5 col-lg-4">
-
                                     <!-- Card -->
                                     <div class="card shadow-light-lg lift lift-lg" style="background-color: #B5D3FF;">
                                         <div class="card-body text-center">
-
                                             <!-- Icon -->
                                             <div class="img-fluid mb-2 w-50 mx-auto" style="color: #FF5A5F;">
                                                 <img src="{{ asset('assets/img/Document Icon.png') }}" class="rounded">
                                             </div>
-
                                             <!-- Text -->
                                             <h3 class="text-gray-700 mb-3">
                                                 Document Quality Assurance (DCKJM)
                                             </h3>
-
                                             <!-- Link -->
                                             <a href="#!" style="color: #FF5A5F;">Kunjungi</a>
-
                                         </div>
                                     </div>
-
                                 </div>
                                 <div class="d-block col-12 col-md-5 col-lg-4">
-
                                     <!-- Card -->
                                     <div class="card shadow-light-lg lift lift-lg" style="background-color: #B5D3FF;">
                                         <div class="card-body text-center">
-
                                             <!-- Icon -->
                                             <div class="img-fluid mb-5 w-50 mx-auto" style="color: #FF5A5F;">
                                                 <img src="{{ asset('assets/img/Document Icon.png') }}" class="rounded">
                                             </div>
-
                                             <!-- Text -->
                                             <h3 class="text-gray-700 mb-5">
                                                 Kuisioner Mitra
                                             </h3>
-
                                             <!-- Link -->
                                             <a href="#!" style="color: #FF5A5F;">Kunjungi</a>
-
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
-
                         </div>
                     </div> <!-- / .row -->
                 </div> <!-- / .container -->
@@ -218,7 +191,7 @@
                             alt="Tidak Ada Informasi">
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-2">
-                                <img src="{{ asset('assets/img/berita/berita1.png') }}" class="rounded-circle"
+                                <img src="{{ asset('assets/img/profil/sukuna.png') }}" class="rounded-circle"
                                     alt="Profil" width="50" height="50">
                                 <h3 class="px-2 mb-0"><span class="text-muted">Oleh</span> Pritantina</h3>
                                 <p class="mb-0 text-muted ms-auto">07 August</p>
@@ -244,7 +217,7 @@
                             alt="Tidak Ada Informasi">
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-2">
-                                <img src="{{ asset('assets/img/berita/berita1.png') }}" class="rounded-circle"
+                                <img src="{{ asset('assets/img/profil/gojo.png') }}" class="rounded-circle"
                                     alt="Profil" width="50" height="50">
                                 <h3 class="px-2 mb-0"><span class="text-muted">Oleh</span> Pritantina</h3>
                                 <p class="mb-0 text-muted ms-auto">07 August</p>
@@ -270,7 +243,7 @@
                             style="width: 100%;" alt="Tidak Ada Informasi">
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-2">
-                                <img src="{{ asset('assets/img/berita/berita1.png') }}" class="rounded-circle"
+                                <img src="{{ asset('assets/img/profil/levi.png') }}" class="rounded-circle"
                                     alt="Profil" width="50" height="50">
                                 <h3 class="px-2 mb-0"><span class="text-muted">Oleh</span> Pritantina</h3>
                                 <p class="mb-0 text-muted ms-auto">07 August</p>
