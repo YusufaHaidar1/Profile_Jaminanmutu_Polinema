@@ -30,4 +30,9 @@ class KepuasanPelangganController extends Controller
     {
         return view('Pelayanan.Kepuasan Pelanggan.alumni');
     }
+
+    public function student()
+    {
+        return view('Pelayanan.Kepuasan Pelanggan.student');
+    }
 }

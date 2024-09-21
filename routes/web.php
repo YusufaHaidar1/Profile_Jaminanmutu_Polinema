@@ -26,6 +26,7 @@ Route::prefix('kepuasanpelanggan')->group(function () {
     Route::get('/dosenstaff', [KepuasanPelangganController::class, 'dosenstaff'])->name('kepuasanpelanggan.dosenstaff');
     Route::get('/mitra', [KepuasanPelangganController::class, 'mitra'])->name('kepuasanpelanggan.mitra');
     Route::get('/alumni', [KepuasanPelangganController::class, 'alumni'])->name('kepuasanpelanggan.alumni');
+    Route::get('/student', [KepuasanPelangganController::class, 'student'])->name('kepuasanpelanggan.student');
 });
 
 Route::prefix('profil')->group(function () {});
@@ -49,6 +50,8 @@ Route::get('/kebijakan mutu', function () {
 Route::get('/tugas fungsi utama', function () {
     return view('Profil.tugas_fungsiutama');
 })->name('tugas fungsi utama');
+
+
 
 Route::get('/berita1', function () {
     return view('Beranda.berita1');

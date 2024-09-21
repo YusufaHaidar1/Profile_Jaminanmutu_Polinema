@@ -118,7 +118,7 @@
     
     <div class="container">
     <div class="box-row">
-        <a href="/assets/files/SPMI_2013.pdf" >
+        <a href="{{ route('kepuasanpelanggan.student') }}" >
             <div class="box">
                 <div class="icon-space"></div>
                 <h3>ADMINISTRASI NIAGA</h3>
