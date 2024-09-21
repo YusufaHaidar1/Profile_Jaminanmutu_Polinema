@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-12 col-md-6 order-md-1 px-10 py-8">
                     <div class="row">
-                        <h1 style="font-weight: bold; font-size: 50px;">
+                        <h1 style="font-weight: bold; font-size: 55px;">
                             Pusat Penjaminan Mutu dan Pengembangan Pembelajaran
                             <span style="color: #FAD776;">(P2MPP)</span>
                         </h1>
@@ -263,7 +263,7 @@
                     </div>
                 </div>
             </div>
-            <div style="display: flex; justify-content: center; align-items: center;">
+            <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 90px;">
                 <div class="row"
                     style="background-color: #F5C149; text-align: center;
                             border: none; border-radius: 8px; display: flex; width: 20%;
