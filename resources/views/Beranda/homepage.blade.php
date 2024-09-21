@@ -20,7 +20,7 @@
                     </div>
                     <div class="row"
                         style="background-color: #F5C149; text-align: center;
-                            border: none; border-radius: 8px; display: flex; width: 30%;
+                            border: none; border-radius: 8px; display: flex; width: 45%;
                             margin: 4px 2px;
                             cursor: pointer; padding: 5px 10px;">
                         <div class="col">
@@ -266,7 +266,7 @@
             <div style="display: flex; justify-content: center; align-items: center;">
                 <div class="row"
                     style="background-color: #F5C149; text-align: center;
-                            border: none; border-radius: 8px; display: flex; width: 30%;
+                            border: none; border-radius: 8px; display: flex; width: 20%;
                             margin: 4px 2px;
                             cursor: pointer; padding: 5px 10px;">
                     <div class="col">
@@ -275,7 +275,8 @@
                             color: white;
                             text-decoration: none;
                             font-size: 16px;
-                            ">Selengkapnya</a>
+                            ">Berita
+                            Lainnya</a>
                         <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
