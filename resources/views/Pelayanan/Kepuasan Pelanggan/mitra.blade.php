@@ -48,11 +48,6 @@
                                         <option value="2021">2021</option>
                                         <option value="2020">2020</option>
                                     </select>
-                                    <!-- Text -->
-                                    <span class="input-group-text border-0 py-0 ps-1 pe-3">
-                                        <!-- Button -->
-                                        <button type="submit" class="btn btn-sm btn-primary" id="filterButton">Search</button>
-                                    </span>
                                 </div>
                             </form>
                             <!-- List group -->
@@ -63,9 +58,9 @@
                                         <p class="fw-bold mb-1 text-center" style="background-color: #B5D3FF;">
                                             GRAFIK PROSENTASE KEPUASAN PARTNER
                                         </p>
-                                        <!-- Image Container -->
-                                        <div id="imageContainer" class="figure" style="background-color: #B5D3FF; margin: 0; padding: 0;">
-                                            <img id="filteredImage" src="{{ asset('assets/img/kepuasan pelanggan/mitra/IKM_2023.png') }}" alt="Tidak Ada Informasi" class="figure-img img-fluid rounded" style="display: block; margin: 0; padding: 0; border: none;">
+                                        <!-- Chart Container -->
+                                        <div id="chartContainer" class="figure" style="background-color: #ffffff; margin: 0; padding: 0;">
+                                            <canvas id="myBarChart" width="500" height="400"></canvas> <!-- Chart goes here -->
                                         </div>
                                     </div>
                                 </div>
@@ -79,27 +74,79 @@
 @endsection
 
 @section('scripts')
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Display the default image (latest year) on page load
-            displayImage('2023');
-            
-            // Add event listener for the filter button
-            document.getElementById('filterButton').addEventListener('click', function(event) {
-                // Prevent the default form submission
-                event.preventDefault();
-                
-                const selectedYear = document.getElementById('yearSelect').value;
-                displayImage(selectedYear);
-            });
-        });
-        
-        // Function to display the image based on the selected year
-        function displayImage(year) {
-            const imageFilename = `{{ asset('assets/img/kepuasan pelanggan/mitra/IKM_${year}.png') }}`;
-            const image = document.getElementById('filteredImage');
-            image.src = imageFilename;
-            image.style.display = 'block'; // Ensure the image is displayed
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Define your data based on the year
+    const dataByYear = {
+        2023: [3.51, 3.482, 3.518, 3.479, 3.505, 3.523, 3.481, 3.55, 3.5],
+        2021: [3.88, 3.85, 3.9, 3.8, 3.98, 3.98, 3.75, 3.88, 3.98],
+        2020: [3.9, 3.82, 3.88, 3.82, 3.98, 3.98, 3.72, 3.84, 3.98],
+        2022: [] // No data for 2022
+    };
+
+    const ctx = document.getElementById('myBarChart').getContext('2d');
+
+    // Initialize the chart with empty data (or default to the latest year)
+    let myBarChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['U1', 'U2', 'U3', 'U4', 'U5', 'U6', 'U7', 'U8', 'U9'],
+            datasets: [{
+                label: 'Nilai Kepuasan Partner',
+                data: [], // Empty initially
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(199, 199, 199, 0.2)',
+                    'rgba(83, 102, 255, 0.2)',
+                    'rgba(255, 99, 71, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(199, 199, 199, 1)',
+                    'rgba(83, 102, 255, 1)',
+                    'rgba(255, 99, 71, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: false,   // Prevents the scale from starting at 0
+                    min: 3.4,             // Start the Y-axis at 3.4
+                    max: 4,               // End the Y-axis at 4
+                    ticks: {
+                    stepSize: 0.1,
+                    } 
+                }
+            }
         }
-    </script>
+    });
+
+    // Function to update chart data based on selected year
+    function updateChartData(year) {
+        const selectedData = dataByYear[year] || [];
+        myBarChart.data.datasets[0].data = selectedData; // Update data
+        myBarChart.update(); // Refresh the chart
+    }
+
+    // Listen for year selection changes
+    document.getElementById('yearSelect').addEventListener('change', function() {
+        const selectedYear = this.value;
+        updateChartData(selectedYear); // Update chart based on selected year
+    });
+
+    // Set default year to 2023
+    updateChartData('2023');
+</script>
 @endsection
