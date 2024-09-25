@@ -171,7 +171,7 @@
                 data: {
                     labels: ['U1', 'U2', 'U3', 'U4', 'U5', 'U6', 'U7', 'U8', 'U9', 'U10', 'U11', 'U12', 'U13'],
                     datasets: [{
-                        label: 'Prosentase Kepuasan Dosen & Staff',
+                        label: '',
                         data: data,
                         backgroundColor: 'rgba(54, 162, 235, 0.2)',
                         borderColor: 'rgba(54, 162, 235, 1)',
@@ -179,6 +179,11 @@
                     }]
                 },
                 options: {
+                    plugins: {
+                        legend: {
+                            display: false // This hides the dataset label
+                        }
+                    },
                     scales: {
                         y: {
                             beginAtZero: false,

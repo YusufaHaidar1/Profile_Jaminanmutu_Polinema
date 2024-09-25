@@ -92,7 +92,7 @@
         data: {
             labels: ['U1', 'U2', 'U3', 'U4', 'U5', 'U6', 'U7', 'U8', 'U9'],
             datasets: [{
-                label: 'Nilai Kepuasan Partner',
+                label: '',
                 data: [], // Empty initially
                 backgroundColor: [
                     'rgba(54, 162, 235, 0.2)',
@@ -120,6 +120,11 @@
             }]
         },
         options: {
+            plugins: {
+                        legend: {
+                            display: false // This hides the dataset label
+                        }
+            },
             scales: {
                 y: {
                     beginAtZero: false,   // Prevents the scale from starting at 0
