@@ -62,17 +62,13 @@
                 <div class="col-12 col-md-5 order-md-2">
                     <!-- Heading -->
                     <h2>GRAFIK KARAKTERISTIK RESPONDEN</h2>
-                    <!-- Figure 3 -->
-                    <figure class="figure mb-7">
-                        <img class="figure-img img-fluid rounded lift lift-lg" src="{{ asset('assets/img/kepuasan pelanggan/orangtua/Grafik_Karakteristik_2023.png') }}" alt="Tidak Ada Informasi">
-                    </figure>
-
+                    <!-- Grafik Karakteristik Responden Chart -->
+                    <canvas id="karakteristikChart" width="400" height="400"></canvas>
+                
                     <!-- Heading -->
                     <h2>GRAFIK NILAI IKM</h2>
-                    <!-- Figure 4-->
-                    <figure class="figure mb-7">
-                        <img class="figure-img img-fluid rounded lift lift-lg" src="{{ asset('assets/img/kepuasan pelanggan/orangtua/Grafik_IKM_2023.png') }}" alt="Tidak Ada Informasi">
-                    </figure>
+                    <!-- Grafik Nilai IKM Chart -->
+                    <canvas id="ikmChart" width="400" height="400"></canvas>
                 </div>
             </div> <!-- / .row -->
         </div> <!-- / .container -->
@@ -80,28 +76,118 @@
 @endsection
 
 @section('scripts')
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Display the default images (latest year) on page load
-            displayImages('2023');
+        let karakteristikChart, ikmChart;
 
-            // Add event listener for the filter button
-            document.getElementById('filterButton').addEventListener('click', function(event) {
-                // Prevent the default form submission
-                event.preventDefault();
+        const karakteristikData = {
+            2023: {
+                data: [67, 33, 2.4, 30.9, 64.6, 8, 5, 42, 10, 30, 5, 24.3, 18.6, 26.5, 2.9, 26.2, 28, 54.3, 14.2, 1.5]
+            },
+            2022: {
+                data: [67, 33, 2.4, 30.9, 64.6, 8, 5, 42, 10, 30, 5, 24.3, 18.6, 26.5, 2.9, 26.2, 28, 54.3, 14.2, 1.5]
+            },
+            2021: {
+                data: [67, 33, 2.4, 30.9, 64.6, 8, 5, 42, 10, 30, 5, 24.3, 18.6, 26.5, 2.9, 26.2, 28, 54.3, 14.2, 1.5]
+            },
+            2020: {
+                data: [67, 33, 2.4, 30.9, 64.6, 8, 5, 42, 10, 30, 5, 24.3, 18.6, 26.5, 2.9, 26.2, 28, 54.3, 14.2, 1.5]
+            },
+            2019: {
+                data: [71.9, 29.9, 2.4, 30.9, 64.6, 9.5, 9.8, 44.9, 7.3, 25.3, 4.2, 24.3, 18.6, 26.5, 2.9, 26.2, 28, 54.3, 14.2, 1.5]
+            }
+        };
 
-                const selectedYear = document.getElementById('yearSelect').value;
-                displayImages(selectedYear);
+        const ikmData = {
+            2023: {
+                data: [3.9, 3.43, 3.47, 3.39, 3.38, 3.441, 3.443, 3.461, 3.461, 3.39, 3.37, 3.375]
+            },
+            2020: {
+                data: [85, 84.8, 86.8, 86.1, 84.2, 86.4, 86.8, 86.9, 89, 88, 83, 84.3],
+            },
+            2019: {
+                data: [71.9, 74.1, 74.2, 72.2, 71.6, 78.4, 76.3, 78.1, 78, 75, 76, 70.3],
+            }
+        };
+
+        // Function to initialize or update charts
+        function displayCharts(year) {
+            const karakteristikYearData = karakteristikData[year] || { labels: [], data: [] };
+            const ikmYearData = ikmData[year] || { labels: [], data: [] };
+
+            // Destroy previous charts if they exist
+            if (karakteristikChart) karakteristikChart.destroy();
+            if (ikmChart) ikmChart.destroy();
+
+            // Create the Karakteristik Chart
+            const ctx1 = document.getElementById('karakteristikChart').getContext('2d');
+            karakteristikChart = new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: ['Laki - Laki', 'Perempuan', '<40 Tahun', '40 - 49 Tahun', '> 50 Tahun', 'SD / MI', 'SMP/MTS', 'SMA / MA', 'Diploma', 'Sarjana', 'Pasca Sarjana', 'PNS', 'Karyawan Swasta', 'Wiraswasta', 'TNI / Polri', 'Lainnya', '< 2,5jt', '2,5 - 5jt', '5 - 10jt', '>10jt'],
+                    datasets: [{
+                        data: karakteristikYearData.data,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: false // This hides the dataset label
+                        }
+                    },
+                    scales: {
+                        y: {
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%'; // Add "%" to the y-axis labels
+                                }
+                            }
+                        }
+                    }
+                }
             });
-        });
 
-        // Function to display images based on the selected year
-        function displayImages(year) {
-            // Update the src for each image based on the year
-            document.querySelector("img[src*='Karakteristik_']").src = `{{ asset('assets/img/kepuasan pelanggan/orangtua/Karakteristik_${year}.png') }}`;
-            document.querySelector("img[src*='Pelayanan_']").src = `{{ asset('assets/img/kepuasan pelanggan/orangtua/Unsur_Pelayanan_${year}.png') }}`;
-            document.querySelector("img[src*='Grafik_Karakteristik_']").src = `{{ asset('assets/img/kepuasan pelanggan/orangtua/Grafik_Karakteristik_${year}.png') }}`;
-            document.querySelector("img[src*='Grafik_IKM_']").src = `{{ asset('assets/img/kepuasan pelanggan/orangtua/Grafik_IKM_${year}.png') }}`;
+            // Create the IKM Chart
+            const ctx2 = document.getElementById('ikmChart').getContext('2d');
+            ikmChart = new Chart(ctx2, {
+                type: 'bar',
+                data: {
+                    labels: ['U1', 'U2', 'U3', 'U4', 'U5', 'U6', 'U7', 'U8', 'U9', 'U10', 'U11', 'U12'],
+                    datasets: [{
+                        data: ikmYearData.data,
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: false // This hides the dataset label
+                        }
+                    },
+                    y: {
+                    beginAtZero: true
+                }
+                }
+            });
         }
+
+        // Display default charts (latest year) on page load
+        displayCharts('2023');
+
+        // Add event listener for the filter button
+        document.getElementById('filterButton').addEventListener('click', function(event) {
+            event.preventDefault();
+            const selectedYear = document.getElementById('yearSelect').value;
+            if (selectedYear) {
+                displayCharts(selectedYear);
+            }
+        });
+    });
     </script>
 @endsection
