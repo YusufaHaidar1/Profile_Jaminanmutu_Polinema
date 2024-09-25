@@ -26,7 +26,7 @@
                     <h2>UNSUR IKM</h2>
                     <!-- Figure -->
                     <figure class="figure mb-7">
-                        <img class="figure-img img-fluid rounded lift lift-lg" src="{{ asset('assets/img/kepuasan pelanggan/dosen&staff/hrm/Unsur_IKM_2023.png') }}" id="unsurImage" alt="Tidak Ada Informasi">
+                        <img class="figure-img img-fluid rounded lift lift-lg" src="{{ asset('') }}" id="unsurImage" alt="Tidak Ada Informasi">
                     </figure>
                 </div>
                 <div class="col-12 col-md-10 col-lg-7">
@@ -82,26 +82,11 @@
                                     <div class="me-auto">
                                         <!-- Heading -->
                                         <p id="dosenHeading" class="fw-bold mb-1 text-center" style="background-color: #B5D3FF;">
-                                            GRAFIK PROSENTASE KEPUASAN DOSEN
+                                            GRAFIK PROSENTASE KEPUASAN DOSEN & STAFF
                                         </p>
-                                        <!-- Image Container -->
-                                        <div id="imageContainer" class="figure" style="background-color: #B5D3FF; margin: 0; padding: 0;">
-                                            <img id="dosenImage" src="{{ asset('assets/img/kepuasan pelanggan/dosen&staff/hrm/Dosen_2023.png') }}" alt="Tidak Ada Informasi" class="figure-img img-fluid rounded" style="display: block; margin: 0; padding: 0; border: none;">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- List group -->
-                            <div id="staffSection" class="list-group list-group-flush">
-                                <div class="list-group-item d-flex align-items-center" style="background-color: #B5D3FF;">
-                                    <div class="me-auto">
-                                        <!-- Heading -->
-                                        <p id="staffHeading" class="fw-bold mb-1 text-center" style="background-color: #B5D3FF;">
-                                            GRAFIK PROSENTASE KEPUASAN STAFF
-                                        </p>
-                                        <!-- Image Container -->
-                                        <div id="imageContainer" class="figure" style="background-color: #B5D3FF; margin: 0; padding: 0;">
-                                            <img id="tendikImage" src="{{ asset('assets/img/kepuasan pelanggan/dosen&staff/hrm/Tendik_2023.png') }}" alt="Tidak Ada Informasi" class="figure-img img-fluid rounded" style="display: block; margin: 0; padding: 0; border: none;">
+                                        <!-- Chart Container -->
+                                        <div id="dosenChartContainer" style="background-color: #ffffff;">
+                                            <canvas id="dosenChart" width="500" height="400"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -115,86 +100,104 @@
 @endsection
 
 @section('scripts')
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
+    let dosenChart; // Declare a global variable for the chart
+
     document.addEventListener('DOMContentLoaded', function() {
-        // Display the default image (latest year) on page load
-        displayImages('2023', 'default');
-        
-        // Add event listener for the filter button
+        const dataByCategoryAndYear = {
+            hrm: {
+                2023: [3.28, 3.25, 3.39, 3.4, 3.23, 3.12, 3.10, 3.34, 3.45, 3.3, 3.32, 3.34, 3.35],
+                2022: [3.45, 3.53, 3.5, 3.49, 3.5, 3.49, 3.55, 3.5, 3.47, 3.5],
+                2021: [3.28, 3.24, 3.4, 3.4, 3.23, 3.13, 3.13, 3.35, 3.47, 3.32],
+                2020: [3.74, 3.7, 3.7, 3.8, 3.76, 3.6, 3.5, 3.7, 3.85, 3.8],
+            },
+            finance: {
+                2023: [3.41, 3.39, 3.24, 3.21, 3.27, 3.34, 3.19, 3.19, 3.19, 3.31],
+                2022: [3.49, 3.52, 3.5, 3.45, 3.48, 3.45, 3.47, 3.5, 3.44, 3.46],
+                2021: [3.35, 3.35, 3.38, 3.44, 3.32, 3.2, 3.2, 3.4, 3.44, 3.41],
+                2020: [3.74, 3.7, 3.7, 3.8, 3.76, 3.6, 3.5, 3.7, 3.85, 3.8]
+            },
+            facilities: {
+                2023: [3.23, 3.52, 3.53, 3.54, 3.54, 3.55, 3.50, 3.42, 3.49],
+                2022: [3.57, 3.48, 3.56, 3.55, 3.50, 3.52, 3.47, 3.53, 3.52],
+                2021: [3.27, 3.34, 3.30, 3.36, 3.20, 3.24, 3.24, 3.35, 3.29]
+            },
+            riset: {
+                2023: [3.4, 3.43, 3.41, 3.45, 3.36, 3.53, 3.52, 3.52, 3.54, 3.46, 3.47, 3.44, 3.46],
+                2022: [3.47, 3.44, 3.49, 3.51, 3.48, 3.45, 3.49, 3.54, 3.49, 3.5, 3.51, 3.52, 3.49],
+                2021: [3.51, 3.51, 3.51, 3.54, 3.56, 3.49, 3.41, 3.48, 3.40, 3.44, 3.41, 3.43, 3.38]
+            },
+            community: {
+                2023: [3.4, 3.42, 3.31, 3.44, 3.33],
+                2022: [3.48, 3.48, 3.54, 3.03, 3.5, 3.54, 3.47, 3.48, 3.55, 3.5, 3.53, 3.5, 3.54],
+                2021: [3.55, 3.55, 3.53, 3.56, 3.48, 3.49, 3.46, 3.48, 3.43, 3.45, 3.32, 3.47, 3.35]
+            }
+        };
+
+        function updateUnsurImage(category, year) {
+        const imageBasePath = '{{ asset('assets/img/kepuasan pelanggan') }}';
+        const categoryFolder = encodeURIComponent('dosen&staff'); // encode the folder name
+        const imagePath = `${imageBasePath}/${categoryFolder}/${category}/Unsur_IKM.png`;
+        console.log("Image Path:", imagePath);
+        document.getElementById('unsurImage').src = imagePath;
+        }
+
+        // Event listener for the filter button
         document.getElementById('filterButton').addEventListener('click', function(event) {
-            // Prevent the default form submission
             event.preventDefault();
-            
+
             const selectedYear = document.getElementById('yearSelect').value;
             const selectedCategory = document.getElementById('categorySelect').value;
-            
-            // Display images based on selected category and year
+
             if (selectedYear && selectedCategory) {
-                displayImages(selectedYear, selectedCategory);
-            } else {
-                // If no selection, clear the images and headings
-                clearImages();
+                displayChart(selectedCategory, selectedYear);
+                updateUnsurImage(selectedCategory, selectedYear);
             }
         });
+
+        function displayChart(category, year) {
+            const data = dataByCategoryAndYear[category][year] || [];
+
+            // Clear the previous chart instance if it exists
+            if (dosenChart) {
+                dosenChart.destroy();
+            }
+
+            // Create a new chart
+            const ctx = document.getElementById('dosenChart').getContext('2d');
+            dosenChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['U1', 'U2', 'U3', 'U4', 'U5', 'U6', 'U7', 'U8', 'U9', 'U10', 'U11', 'U12', 'U13'],
+                    datasets: [{
+                        label: 'Prosentase Kepuasan Dosen & Staff',
+                        data: data,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            min: 3.0,
+                            max: 4.0,
+                            ticks: {
+                                stepSize: 0.1
+                            }
+                        }
+                    }
+                }
+            });
+        }
     });
 
-    // Function to display the images based on the selected category and year
-    function displayImages(year, category) {
-        const baseDirectory = category === 'default' ? '' : `assets/img/kepuasan pelanggan/dosen&staff/${category}`;
-        
-        // Set image for UNSUR IKM
-        const unsurImageFilename = category === 'default' ? '' : `Unsur_IKM_${year}.png`;
-        const unsurImageSrc = unsurImageFilename ? `{{ asset('${baseDirectory}/${unsurImageFilename}') }}` : '';
-        const unsurImage = document.getElementById('unsurImage');
-        unsurImage.src = unsurImageSrc;
-
-        // Debugging
-        console.log('UNSUR IKM Image Path:', unsurImageSrc);
-
-        // Set image for KEPUASAN DOSEN
-        const dosenImageFilename = category === 'default' ? '' : `Dosen_${year}.png`;
-        const dosenImageSrc = dosenImageFilename ? `{{ asset('${baseDirectory}/${dosenImageFilename}') }}` : '';
-        const dosenImage = document.getElementById('dosenImage');
-        dosenImage.src = dosenImageSrc;
-
-        // Debugging
-        console.log('KEPUASAN DOSEN Image Path:', dosenImageSrc);
-
-        // Set image for KEPUASAN STAFF and check if it exists
-        const tendikImageFilename = category === 'default' ? '' : `Tendik_${year}.png`;
-        const tendikImageSrc = tendikImageFilename ? `{{ asset('${baseDirectory}/${tendikImageFilename}') }}` : '';
-        const tendikImage = new Image();
-        tendikImage.src = tendikImageSrc;
-
-        // Debugging
-        console.log('KEPUASAN STAFF Image Path:', tendikImageSrc);
-
-        tendikImage.onload = function() {
-            document.getElementById('tendikImage').src = tendikImage.src;
-            document.getElementById('staffSection').style.display = 'block';
-            document.getElementById('dosenHeading').textContent = 'GRAFIK PROSENTASE KEPUASAN DOSEN';
-        };
-        tendikImage.onerror = function() {
-            // Hide the staff section if the image is not found
-            document.getElementById('staffSection').style.display = 'none';
-            // Update the heading if staff section is hidden
-            document.getElementById('dosenHeading').textContent = 'GRAFIK PROSENTASE KEPUASAN DOSEN & STAFF';
-        };
-    }
-
-    // Function to clear all images and headings
-    function clearImages() {
-        // Clear UNSUR IKM image
+    // Function to clear charts and reset the Unsur IKM image
+    function clearCharts() {
+        if (dosenChart) dosenChart.destroy();
         document.getElementById('unsurImage').src = '';
-        
-        // Clear KEPUASAN DOSEN image
-        document.getElementById('dosenImage').src = '';
-        
-        // Hide KEPUASAN STAFF section
-        document.getElementById('staffSection').style.display = 'none';
-        
-        // Set default heading text for KEPUASAN DOSEN
-        document.getElementById('dosenHeading').textContent = '';
     }
 </script>
 @endsection
