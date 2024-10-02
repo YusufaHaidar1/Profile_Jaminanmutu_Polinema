@@ -198,8 +198,7 @@
                 </ul>
 
                 <!-- Button -->
-                <a class="navbar-btn btn btn-sm btn-primary lift ms-auto"
-                    href="https://themes.getbootstrap.com/product/landkit/" target="_blank">
+                <a class="navbar-btn btn btn-sm btn-primary lift ms-auto" href="{{ route('signin') }}">
                     Masuk
                 </a>
 
