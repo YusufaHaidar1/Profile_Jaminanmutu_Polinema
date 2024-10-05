@@ -1,6 +1,9 @@
-# Penjaminan Mutu Polinema
 
-## Introduction
+=======
+<p align="center"><a href="https://laravel.com" target="_blank"><img src=![brand](https://github.com/user-attachments/assets/da80f19f-30af-4bf3-8d73-9bfa55fc6828) width="400" alt="Jamintu Logo"></a></p>
+
+## Penjaminan Mutu Polinema
+>>>>>>> 8f74b0303dd8b4a4b6d6c5d0196b499ef8b3987b
 
 The Polinema Quality Assurance Project is a website application developed using the Laravel framework. This application aims to provide information about Malang State Polytechnic and also as a place to store internal quality assurance system files and for customer satisfaction surveys and also as a place for information about institutional and study program accreditation.
 
@@ -9,15 +12,20 @@ The Polinema Quality Assurance Project is a website application developed using 
 - User Registration and Authentication: Users can create an account and log in to access the application.
 - Home View: The application displays items such as statistical displays and also quality assurance system displays (sijamu) and there is news that occurs at the Malang State Polytechnic
 - Profile Menu: The application displays information such as vision, mission and objectives and displays quality policies and also main tasks and functions
-- SPMI = User can see 42 internal quality standards from Polinema and User can see File SPMI
-- Akreditasi = User can see table of prodi and akreditasi from Polinema that contain a file of sertificate
-- Pelayanan = User can see review from Student, Lecturer, Student Parent, and Staff
+=======
+- SPMI : Lists of Standard & Files of Polinema
+- Akreditasi : History of accreditation (University & Study Programs) of Polinema
+- Service : 
+   - a. Customer Satisfaction : Lists and Data of Customer Satisfaction incl. Mahasiswa, Orangtua, Dosen & Staff, Mitra, and Alumni
+    - b. Training : (TBA)   
+- SIJAMU : (TBA)
+>>>>>>> 8f74b0303dd8b4a4b6d6c5d0196b499ef8b3987b
 
-
-
-
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Installation
+1. Clone the repository: `git clone https://github.com/your-repo.git`
+2. Install dependencies: `composer install && npm install`
+3. Configure the environment variables: Copy the `.env.example` file to `.env` and update the necessary variables.
+4. Generate the application key: `php artisan key:generate`
 
 ## License
 
