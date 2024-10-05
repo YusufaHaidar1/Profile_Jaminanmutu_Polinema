@@ -1,6 +1,8 @@
 
 
-![Logo](assets/preview/image.png)
+<div align="center">
+  ![Logo](assets/preview/image.png)
+</div>
 ## Penjaminan Mutu Polinema
 
 
