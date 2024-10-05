@@ -59,11 +59,22 @@ In order to ensure that the Laravel community is welcoming to all, please review
 
 ## Security Vulnerabilities
 
+
+
 # Penjaminan Mutu Polinema
 
 ## Introduction
 
-The E-Canteen project is a web application developed using Laravel and Inertia.js with Svelte. It aims to provide a convenient and efficient way for users to order food from a canteen online.
+The Polinema Quality Assurance Project is a website application developed using the Laravel framework. This application aims to provide information about Malang State Polytechnic and also as a place to store internal quality assurance system files and for customer satisfaction surveys and also as a place for information about institutional and study program accreditation.
+
+## Features
+
+- User Registration and Authentication: Users can create an account and log in to access the application.
+- Home View: The application displays items such as statistical displays and also quality assurance system displays (sijamu) and there is news that occurs at the Malang State Polytechnic
+- Profile Menu: The application displays information such as vision, mission and objectives and displays quality policies and also main tasks and functions
+
+
+
 
 
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
