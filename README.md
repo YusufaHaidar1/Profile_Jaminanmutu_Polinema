@@ -1,7 +1,6 @@
 
-=======
-<p align="center"><a href="https://laravel.com" target="_blank"><img src=![brand](https://github.com/user-attachments/assets/da80f19f-30af-4bf3-8d73-9bfa55fc6828) width="400" alt="Jamintu Logo"></a></p>
 
+![Logo](assets/img/image.png)
 ## Penjaminan Mutu Polinema
 >>>>>>> 8f74b0303dd8b4a4b6d6c5d0196b499ef8b3987b
 
