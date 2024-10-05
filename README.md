@@ -1,6 +1,6 @@
 
 
-![Logo](assets/img/image.png)
+![Logo](https://github-production-user-asset-6210df.s3.amazonaws.com/91399445/373837375-da80f19f-30af-4bf3-8d73-9bfa55fc6828.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20241005%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241005T033841Z&X-Amz-Expires=300&X-Amz-Signature=42ebf099a096257163bcd2d94b98b33ad22b22cdc19c59d9e532c059a9c236fa&X-Amz-SignedHeaders=host)
 ## Penjaminan Mutu Polinema
 >>>>>>> 8f74b0303dd8b4a4b6d6c5d0196b499ef8b3987b
 
