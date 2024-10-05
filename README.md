@@ -59,6 +59,13 @@ In order to ensure that the Laravel community is welcoming to all, please review
 
 ## Security Vulnerabilities
 
+# Penjaminan Mutu Polinema
+
+## Introduction
+
+The E-Canteen project is a web application developed using Laravel and Inertia.js with Svelte. It aims to provide a convenient and efficient way for users to order food from a canteen online.
+
+
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
