@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('customer_satisfaction_chart', function (Blueprint $table) {
-            $table->integer('id',11);
+            $table->id('id_cust_chart',11);
             $table->string('kategori',50)->nullable()->default('NULL');
             $table->date('tahun');
 
