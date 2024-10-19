@@ -16,6 +16,7 @@ return new class extends Migration
             $table->enum('jenjang', ['institusi', 'program studi D-III', 'program studi D-IV', 'program studi S2']);
             $table->string('sk');
             $table->string('nama');
+            $table->string('nama_eng');
             $table->string('skor');
             $table->string('masa_berlaku');
             $table->text('dokumen');
