@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('nama');
             $table->string('nama_eng');
             $table->string('skor');
-            $table->string('masa_berlaku');
+            $table->string('masa_berlaku_dari');
+            $table->string('masa_berlaku_sampai');
             $table->text('dokumen');
         });
     }
