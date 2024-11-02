@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('jurusan', function (Blueprint $table) {
-            $table->id('id_jurusan', 16);
-            $table->string('nama_jurusan');
-            $table->enum('aktif', ['ya', 'tidak']);
+        Schema::create('footer', function (Blueprint $table) {
+            $table->id('id_footer');
+            $table->string('title');
+            $table->text('content');
         });
     }
 
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('jurusan');
+        Schema::dropIfExists('footer');
     }
 };
