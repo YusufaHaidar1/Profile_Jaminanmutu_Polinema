@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('beranda', function (Blueprint $table) {
             $table->id('id_beranda');
-            $table->unsignedBigInteger('id_berita', 11)->index();
+            $table->unsignedBigInteger('id_berita')->index();
             $table->text('judul');
             $table->text('judul_eng');
             $table->text('deskripsi');

@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('berita', function (Blueprint $table) {
             $table->id('id_berita',11);
             $table->string('penulis');
-            $table->date('tanggal')->nullable()->default('NULL');
+            $table->date('tanggal')->nullable();
             $table->string('judul')->nullable()->default('NULL');
             $table->string('judul_eng')->nullable()->default('NULL');
-            $table->text('deskripsi')->nullable()->default('NULL');
-            $table->text('deskripsi_eng')->nullable()->default('NULL');
-            $table->text('gambar')->nullable()->default('NULL');
+            $table->text('deskripsi')->nullable();
+            $table->text('deskripsi_eng')->nullable();
+            $table->text('gambar')->nullable();
             $table->text('gambar_eng');
         });
     }

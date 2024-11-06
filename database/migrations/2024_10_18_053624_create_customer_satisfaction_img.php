@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('id_cust_img',11);
             $table->string('kategori',50)->nullable()->default('NULL');
             $table->date('tahun');
-            $table->text('gambar')->nullable()->default('NULL');
+            $table->text('gambar')->nullable();
             $table->text('gambar_eng');
         });
     }
