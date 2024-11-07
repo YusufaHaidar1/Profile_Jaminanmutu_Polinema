@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KepuasanPelangganController;
-use App\Http\Controllers\ProfilController;
-
+use App\Http\Controllers\GroupController;
+use PHPUnit\Framework\Attributes\Group;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +27,19 @@ Route::prefix('kepuasanpelanggan')->group(function () {
     Route::get('/mitra', [KepuasanPelangganController::class, 'mitra'])->name('kepuasanpelanggan.mitra');
     Route::get('/alumni', [KepuasanPelangganController::class, 'alumni'])->name('kepuasanpelanggan.alumni');
     Route::get('/student', [KepuasanPelangganController::class, 'student'])->name('kepuasanpelanggan.student');
+});
+
+Route::group(['prefix' => 'admin'], function(){
+    Route::group(['prefix' => 'group'], function(){
+        Route::get('/', [GroupController::class, 'index']);
+        Route::post('/list', [GroupController::class, 'list']);
+        Route::get('/create', [GroupController::class, 'create']);
+        Route::post('/', [GroupController::class,'store']);
+        Route::get('/{id}', [GroupController::class, 'show']);
+        Route::get('/{id}/edit', [GroupController::class, 'edit']);
+        Route::put('/{id}', [GroupController::class, 'update']);
+        Route::delete('/{id}', [GroupController::class, 'destroy']);
+    });
 });
 
 Route::prefix('profil')->group(function () {});
