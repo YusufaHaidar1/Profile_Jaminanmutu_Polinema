@@ -107,9 +107,9 @@
               </a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('logout') }}" class="nav-link">
+            {{-- <a href="{{ route('logout') }}" class="nav-link">
                 <p>Logout</p>
-            </a>
+            </a> --}}
         </li>
         </ul>
     </nav>

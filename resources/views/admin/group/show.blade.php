@@ -1,4 +1,4 @@
-@extends('layouts.template')
+@extends('layouts.admin.template')
 
 @section('content')
 <div class="card card-outline card-primary">
@@ -15,15 +15,15 @@
     <table class="table table-bordered table-striped table-hover tablesm">
         <tr>
             <th>ID</th>
-            <td>{{ $role->id_group }}</td>
+            <td>{{ $group->id_group }}</td>
         </tr>
         <tr>
             <th>Name</th>
-            <td>{{ $role->name }}</td>
+            <td>{{ $group->name }}</td>
         </tr>
         <tr>
             <th>Description</th>
-            <td>{{ $role->description }}</td>
+            <td>{{ $group->description }}</td>
         </tr>
         </table>
     @endempty

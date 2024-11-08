@@ -1,4 +1,4 @@
-@extends('layouts.template')
+@extends('layouts.admin.template')
 @section('content')
 <div class="card card-outline card-primary">
     <div class="card-header">
@@ -12,7 +12,7 @@
         </div>
         <a href="{{ url('/admin/group') }}" class="btn btn-sm btn-default mt-2">Kembali</a>
         @else
-        <form method="POST" action="{{ url('/admin/role/'.$role->id_role) }}" class="form-horizontal">
+        <form method="POST" action="{{ url('/admin/group/'.$group->id_group) }}" class="form-horizontal">
             @csrf
             {!! method_field('PUT')!!}
             <div class="form-group row">
@@ -27,7 +27,7 @@
             <div class="form-group row">
                 <label class="col-1 control-label col-form-label">Description</label>
                 <div class="col-11">
-                    <input type="text" class="form-control" id="description" name="description" value="{{ old('description', $role->description) }}" required>
+                    <input type="text" class="form-control" id="description" name="description" value="{{ old('description', $group->description) }}" required>
                 @error('description')
                     <small class="form-text text-danger">{{ $message }}</small>
                 @enderror
