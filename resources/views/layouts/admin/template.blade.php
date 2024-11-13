@@ -31,8 +31,8 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{ url('/') }}" class="brand-link">
-      <img src="{{ asset('adminlte/dist/img/INVENTIFY.png') }}" alt="AdminLTE Logo" class="brand-image" style="opacity: 1">
-      <span class="brand-text font-weight-light">.</span>
+      <img src="{{ asset('adminlte/dist/img/kjm.png') }}" alt="AdminLTE Logo" class="brand-image" style="opacity: 1">
+      <span class="brand-text font-weight-light" style="opacity: 0;">.</span>
     </a>
 
     <!-- Sidebar -->
