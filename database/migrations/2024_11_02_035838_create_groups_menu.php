@@ -15,7 +15,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_group')->index();
             $table->unsignedBigInteger('id_menu')->index();
             $table->foreign('id_group')->references('id_group')->on('groups');
-            $table->foreign('id_menu')->references('id_menu')->on('menu');
+            $table->foreign('id_menu')->references('id_menu')->on('sidebar_menu');
         });
     }
 

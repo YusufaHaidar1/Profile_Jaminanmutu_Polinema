@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KepuasanPelangganController;
 use App\Http\Controllers\GroupController;
+use App\Http\Controllers\SidebarController;
 use PHPUnit\Framework\Attributes\Group;
 
 /*
@@ -39,6 +40,17 @@ Route::group(['prefix' => 'admin'], function(){
         Route::get('/{id}/edit', [GroupController::class, 'edit']);
         Route::put('/{id}', [GroupController::class, 'update']);
         Route::delete('/{id}', [GroupController::class, 'destroy']);
+    });
+
+    Route::group(['prefix' => 'sidebar'], function(){
+        Route::get('/', [SidebarController::class, 'index']);
+        Route::post('/list', [SidebarController::class, 'list']);
+        Route::get('/create', [SidebarController::class, 'create']);
+        Route::post('/', [SidebarController::class,'store']);
+        Route::get('/{id}', [SidebarController::class, 'show']);
+        Route::get('/{id}/edit', [SidebarController::class, 'edit']);
+        Route::put('/{id}', [SidebarController::class, 'update']);
+        Route::delete('/{id}', [SidebarController::class, 'destroy']);
     });
 });
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\GroupModel;
+use App\Models\SidebarMenuModel;
 use Yajra\DataTables\Facades\DataTables;
 
 class GroupController extends Controller
@@ -19,9 +20,13 @@ class GroupController extends Controller
             'title' => 'Daftar Group',
         ];
 
+        $menus = SidebarMenuModel::orderBy('level', 'asc')
+        ->orderBy('parent_id', 'asc')
+        ->get();
+
         $activeMenu = 'group';
 
-        return view('admin.group.index', ['breadcrumb' => $breadcrumb, 'page' => $page, 'activeMenu' => $activeMenu]);
+        return view('admin.group.index', ['breadcrumb' => $breadcrumb, 'page' => $page, 'activeMenu' => $activeMenu, 'menus' => $menus]);
     }
 
     public function list(Request $request)
@@ -50,9 +55,13 @@ class GroupController extends Controller
             'title' => 'Tambah Group Baru',
         ];
 
+        $menus = SidebarMenuModel::orderBy('level', 'asc')
+        ->orderBy('parent_id', 'asc')
+        ->get();
+
         $activeMenu = 'group';
 
-        return view('admin.group.create', ['breadcrumb' => $breadcrumb, 'page' => $page, 'activeMenu' => $activeMenu]);
+        return view('admin.group.create', ['breadcrumb' => $breadcrumb, 'page' => $page, 'activeMenu' => $activeMenu, 'menus' => $menus]);
     }
 
     public function store(Request $request){
@@ -81,9 +90,13 @@ class GroupController extends Controller
             'title' => 'Detail Group',
         ];
 
+        $menus = SidebarMenuModel::orderBy('level', 'asc')
+        ->orderBy('parent_id', 'asc')
+        ->get();
+
         $activeMenu = 'group';
 
-        return view('admin.group.show', ['breadcrumb' => $breadcrumb, 'page' => $page, 'group' => $group, 'activeMenu' => $activeMenu]);
+        return view('admin.group.show', ['breadcrumb' => $breadcrumb, 'page' => $page, 'group' => $group, 'activeMenu' => $activeMenu, 'menus' => $menus]);
     }
 
     public function edit(string $id){
@@ -98,9 +111,13 @@ class GroupController extends Controller
             'title' => 'Edit Group',
         ];
 
+        $menus = SidebarMenuModel::orderBy('level', 'asc')
+        ->orderBy('parent_id', 'asc')
+        ->get();
+
         $activeMenu = 'group';
 
-        return view('admin.group.edit', ['breadcrumb' => $breadcrumb, 'page' => $page, 'group' => $group, 'activeMenu' => $activeMenu]);
+        return view('admin.group.edit', ['breadcrumb' => $breadcrumb, 'page' => $page, 'group' => $group, 'activeMenu' => $activeMenu, 'menus' => $menus]);
     }
 
     public function update(Request $request, $id){

@@ -11,14 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('menu', function (Blueprint $table) {
+        Schema::create('sidebar_menu', function (Blueprint $table) {
             $table->id('id_menu');
-            $table->unsignedBigInteger('id_menu_type')->index();
             $table->integer('level');
-            $table->integer('parent_id');
+            $table->integer('parent_id')->nullable();
             $table->string('label');
-            $table->string('link');
-            $table->foreign('id_menu_type')->references('id_menu_type')->on('menu_type');
+            $table->string('link')->nullable();
         });
     }
 
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('menu');
+        Schema::dropIfExists('sidebar_menu');
     }
 };
