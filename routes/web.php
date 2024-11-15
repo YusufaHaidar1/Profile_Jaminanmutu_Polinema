@@ -7,6 +7,7 @@ use App\Http\Controllers\SidebarController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\GroupMenuController;
 use App\Http\Controllers\MemberController;
 use PHPUnit\Framework\Attributes\Group;
 
@@ -51,6 +52,16 @@ Route::group(['middleware' => ['auth']], function(){
                 Route::get('/{id}/edit', [GroupController::class, 'edit']);
                 Route::put('/{id}', [GroupController::class, 'update']);
                 Route::delete('/{id}', [GroupController::class, 'destroy']);
+            });
+
+            Route::group(['prefix' => 'group_menu'], function(){
+                Route::get('/', [GroupMenuController::class, 'index']);
+                Route::post('/list', [GroupMenuController::class, 'list']);
+                Route::get('/create', [GroupMenuController::class, 'create']);
+                Route::post('/', [GroupMenuController::class,'store']);
+                Route::get('/{id}/edit', [GroupMenuController::class, 'edit']);
+                Route::put('/{id}', [GroupMenuController::class, 'update']);
+                Route::delete('/{id}', [GroupMenuController::class, 'destroy']);
             });
 
             Route::group(['prefix' => 'sidebar'], function(){

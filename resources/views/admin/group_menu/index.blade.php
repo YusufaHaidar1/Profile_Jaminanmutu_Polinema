@@ -5,7 +5,7 @@
         <div class="card-header">
             <h3 class="card-title">{{ $page->title }}</h3>
             <div class="card-tools">
-                <a class="btn btn-sm btn-primary mt-1" href="{{ url('/admin/sidebar/create')}}">Tambah</a>
+                <a class="btn btn-sm btn-primary mt-1" href="{{ url('/admin/group_menu/create')}}">Tambah</a>
             </div>
         </div>
             <div class="card-body">
@@ -15,9 +15,9 @@
                 @if (@session('error'))
                     <div class="alert alert-danger">{{ session('error') }}</div>
                 @endif
-                <table class="table table-bordered table-striped table-hover table-sm" id="table_menu">
+                <table class="table table-bordered table-striped table-hover table-sm" id="table_group_menu">
                 <thead>
-                    <tr><th>No</th><th>ID Menu</th><th>Level</th><th>Parent_id</th><th>Label</th><th>Link</th><th>Aksi</th></tr>
+                    <tr><th>ID</th><th>Group</th><th>Menu</th><th>Aksi</th></tr>
                 </thead>
                 </table>
             </div>
@@ -30,14 +30,14 @@
 
 <script>
     $(document).ready(function() {
-        var dataLevel = $('#table_menu').DataTable({
+        var dataLevel = $('#table_group_menu').DataTable({
             serverSide: true, // serverSide: true, jika ingin menggunakan server side processing
             ajax: {
-            "url": "{{ url('/admin/sidebar/list') }}",
+            "url": "{{ url('/admin/group_menu/list') }}",
             "dataType": "json",
             "type": "POST",
             "data": function ( d ) {
-                d.id_menu = $('#id_menu').val();
+                d.id_group_menu = $('#id_group_menu').val();
             }
             },
             columns: [
@@ -48,41 +48,16 @@
                 searchable: false
                 },
                 {
-                data: "id_menu",
+                data: "group.name",
                 className: "",
                 orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
                 searchable: true // searchable: true, jika ingin kolom ini bisa dicari
                 },
                 {
-                data: "level",
+                data: "menu.label",
                 className: "",
                 orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
                 searchable: true // searchable: true, jika ingin kolom ini bisa dicari
-                },
-                {
-                data: "parent_id",
-                className: "",
-                orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
-                searchable: true, // searchable: true, jika ingin kolom ini bisa dicari
-                render: function(data, type, row) {
-                    if (data === null) {
-                        return "Bertindak sebagai parent";
-                    } else {
-                        return data;
-                    }
-                }
-                },
-                {
-                data: "label",
-                className: "",
-                orderable: false, // orderable: true, jika ingin kolom ini bisa diurutkan
-                searchable: false // searchable: true, jika ingin kolom ini bisa dicari
-                },
-                {
-                data: "link",
-                className: "",
-                orderable: false, // orderable: true, jika ingin kolom ini bisa diurutkan
-                searchable: false // searchable: true, jika ingin kolom ini bisa dicari    
                 },
                 {
                 data: "aksi",
@@ -93,7 +68,7 @@
             ]
         });
 
-        $('#id_menu').on('change', function() {
+        $('#id_group').on('change', function() {
             dataLevel.ajax.reload();
         });
     });

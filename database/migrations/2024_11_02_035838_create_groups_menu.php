@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('groups_menu', function (Blueprint $table) {
+            $table->id('id_group_menu');
             $table->unsignedBigInteger('id_group')->index();
             $table->unsignedBigInteger('id_menu')->index();
             $table->foreign('id_group')->references('id_group')->on('groups');

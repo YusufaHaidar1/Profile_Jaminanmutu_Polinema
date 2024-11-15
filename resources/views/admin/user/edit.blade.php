@@ -1,4 +1,4 @@
-@extends('layouts.admin.template')
+@extends('layouts.cms.template')
 @section('content')
 <div class="card card-outline card-primary">
     <div class="card-header">
@@ -20,8 +20,8 @@
                 <div class="col-11">
                     <select class="form-control" id="id_group" name="id_group" required>
                         <option value="">- Pilih Group -</option>
-                    @foreach($role as $item)
-                        <option value="{{ $item->id_group }}" @if($item->id_group == $user->id_group) selected @endif>{{ $item->nama}}</option>
+                    @foreach($group as $item)
+                        <option value="{{ $item->id_group }}" @if($item->id_group == $user->id_group) selected @endif>{{ $item->name}}</option>
                     @endforeach
                     </select>
                     @error('id_group')

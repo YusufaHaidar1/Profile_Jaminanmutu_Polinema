@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ config('app.name', 'CMS Admin') }}</title>
+  <title>{{ config('app.name', 'CMS') }}</title>
 
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -24,7 +24,7 @@
 <!-- Site wrapper -->
 <div class="wrapper">
   <!-- Navbar -->
-  @include('layouts.admin.header')
+  @include('layouts.cms.header')
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
@@ -36,14 +36,14 @@
     </a>
 
     <!-- Sidebar -->
-    @include('layouts.admin.sidebar')
+    @include('layouts.cms.sidebar')
     <!-- /.sidebar -->
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    @include('layouts.admin.breadcrumb')
+    @include('layouts.cms.breadcrumb')
 
     <!-- Main content -->
     <section class="content">
@@ -53,7 +53,7 @@
   </div>
   <!-- /.content-wrapper -->
 
-  @include('layouts.admin.footer')
+  @include('layouts.cms.footer')
 </div>
 <!-- ./wrapper -->
 
