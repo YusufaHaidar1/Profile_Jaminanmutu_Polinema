@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GroupMenuController;
+use App\Http\Controllers\AkreditasiController;
 use App\Http\Controllers\MemberController;
 use PHPUnit\Framework\Attributes\Group;
 
@@ -85,14 +86,29 @@ Route::group(['middleware' => ['auth']], function(){
                 Route::put('/{id}', [UserController::class, 'update']);
                 Route::delete('/{id}', [UserController::class, 'destroy']);
             });
+            
         });
 
         Route::resource('admin', AdminController::class);
     });
 
     Route::group(['middleware' => ['cek_login:2']], function(){
+        Route::group(['prefix' => 'member'], function(){
+            
+            Route::group(['prefix' => 'akreditasi'], function(){
+                Route::get('/', [AkreditasiController::class, 'index']);
+                Route::post('/list', [AkreditasiController::class, 'list']);
+                Route::get('/create', [AkreditasiController::class, 'create']);
+                Route::post('/', [AkreditasiController::class,'store']);
+                Route::get('/{id}', [AkreditasiController::class, 'show']);
+                Route::get('/{id}/edit', [AkreditasiController::class, 'edit']);
+                Route::put('/{id}', [AkreditasiController::class, 'update']);
+                Route::delete('/{id}', [AkreditasiController::class, 'destroy']);
+            });
+        });
         Route::resource('member', MemberController::class);
-    });
+        });
+       
 });
 
 Route::prefix('profil')->group(function () {});
