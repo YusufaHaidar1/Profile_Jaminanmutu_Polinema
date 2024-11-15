@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\GroupModel;
+use App\Models\ProfileModel;
 use App\Models\SidebarMenuModel;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\Auth;
@@ -34,7 +34,7 @@ class ProfileController extends Controller
 
     public function list(Request $request)
     {
-        $groups = GroupModel::select('id_profile', 'gambar', 'gambar_eng', 'judul', 'judul_eng', 'deskripsi', 'deskripsi_eng');
+        $groups = ProfileModel::select('id_profile', 'gambar', 'gambar_eng', 'judul', 'judul_eng', 'deskripsi', 'deskripsi_eng');
 
         return DataTables::of($groups)
             ->addIndexColumn() // menambahkan kolom index / no urut (default name kolom: DT_RowIndex)
@@ -82,7 +82,7 @@ class ProfileController extends Controller
 
         ]);
 
-        GroupModel::create([
+        ProfileModel::create([
             'gambar' => $request->gambar,
             'gambar_eng' => $request->gambar_eng,
             'judul' => $request->judul,
@@ -97,7 +97,7 @@ class ProfileController extends Controller
 
     public function show(string $id)
     {
-        $group = GroupModel::find($id);
+        $group = ProfileModel::find($id);
 
         $breadcrumb = (object)[
             'title' => 'Detail profile',
@@ -121,7 +121,7 @@ class ProfileController extends Controller
 
     public function edit(string $id)
     {
-        $group = GroupModel::find($id);
+        $group = ProfileModel::find($id);
 
         $breadcrumb = (object)[
             'title' => 'Edit Profile',
@@ -154,7 +154,7 @@ class ProfileController extends Controller
             'deskripsi_eng' => 'required | string | max:255',
         ]);
 
-        GroupModel::find($id)->update([
+        ProfileModel::find($id)->update([
             'gambar' => $request->gambar,
             'gambar_eng' => $request->gambar_eng,
             'judul' => $request->judul,
@@ -168,13 +168,13 @@ class ProfileController extends Controller
 
     public function destroy($id)
     {
-        $check = GroupModel::find($id);
+        $check = ProfileModel::find($id);
         if (!$check) {
             return redirect('/member/profile')->with('error', 'Data tidak ditemukan!');
         }
 
         try {
-            GroupModel::destroy($id);
+            ProfileModel::destroy($id);
             return redirect('/member/profile')->with('success', 'Data berhasil dihapus!');
         } catch (\Illuminate\Database\QueryException $e) {
             return redirect('/member/profile')->with('error', 'Data gagal dihapus! masih terdapat tabel lain yang terikat dengan data ini!');
