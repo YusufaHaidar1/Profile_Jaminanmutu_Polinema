@@ -17,7 +17,7 @@ class Cek_login{
     {
         //Melakukan cek apakah sudah melakukan login, jika belum akan kembali ke halaman login
         if(!Auth::check()){
-            return redirect('/login');
+            return redirect('/signin');
         }
         //Menyimpan data user pada variabel user
         $user = Auth::user();

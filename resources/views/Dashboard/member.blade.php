@@ -7,7 +7,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                Dashboard Admin
+                Dashboard Member
             </div>
             <div class="card-body">
                 <h2>

@@ -22,7 +22,7 @@ class AuthController extends Controller
                 return redirect()->intended('member');
             }
         }
-        return view('login');
+        return view('Login.signin');
     }
 
     public function proses_login(Request $request){
@@ -36,10 +36,10 @@ class AuthController extends Controller
         if (Auth::attempt($credential)) {
             $user = Auth::user();
 
-            if($user->id_role == '1') {
+            if($user->id_group == '1') {
                 return redirect()->intended('admin');
             }
-            else if($user->id_role == '2') {
+            else if($user->id_group == '2') {
                 return redirect()->intended('member');
             }
             return redirect()->intended('/');

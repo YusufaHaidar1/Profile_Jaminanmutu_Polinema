@@ -5,6 +5,9 @@ use App\Http\Controllers\KepuasanPelangganController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\SidebarController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\MemberController;
 use PHPUnit\Framework\Attributes\Group;
 
 /*
@@ -31,38 +34,53 @@ Route::prefix('kepuasanpelanggan')->group(function () {
     Route::get('/student', [KepuasanPelangganController::class, 'student'])->name('kepuasanpelanggan.student');
 });
 
-Route::group(['prefix' => 'admin'], function(){
-    Route::group(['prefix' => 'group'], function(){
-        Route::get('/', [GroupController::class, 'index']);
-        Route::post('/list', [GroupController::class, 'list']);
-        Route::get('/create', [GroupController::class, 'create']);
-        Route::post('/', [GroupController::class,'store']);
-        Route::get('/{id}', [GroupController::class, 'show']);
-        Route::get('/{id}/edit', [GroupController::class, 'edit']);
-        Route::put('/{id}', [GroupController::class, 'update']);
-        Route::delete('/{id}', [GroupController::class, 'destroy']);
+Route::get('login', [AuthController::class, 'index'])->name('login');
+Route::post('proses_login', [AuthController::class, 'proses_login'])->name('proses_login');
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::group(['middleware' => ['auth']], function(){
+
+    Route::group(['middleware' => ['cek_login:1']], function(){
+        Route::group(['prefix' => 'admin'], function(){
+            Route::group(['prefix' => 'group'], function(){
+                Route::get('/', [GroupController::class, 'index']);
+                Route::post('/list', [GroupController::class, 'list']);
+                Route::get('/create', [GroupController::class, 'create']);
+                Route::post('/', [GroupController::class,'store']);
+                Route::get('/{id}', [GroupController::class, 'show']);
+                Route::get('/{id}/edit', [GroupController::class, 'edit']);
+                Route::put('/{id}', [GroupController::class, 'update']);
+                Route::delete('/{id}', [GroupController::class, 'destroy']);
+            });
+
+            Route::group(['prefix' => 'sidebar'], function(){
+                Route::get('/', [SidebarController::class, 'index']);
+                Route::post('/list', [SidebarController::class, 'list']);
+                Route::get('/create', [SidebarController::class, 'create']);
+                Route::post('/', [SidebarController::class,'store']);
+                Route::get('/{id}', [SidebarController::class, 'show']);
+                Route::get('/{id}/edit', [SidebarController::class, 'edit']);
+                Route::put('/{id}', [SidebarController::class, 'update']);
+                Route::delete('/{id}', [SidebarController::class, 'destroy']);
+            });
+
+            Route::group(['prefix' => 'user'], function(){
+                Route::get('/', [UserController::class, 'index']);
+                Route::post('/list', [UserController::class, 'list']);
+                Route::get('/create', [UserController::class, 'create']);
+                Route::post('/', [UserController::class,'store']);
+                Route::get('/{id}', [UserController::class, 'show']);
+                Route::get('/{id}/edit', [UserController::class, 'edit']);
+                Route::put('/{id}', [UserController::class, 'update']);
+                Route::delete('/{id}', [UserController::class, 'destroy']);
+            });
+        });
+
+        Route::resource('admin', AdminController::class);
     });
 
-    Route::group(['prefix' => 'sidebar'], function(){
-        Route::get('/', [SidebarController::class, 'index']);
-        Route::post('/list', [SidebarController::class, 'list']);
-        Route::get('/create', [SidebarController::class, 'create']);
-        Route::post('/', [SidebarController::class,'store']);
-        Route::get('/{id}', [SidebarController::class, 'show']);
-        Route::get('/{id}/edit', [SidebarController::class, 'edit']);
-        Route::put('/{id}', [SidebarController::class, 'update']);
-        Route::delete('/{id}', [SidebarController::class, 'destroy']);
-    });
-
-    Route::group(['prefix' => 'user'], function(){
-        Route::get('/', [UserController::class, 'index']);
-        Route::post('/list', [UserController::class, 'list']);
-        Route::get('/create', [UserController::class, 'create']);
-        Route::post('/', [UserController::class,'store']);
-        Route::get('/{id}', [UserController::class, 'show']);
-        Route::get('/{id}/edit', [UserController::class, 'edit']);
-        Route::put('/{id}', [UserController::class, 'update']);
-        Route::delete('/{id}', [UserController::class, 'destroy']);
+    Route::group(['middleware' => ['cek_login:2']], function(){
+        Route::resource('member', MemberController::class);
     });
 });
 
