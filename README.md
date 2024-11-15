@@ -28,6 +28,8 @@ The Polinema Quality Assurance Project is a website application developed using 
 2. Install dependencies: `composer install && npm install`
 3. Configure the environment variables: Copy the `.env.example` file to `.env` and update the necessary variables.
 4. Generate the application key: `php artisan key:generate`
+5. Open your localhost/phpmyadmin and make a database under the name of `jamintu_polinema`
+6. Run this command `php artisan migrate` on your console to migrate the tables into the database
 
 ## License
 
