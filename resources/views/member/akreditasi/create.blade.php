@@ -14,9 +14,9 @@
                     <select class="form-control" id="jenjang" name="jenjang" required>
                         <option value="">- Pilih Jenjang -</option>
                         <option value="institusi">Institusi</option>
-                        <option value="d3">Program Studi D-III</option>
-                        <option value="d4">Program Studi D-IV</option>
-                        <option value="s2">Program Studi S2</option>
+                        <option value="program studi D-III">program studi D-III</option>
+                        <option value="program studi D-IV">program studi D-IV</option>
+                        <option value="program studi S2">program studi S2</option>
                     </select>
                     @error('jenjang')
                     <small class="form-text text-danger">{{ $message }}</small>
