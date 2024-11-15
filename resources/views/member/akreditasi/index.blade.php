@@ -5,7 +5,7 @@
         <div class="card-header">
             <h3 class="card-title">{{ $page->title }}</h3>
             <div class="card-tools">
-                <a class="btn btn-sm btn-primary mt-1" href="{{ url('/admin/user/create')}}">Tambah</a>
+                <a class="btn btn-sm btn-primary mt-1" href="{{ url('/member/akreditasi/create')}}">Tambah</a>
             </div>
         </div>
             <div class="card-body">
@@ -15,32 +15,9 @@
                 @if (@session('error'))
                     <div class="alert alert-danger">{{ session('error') }}</div>
                 @endif
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Filter :</label>
-                            <div class="col-3">
-                                <select name="id_group" id="id_group" class="form-control" required>
-                                    <option value="">- Semua -</option>
-                                    @foreach ($group as $item)
-                                        <option value="{{ $item->id_group }}">{{ $item->name }}</option>
-                                    @endforeach
-                                    </select>
-                                    <small class="form-text text-muted">Group Pengguna</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <table class="table table-bordered table-striped table-hover table-sm" id="table_users">
+                <table class="table table-bordered table-striped table-hover table-sm" id="table_group">
                 <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nama</th>
-                        <th>Email</th>
-                        <th>No HP</th>
-                        <th>Group</th>
-                        <th>Aksi</th>
-                    </tr>
+                    <tr><th>ID</th><th>jenjang</th><th>SK</th><th>Nama</th><th>Nama_Eng</th><th>Skor</th><th>Masa Berlaku Dari</th><th>Masa Berlaku Sampai</th><th>Dokumen</th></tr>
                 </thead>
                 </table>
             </div>
@@ -53,14 +30,14 @@
 
 <script>
     $(document).ready(function() {
-        var dataUser = $('#table_users').DataTable({
+        var dataAkreditasi = $('#table_akreditasi').DataTable({
             serverSide: true, // serverSide: true, jika ingin menggunakan server side processing
             ajax: {
-            "url": "{{ url('/admin/user/list') }}",
+            "url": "{{ url('/member/akreditasi/list') }}",
             "dataType": "json",
             "type": "POST",
             "data": function ( d ) {
-                d.id_users = $('#id_users').val();
+                d.id_akreditasi = $('#id_akreditasi').val();
             }
             },
             columns: [
@@ -71,40 +48,59 @@
                 searchable: false
                 },
                 {
+                data: "jenjang",
+                className: "",
+                orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
+                searchable: true // searchable: true, jika ingin kolom ini bisa dicari
+                },
+                {
+                data: "sk",
+                className: "",
+                orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
+                searchable: true // searchable: true, jika ingin kolom ini bisa dicari
+                },
+                {
                 data: "nama",
                 className: "",
                 orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
                 searchable: true // searchable: true, jika ingin kolom ini bisa dicari
                 },
                 {
-                data: "email",
+                data: "nama_eng",
                 className: "",
                 orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
                 searchable: true // searchable: true, jika ingin kolom ini bisa dicari
                 },
                 {
-                data: "no_hp",
+                data: "skor",
                 className: "",
                 orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
                 searchable: true // searchable: true, jika ingin kolom ini bisa dicari
                 },
                 {
-                data: "group.name",
+                data: "masa_berlaku_dari",
+                className: "",
+                orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
+                searchable: true // searchable: true, jika ingin kolom ini bisa dicari
+                },
+                {
+                data: "masa_berlaku_sampai",
+                className: "",
+                orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
+                searchable: true // searchable: true, jika ingin kolom ini bisa dicari
+                },
+                {
+                data: "dokumen",
                 className: "",
                 orderable: false, // orderable: true, jika ingin kolom ini bisa diurutkan
                 searchable: false // searchable: true, jika ingin kolom ini bisa dicari
                 },
-                {
-                data: "aksi",
-                className: "",
-                orderable: false, // orderable: true, jika ingin kolom ini bisa diurutkan
-                searchable: false // searchable: true, jika ingin kolom ini bisa dicari
-                }
+
             ]
         });
 
-        $('#id_users').on('change', function() {
-            dataUser.ajax.reload();
+        $('#id_akreditasi').on('change', function() {
+            dataLevel.ajax.reload();
         });
     });
 </script>
