@@ -18,6 +18,10 @@
             <td>{{ $sidebar->id_menu }}</td>
         </tr>
         <tr>
+            <th>Group</th>
+            <td>{{ $sidebar->group->name }}</td>
+        </tr>
+        <tr>
             <th>Level</th>
             <td>{{ $sidebar->level }}</td>
         </tr>

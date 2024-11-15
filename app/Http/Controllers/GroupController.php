@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\GroupModel;
 use App\Models\SidebarMenuModel;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Facades\Auth;
 
 class GroupController extends Controller
 {
@@ -20,9 +21,11 @@ class GroupController extends Controller
             'title' => 'Daftar Group',
         ];
 
-        $menus = SidebarMenuModel::orderBy('level', 'asc')
-        ->orderBy('parent_id', 'asc')
-        ->get();
+        $user = Auth::user(); // Get the logged-in user
+        $menus = SidebarMenuModel::where('id_group', $user->id_group)
+                    ->orderBy('level', 'asc')
+                    ->orderBy('parent_id', 'asc')
+                    ->get();
 
         $activeMenu = 'group';
 
@@ -55,9 +58,11 @@ class GroupController extends Controller
             'title' => 'Tambah Group Baru',
         ];
 
-        $menus = SidebarMenuModel::orderBy('level', 'asc')
-        ->orderBy('parent_id', 'asc')
-        ->get();
+        $user = Auth::user(); // Get the logged-in user
+        $menus = SidebarMenuModel::where('id_group', $user->id_group)
+                    ->orderBy('level', 'asc')
+                    ->orderBy('parent_id', 'asc')
+                    ->get();
 
         $activeMenu = 'group';
 
@@ -90,9 +95,11 @@ class GroupController extends Controller
             'title' => 'Detail Group',
         ];
 
-        $menus = SidebarMenuModel::orderBy('level', 'asc')
-        ->orderBy('parent_id', 'asc')
-        ->get();
+        $user = Auth::user(); // Get the logged-in user
+        $menus = SidebarMenuModel::where('id_group', $user->id_group)
+                    ->orderBy('level', 'asc')
+                    ->orderBy('parent_id', 'asc')
+                    ->get();
 
         $activeMenu = 'group';
 
@@ -111,9 +118,11 @@ class GroupController extends Controller
             'title' => 'Edit Group',
         ];
 
-        $menus = SidebarMenuModel::orderBy('level', 'asc')
-        ->orderBy('parent_id', 'asc')
-        ->get();
+        $user = Auth::user(); // Get the logged-in user
+        $menus = SidebarMenuModel::where('id_group', $user->id_group)
+                    ->orderBy('level', 'asc')
+                    ->orderBy('parent_id', 'asc')
+                    ->get();
 
         $activeMenu = 'group';
 

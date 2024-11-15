@@ -7,6 +7,7 @@ use App\Models\GroupModel;
 use App\Models\UserModel;
 use App\Models\SidebarMenuModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -25,9 +26,11 @@ class UserController extends Controller
             'title' => 'Daftar User dalam sistem',
         ];
 
-        $menus = SidebarMenuModel::orderBy('level', 'asc')
-                            ->orderBy('parent_id', 'asc')
-                            ->get();
+        $user = Auth::user(); // Get the logged-in user
+        $menus = SidebarMenuModel::where('id_group', $user->id_group)
+                    ->orderBy('level', 'asc')
+                    ->orderBy('parent_id', 'asc')
+                    ->get();
 
         $activeMenu = 'user';
         $group = GroupModel::all();
@@ -66,9 +69,11 @@ class UserController extends Controller
             'title' => 'Tambah User Baru',
         ];
 
-        $menus = SidebarMenuModel::orderBy('level', 'asc')
-                            ->orderBy('parent_id', 'asc')
-                            ->get();
+        $user = Auth::user(); // Get the logged-in user
+        $menus = SidebarMenuModel::where('id_group', $user->id_group)
+                    ->orderBy('level', 'asc')
+                    ->orderBy('parent_id', 'asc')
+                    ->get();
 
         $activeMenu = 'user';
         $group = GroupModel::all();
@@ -108,9 +113,11 @@ class UserController extends Controller
             'title' => 'Detail User',
         ];
 
-        $menus = SidebarMenuModel::orderBy('level', 'asc')
-                            ->orderBy('parent_id', 'asc')
-                            ->get();
+        $user = Auth::user(); // Get the logged-in user
+        $menus = SidebarMenuModel::where('id_group', $user->id_group)
+                    ->orderBy('level', 'asc')
+                    ->orderBy('parent_id', 'asc')
+                    ->get();
 
         $activeMenu = 'user';
 
@@ -130,9 +137,11 @@ class UserController extends Controller
             'title' => 'Edit User',
         ];
 
-        $menus = SidebarMenuModel::orderBy('level', 'asc')
-                            ->orderBy('parent_id', 'asc')
-                            ->get();
+        $user = Auth::user(); // Get the logged-in user
+        $menus = SidebarMenuModel::where('id_group', $user->id_group)
+                    ->orderBy('level', 'asc')
+                    ->orderBy('parent_id', 'asc')
+                    ->get();
 
         $activeMenu = 'user';
 

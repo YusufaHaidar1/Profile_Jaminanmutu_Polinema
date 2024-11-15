@@ -18,6 +18,11 @@ class SidebarMenuModel extends Model
         'parent_id',
         'label',
         'link',
+        'id_group'
     ];  
+
+    public function group(){
+        return $this->belongsTo(GroupModel::class, 'id_group', 'id_group');
+    }
 
 }

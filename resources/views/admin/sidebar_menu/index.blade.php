@@ -17,7 +17,16 @@
                 @endif
                 <table class="table table-bordered table-striped table-hover table-sm" id="table_menu">
                 <thead>
-                    <tr><th>No</th><th>ID Menu</th><th>Level</th><th>Parent_id</th><th>Label</th><th>Link</th><th>Aksi</th></tr>
+                    <tr>
+                        <th>No</th>
+                        <th>ID Menu</th>
+                        <th>Group</th>
+                        <th>Level</th>
+                        <th>Parent_id</th>
+                        <th>Label</th>
+                        <th>Link</th>
+                        <th>Aksi</th>
+                    </tr>
                 </thead>
                 </table>
             </div>
@@ -49,6 +58,12 @@
                 },
                 {
                 data: "id_menu",
+                className: "",
+                orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
+                searchable: true // searchable: true, jika ingin kolom ini bisa dicari
+                },
+                {
+                data: "group.name",
                 className: "",
                 orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
                 searchable: true // searchable: true, jika ingin kolom ini bisa dicari

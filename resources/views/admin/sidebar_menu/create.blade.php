@@ -23,6 +23,20 @@
             </div>
         </div>
         <div class="form-group row">
+            <label class="col-1 control-label col-form-label">Role</label>
+            <div class="col-11">
+                <select class="form-control" id="id_group" name="id_group" required>
+                    <option value="">- Pilih Group -</option>
+                @foreach($group as $item)
+                    <option value="{{ $item->id_group }}">{{ $item->name}}</option>
+                @endforeach
+                </select>
+                @error('id_group')
+                    <small class="form-text text-danger">{{ $message }}</small>
+                @enderror
+            </div>
+        </div>
+        <div class="form-group row">
             <label class="col-1 control-label col-form-label">Label</label>
             <div class="col-11">
                 <input type="text" class="form-control" id="label" name="label" value="{{ old('label') }}" required>

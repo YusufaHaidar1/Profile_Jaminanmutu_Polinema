@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\SidebarMenuModel;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -19,9 +20,11 @@ class AdminController extends Controller
         ];
 
         $activeMenu = 'dashboard'; // set menu yang sedang aktif
-        $menus = SidebarMenuModel::orderBy('level', 'asc')
-                            ->orderBy('parent_id', 'asc')
-                            ->get();
+        $user = Auth::user(); // Get the logged-in user
+        $menus = SidebarMenuModel::where('id_group', $user->id_group)
+                    ->orderBy('level', 'asc')
+                    ->orderBy('parent_id', 'asc')
+                    ->get();
 
         return view('Dashboard.admin', [
             'breadcrumb' => $breadcrumb, 
