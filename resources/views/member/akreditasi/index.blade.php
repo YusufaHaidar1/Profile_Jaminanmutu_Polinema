@@ -15,9 +15,9 @@
                 @if (@session('error'))
                     <div class="alert alert-danger">{{ session('error') }}</div>
                 @endif
-                <table class="table table-bordered table-striped table-hover table-sm" id="table_group">
+                <table class="table table-bordered table-striped table-hover table-sm" id="table_akreditasi">
                 <thead>
-                    <tr><th>ID</th><th>jenjang</th><th>SK</th><th>Nama</th><th>Nama_Eng</th><th>Skor</th><th>Masa Berlaku Dari</th><th>Masa Berlaku Sampai</th><th>Dokumen</th></tr>
+                    <tr><th>ID</th><th>jenjang</th><th>SK</th><th>Nama</th><th>Nama_Eng</th><th>Skor</th><th>Masa Berlaku Dari</th><th>Masa Berlaku Sampai</th><th>Dokumen</th><th>Aksi</th></tr>
                 </thead>
                 </table>
             </div>
@@ -30,7 +30,7 @@
 
 <script>
     $(document).ready(function() {
-        var dataAkreditasi = $('#table_akreditasi').DataTable({
+        var dataLevel = $('#table_akreditasi').DataTable({
             serverSide: true, // serverSide: true, jika ingin menggunakan server side processing
             ajax: {
             "url": "{{ url('/member/akreditasi/list') }}",
@@ -94,7 +94,12 @@
                 className: "",
                 orderable: false, // orderable: true, jika ingin kolom ini bisa diurutkan
                 searchable: false // searchable: true, jika ingin kolom ini bisa dicari
-                },
+                },{
+                data: "aksi",
+                className: "",
+                orderable: false, // orderable: true, jika ingin kolom ini bisa diurutkan
+                searchable: false // searchable: true, jika ingin kolom ini bisa dicari
+                }
 
             ]
         });

@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\GroupModel;
+use App\Models\AkreditasiModel;
 use App\Models\SidebarMenuModel;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\Auth;
@@ -34,9 +34,9 @@ class AkreditasiController extends Controller
 
     public function list(Request $request)
     {
-        $groups = GroupModel::select('id_akreditasi', 'jenjang', 'sk','nama','nama_eng','skor','masa_berlaku_dari','masa_berlaku_sampai','dokumen');
+        $akreditasi = AkreditasiModel::select('id_akreditasi','jenjang','sk','nama','nama_eng','skor','masa_berlaku_dari','masa_berlaku_sampai','dokumen');
 
-        return DataTables::of($groups)
+        return DataTables::of($akreditasi)
             ->addIndexColumn() // menambahkan kolom index / no urut (default name kolom: DT_RowIndex)
             ->addColumn('aksi', function ($akreditasi) { // menambahkan kolom aksi
                 $btn = '<a href="' . url('/member/akreditasi/' . $akreditasi->id_akreditasi) . '" class="btn btn-info btn-sm">Detail</a> ';
@@ -81,7 +81,7 @@ class AkreditasiController extends Controller
             'dokumen' => 'required | string | max:255',
         ]);
 
-        GroupModel::create([
+        AkreditasiModel::create([
             'jenjang' => $request-> jenjang,
             'sk' => $request-> sk ,
             'nama' => $request-> nama ,
@@ -96,7 +96,7 @@ class AkreditasiController extends Controller
     }
 
     public function show(string $id){
-        $group = GroupModel::find($id);
+        $group = AkreditasiModel::find($id);
 
         $breadcrumb = (object)[
             'title' => 'Detail Akreditasi',
@@ -119,7 +119,7 @@ class AkreditasiController extends Controller
     }
 
     public function edit(string $id){
-        $group = GroupModel::find($id);
+        $group = AkreditasiModel::find($id);
 
         $breadcrumb = (object)[
             'title' => 'Edit Group',
@@ -153,7 +153,7 @@ class AkreditasiController extends Controller
             'dokumen' => 'required | string | max:255',
         ]);
 
-        GroupModel::find($id)->update([
+        AkreditasiModel::find($id)->update([
             'jenjang' => $request-> jenjang,
             'sk' => $request-> sk ,
             'nama' => $request-> nama ,
@@ -169,13 +169,13 @@ class AkreditasiController extends Controller
 
     public function destroy($id)
     {
-        $check = GroupModel::find($id);
+        $check = AkreditasiModel::find($id);
         if(!$check){
             return redirect('/member/akreditasi')->with('error', 'Data tidak ditemukan!');
         }
 
         try{
-            GroupModel::destroy($id);
+            AkreditasiModel::destroy($id);
             return redirect('/member/akreditasi')->with('success', 'Data berhasil dihapus!');
         }catch(\Illuminate\Database\QueryException $e){
             return redirect('/member/akreditasi')->with('error', 'Data gagal dihapus! masih terdapat tabel lain yang terikat dengan data ini!');
