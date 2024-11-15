@@ -30,6 +30,7 @@ The Polinema Quality Assurance Project is a website application developed using 
 4. Generate the application key: `php artisan key:generate`
 5. Open your localhost/phpmyadmin and make a database under the name of `jamintu_polinema`
 6. Run this command `php artisan migrate` on your console to migrate the tables into the database
+7. Run this command `php artisan db:seed` on your console to make sure the data in the table is filled
 
 ## License
 
