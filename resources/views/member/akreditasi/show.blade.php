@@ -25,11 +25,10 @@
                         <th>Nama</th>
                         <th>Nama English</th>
                         <th>Skor</th>
-                        <th>Masa Berlaku</th>
-                        <th>Link</th>
-                        <th>Aksi</th>
-                        <th>Link</th>
-                        <th>Aksi</th>
+                        <th>Masa Berlaku Dari</th>
+                        <th>Masa Berlaku Sampai</th>
+                        <th>Dokummen</th>
+                        
                     </tr>
                 </thead>
                 </table>
