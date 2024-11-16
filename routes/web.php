@@ -9,6 +9,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GroupMenuController;
 use App\Http\Controllers\AkreditasiController;
+use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MemberController;
 use PHPUnit\Framework\Attributes\Group;
@@ -55,16 +56,6 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::get('/{id}/edit', [GroupController::class, 'edit']);
                 Route::put('/{id}', [GroupController::class, 'update']);
                 Route::delete('/{id}', [GroupController::class, 'destroy']);
-            });
-
-            Route::group(['prefix' => 'group_menu'], function () {
-                Route::get('/', [GroupMenuController::class, 'index']);
-                Route::post('/list', [GroupMenuController::class, 'list']);
-                Route::get('/create', [GroupMenuController::class, 'create']);
-                Route::post('/', [GroupMenuController::class, 'store']);
-                Route::get('/{id}/edit', [GroupMenuController::class, 'edit']);
-                Route::put('/{id}', [GroupMenuController::class, 'update']);
-                Route::delete('/{id}', [GroupMenuController::class, 'destroy']);
             });
 
             Route::group(['prefix' => 'sidebar'], function () {
@@ -116,6 +107,17 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::get('/{id}/edit', [ProfileController::class, 'edit']);
                 Route::put('/{id}', [ProfileController::class, 'update']);
                 Route::delete('/{id}', [ProfileController::class, 'destroy']);
+            });
+
+            Route::group(['prefix' => 'berita'], function () {
+                Route::get('/', [BeritaController::class, 'index']);
+                Route::post('/list', [BeritaController::class, 'list']);
+                Route::get('/create', [BeritaController::class, 'create']);
+                Route::post('/', [BeritaController::class, 'store']);
+                Route::get('/{id}', [BeritaController::class, 'show']);
+                Route::get('/{id}/edit', [BeritaController::class, 'edit']);
+                Route::put('/{id}', [BeritaController::class, 'update']);
+                Route::delete('/{id}', [BeritaController::class, 'destroy']);
             });
         });
         Route::resource('member', MemberController::class);

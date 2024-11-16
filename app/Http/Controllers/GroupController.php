@@ -34,8 +34,7 @@ class GroupController extends Controller
 
     public function list(Request $request)
     {
-        $groups = GroupModel::select('id_group', 'name', 'description');
-        dd($akreditasi->get()); // Debugging: tampilkan data
+        $groups = GroupModel::select('id_group', 'name', 'description'); 
         return DataTables::of($groups)
             ->addIndexColumn() // menambahkan kolom index / no urut (default name kolom: DT_RowIndex)
             ->addColumn('aksi', function ($group) { // menambahkan kolom aksi

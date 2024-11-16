@@ -51,8 +51,24 @@ class SidebarSeeder extends Seeder
                 'id_group' => 2,
                 'level' => 1,
                 'parent_id' => NULL,
-                'label' => 'Footer',
-                'link' => '/member/footer',
+                'label' => 'Profile',
+                'link' => '/member/profile',
+            ],
+            [
+                'id_menu' => 6,
+                'id_group' => 2,
+                'level' => 1,
+                'parent_id' => NULL,
+                'label' => 'Akreditas',
+                'link' => '/member/akreditasi',
+            ],
+            [
+                'id_menu' => 7,
+                'id_group' => 2,
+                'level' => 1,
+                'parent_id' => NULL,
+                'label' => 'Berita',
+                'link' => '/member/berita',
             ],
             ];
             DB::table('sidebar_menu')->insert($data);
