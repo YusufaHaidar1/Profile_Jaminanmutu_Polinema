@@ -28,7 +28,7 @@
         <div class="container">
 
             <!-- Brand -->
-            <a class="navbar-brand" href="{{ route('homepage') }}">
+            <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="{{ asset('./assets/img/brand.png') }}" class="navbar-brand-img" alt="...">
             </a>
 
@@ -50,7 +50,7 @@
                 <!-- Navigation -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" id="navbarBeranda" href="{{ route('homepage') }}" aria-haspopup="true"
+                        <a class="nav-link" id="navbarBeranda" href="{{ route('home') }}" aria-haspopup="true"
                             aria-expanded="false">
                             Beranda
                         </a>

@@ -10,6 +10,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GroupMenuController;
 use App\Http\Controllers\AkreditasiController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MemberController;
 use PHPUnit\Framework\Attributes\Group;
@@ -124,15 +125,15 @@ Route::group(['middleware' => ['auth']], function () {
     });
 });
 
+
+Route::get('/homepage', [HomepageController::class, 'index'])->name('home');
+Route::get('/berita/{id}', [HomepageController::class, 'tampil'])->name('berita.tampil');
+
 Route::prefix('profil')->group(function () {});
 
 Route::get('/signin', function () {
     return view('login.signin');
 })->name('signin');
-
-Route::get('/homepage', function () {
-    return view('Beranda.homepage');
-})->name('homepage');
 
 Route::get('/visimisi', function () {
     return view('Profil.visi_misi');
@@ -148,9 +149,7 @@ Route::get('/tugas fungsi utama', function () {
 
 
 
-Route::get('/berita1', function () {
-    return view('Beranda.berita1');
-})->name('berita');
+
 
 Route::get('/standarkualitas', function () {
     return view('SPMI.standar');
