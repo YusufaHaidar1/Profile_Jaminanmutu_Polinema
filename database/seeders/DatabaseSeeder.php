@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             GroupsSeeder::class,
             UserSeeder::class,
             SidebarSeeder::class,
+            BeritaSeeder::class
         ]);
     }
 }
