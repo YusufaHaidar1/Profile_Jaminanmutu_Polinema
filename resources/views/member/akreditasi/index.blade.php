@@ -17,7 +17,7 @@
                 @endif
                 <table class="table table-bordered table-striped table-hover table-sm" id="table_akreditasi">
                 <thead>
-                    <tr><th>ID</th><th>jenjang</th><th>SK</th><th>Nama</th><th>Nama_Eng</th><th>Skor</th><th>Masa Berlaku Dari</th><th>Masa Berlaku Sampai</th><th>Dokumen</th><th>Aksi</th></tr>
+                    <tr><th>ID</th><th>Jenjang</th><th>SK</th><th>Nama</th><th>Nama_Eng</th><th>Skor</th><th>Masa Berlaku Dari</th><th>Masa Berlaku Sampai</th><th>Dokumen</th><th>Aksi</th></tr>
                 </thead>
                 </table>
             </div>
