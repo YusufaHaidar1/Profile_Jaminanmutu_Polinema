@@ -10,10 +10,10 @@
                 enctype="multipart/form-data">
                 @csrf
                 <div class="form-group row">
-                    <label class="col-1 control-label col-form-label">Role</label>
+                    <label class="col-1 control-label col-form-label">ID Profile</label>
                     <div class="col-11">
                         <select class="form-control" id="id_profile" name="id_profile" required>
-                            <option value="">- Pilih Group -</option>
+                            <option value="">- Pilih ID -</option>
                             @foreach ($profile as $item)
                                 <option value="{{ $item->id_profile }}">{{ $item->id_profile }}</option>
                             @endforeach

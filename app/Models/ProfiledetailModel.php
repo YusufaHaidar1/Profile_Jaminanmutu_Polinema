@@ -15,14 +15,15 @@ class ProfiledetailModel extends Model
     public $timestamps = false;
 
     protected $fillable = [
+        'id_profile',
         'jenis',
         'jenis_eng',
         'detail_profile',
         'detail_profile_eng',
-        'id_profile'
+
 
     ];
-    public function group(): BelongsTo
+    public function profile(): BelongsTo
     {
         return $this->belongsTo(ProfileModel::class, 'id_profile', 'id_profile');
     }

@@ -30,9 +30,9 @@ class ProfiledetailController extends Controller
             ->get();
 
         $activeMenu = 'profiledetail';
-        $group = ProfileModel::all();
+        $profile = ProfileModel::all();
 
-        return view('member.profiledetail.index', ['breadcrumb' => $breadcrumb, 'page' => $page, 'activeMenu' => $activeMenu, 'menus' => $menus]);
+        return view('member.profiledetail.index', ['breadcrumb' => $breadcrumb, 'page' => $page, 'profile' => $profile, 'activeMenu' => $activeMenu, 'menus' => $menus]);
     }
 
     public function list(Request $request)
@@ -128,6 +128,7 @@ class ProfiledetailController extends Controller
     public function edit(string $id)
     {
         $profiledetail = ProfiledetailModel::find($id);
+        $profile = ProfileModel::all();
 
         $breadcrumb = (object)[
             'title' => 'Edit Profile detail',
@@ -146,12 +147,13 @@ class ProfiledetailController extends Controller
 
         $activeMenu = 'profiledetail';
 
-        return view('member.profiledetail.edit', ['breadcrumb' => $breadcrumb, 'page' => $page, 'profiledetail' => $profiledetail, 'activeMenu' => $activeMenu, 'menus' => $menus]);
+        return view('member.profiledetail.edit', ['breadcrumb' => $breadcrumb, 'page' => $page, 'profiledetail' => $profiledetail, 'profile' => $profile, 'activeMenu' => $activeMenu, 'menus' => $menus]);
     }
 
     public function update(Request $request, $id)
     {
         $request->validate([
+            'id_profile' => 'required | integer',
             'jenis' => 'required | string | max:255',
             'jenis_eng' => 'required | string | max:255',
             'detail_profile' => 'required | string | max:255',
@@ -159,6 +161,7 @@ class ProfiledetailController extends Controller
         ]);
 
         ProfiledetailModel::find($id)->update([
+            'id_profile' => $request->id_profile,
             'jenis' => $request->jenis,
             'jenis_eng' => $request->jenis_eng,
             'detail_profile' => $request->detail_profile,

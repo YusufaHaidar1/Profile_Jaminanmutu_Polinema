@@ -18,6 +18,10 @@
                         <td>{{ $profiledetail->id_detail_profile }}</td>
                     </tr>
                     <tr>
+                        <th>ID profile</th>
+                        <td>{{ $profiledetail->profile->id_profile }}</td>
+                    </tr>
+                    <tr>
                         <th>jenis</th>
                         <td>{{ $profiledetail->jenis }}</td>
                     </tr>

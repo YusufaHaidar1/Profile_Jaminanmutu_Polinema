@@ -17,6 +17,21 @@
                     @csrf
                     {!! method_field('PUT') !!}
                     <div class="form-group row">
+                        <label class="col-1 control-label col-form-label">ID profile</label>
+                        <div class="col-11">
+                            <select class="form-control" id="id_profile" name="id_profile" required>
+                                <option value="">- Pilih ID profile -</option>
+                                @foreach ($profile as $item)
+                                    <option value="{{ $item->id_profile }}" @if ($item->id_profile == $profiledetail->id_profile) selected @endif>
+                                        {{ $item->id_profile }}</option>
+                                @endforeach
+                            </select>
+                            @error('id_profile')
+                                <small class="form-text text-danger">{{ $message }}</small>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <label class="col-1 control-label col-form-label">Jenis</label>
                         <div class="col-11">
                             <input type="text" class="form-control" id="jenis" name="jenis"
