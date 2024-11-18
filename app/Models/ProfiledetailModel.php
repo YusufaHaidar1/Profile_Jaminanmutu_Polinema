@@ -19,6 +19,7 @@ class ProfiledetailModel extends Model
         'jenis_eng',
         'detail_profile',
         'detail_profile_eng',
+        'id_profile'
 
     ];
     public function group(): BelongsTo

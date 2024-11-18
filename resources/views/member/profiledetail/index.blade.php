@@ -54,6 +54,12 @@
                         searchable: false
                     },
                     {
+                        data: "profile.id_profile",
+                        className: "",
+                        orderable: false, // orderable: true, jika ingin kolom ini bisa diurutkan
+                        searchable: false // searchable: true, jika ingin kolom ini bisa dicari
+                    },
+                    {
                         data: "jenis",
                         className: "",
                         orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan

@@ -58,9 +58,9 @@ class ProfileController extends Controller
 
             // Add the action column with edit/delete buttons
             ->addColumn('aksi', function ($profile) {
-                $btn = '<a href="' . url('/member/profile /' . $profile->id_profile) . '" class="btn btn-info btn-sm">Detail</a> ';
-                $btn .= '<a href="' . url('/member/profile /' . $profile->id_profile  . '/edit') . '" class="btn btn-warning btn-sm">Edit</a> ';
-                $btn .= '<form class="d-inline-block" method="POST" action="' . url('/member/profile /' . $profile->id_profile) . '">' . csrf_field() . method_field('DELETE') . '<button type="submit" class="btn btn-danger btn-sm" onclick="return confirm(\'Apakah Anda yakin menghapus data ini?\');">Hapus</button></form>';
+                $btn = '<a href="' . url('/member/profile/' . $profile->id_profile) . '" class="btn btn-info btn-sm">Detail</a> ';
+                $btn .= '<a href="' . url('/member/profile/' . $profile->id_profile  . '/edit') . '" class="btn btn-warning btn-sm">Edit</a> ';
+                $btn .= '<form class="d-inline-block" method="POST" action="' . url('/member/profile/' . $profile->id_profile) . '">' . csrf_field() . method_field('DELETE') . '<button type="submit" class="btn btn-danger btn-sm" onclick="return confirm(\'Apakah Anda yakin menghapus data ini?\');">Hapus</button></form>';
                 return $btn;
             })
 
@@ -130,7 +130,7 @@ class ProfileController extends Controller
 
     public function show(string $id)
     {
-        $group = ProfileModel::find($id);
+        $profile = ProfileModel::find($id);
 
         $breadcrumb = (object)[
             'title' => 'Detail profile',
@@ -149,7 +149,7 @@ class ProfileController extends Controller
 
         $activeMenu = 'profile';
 
-        return view('member.profile.show', ['breadcrumb' => $breadcrumb, 'page' => $page, 'group' => $group, 'activeMenu' => $activeMenu, 'menus' => $menus]);
+        return view('member.profile.show', ['breadcrumb' => $breadcrumb, 'page' => $page, 'profile' => $profile, 'activeMenu' => $activeMenu, 'menus' => $menus]);
     }
 
     public function edit(string $id)

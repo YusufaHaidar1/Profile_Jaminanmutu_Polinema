@@ -6,7 +6,7 @@
             <div class="card-tools"></div>
         </div>
         <div class="card-body">
-            @empty($profile)
+            @empty($profiledetail)
                 <div class="alert alert-danger alert-dismissible">
                     <h5><i class="icon fas fa-ban"></i> Kesalahan!</h5> Data yang Anda cari tidak ditemukan.
                 </div>
@@ -58,7 +58,7 @@
                         <label class="col-1 control-label col-form-label"></label>
                         <div class="col-11">
                             <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
-                            <a class="btn btn-sm btn-default ml-1" href="{{ url('/member/profile') }}">Kembali</a>
+                            <a class="btn btn-sm btn-default ml-1" href="{{ url('/member/profiledetail') }}">Kembali</a>
                         </div>
                     </div>
                 </form>

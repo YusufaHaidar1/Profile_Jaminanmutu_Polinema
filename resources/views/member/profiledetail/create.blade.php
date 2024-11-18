@@ -15,7 +15,7 @@
                         <select class="form-control" id="id_profile" name="id_profile" required>
                             <option value="">- Pilih Group -</option>
                             @foreach ($profile as $item)
-                                <option value="{{ $item->id_profile }}">{{ $item->judul }}</option>
+                                <option value="{{ $item->id_profile }}">{{ $item->id_profile }}</option>
                             @endforeach
                         </select>
                         @error('id_profile')

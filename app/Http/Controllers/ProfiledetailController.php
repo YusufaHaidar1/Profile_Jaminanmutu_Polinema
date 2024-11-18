@@ -38,7 +38,10 @@ class ProfiledetailController extends Controller
     public function list(Request $request)
     {
         $groups = ProfiledetailModel::select('id_detail_profile', 'id_profile', 'jenis', 'jenis_eng', 'detail_profile', 'detail_profile_eng')
-            ->with('group');
+            ->with('profile');
+        if ($request->id_profile) {
+            $groups->where('id_profile', $request->id_profile);
+        }
 
         return DataTables::of($groups)
             ->addIndexColumn() // menambahkan kolom index / no urut (default nama kolom: DT_RowIndex)
@@ -82,6 +85,7 @@ class ProfiledetailController extends Controller
             'jenis_eng' => 'required | string | max:255',
             'detail_profile' => 'required | string | max:255',
             'detail_profile_eng' => 'required | string | max:255',
+            'id_profile' => 'required | integer'
 
         ]);
 
@@ -90,6 +94,7 @@ class ProfiledetailController extends Controller
             'jenis_eng' => $request->jenis_eng,
             'detail_profile' => $request->detail_profile,
             'detail_profile_eng' => $request->detail_profile_eng,
+            'id_profile' => $request->id_profile
 
         ]);
 
@@ -98,7 +103,7 @@ class ProfiledetailController extends Controller
 
     public function show(string $id)
     {
-        $group = ProfileModel::find($id);
+        $profiledetail = ProfiledetailModel::find($id);
 
         $breadcrumb = (object)[
             'title' => 'Detail profile detail',
@@ -117,7 +122,7 @@ class ProfiledetailController extends Controller
 
         $activeMenu = 'profiledetail';
 
-        return view('member.profiledetail.show', ['breadcrumb' => $breadcrumb, 'page' => $page, 'group' => $group, 'activeMenu' => $activeMenu, 'menus' => $menus]);
+        return view('member.profiledetail.show', ['breadcrumb' => $breadcrumb, 'page' => $page, 'profiledetail' => $profiledetail, 'activeMenu' => $activeMenu, 'menus' => $menus]);
     }
 
     public function edit(string $id)
@@ -141,7 +146,7 @@ class ProfiledetailController extends Controller
 
         $activeMenu = 'profiledetail';
 
-        return view('member.profiledetail.edit', ['breadcrumb' => $breadcrumb, 'page' => $page, 'activeMenu' => $activeMenu, 'menus' => $menus]);
+        return view('member.profiledetail.edit', ['breadcrumb' => $breadcrumb, 'page' => $page, 'profiledetail' => $profiledetail, 'activeMenu' => $activeMenu, 'menus' => $menus]);
     }
 
     public function update(Request $request, $id)
