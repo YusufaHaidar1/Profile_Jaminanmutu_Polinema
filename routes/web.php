@@ -12,6 +12,7 @@ use App\Http\Controllers\AkreditasiController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProfiledetailController;
 use App\Http\Controllers\MemberController;
 use PHPUnit\Framework\Attributes\Group;
 use Symfony\Component\HttpKernel\Profiler\Profile;
@@ -108,6 +109,17 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::get('/{id}/edit', [ProfileController::class, 'edit']);
                 Route::put('/{id}', [ProfileController::class, 'update']);
                 Route::delete('/{id}', [ProfileController::class, 'destroy']);
+            });
+
+            Route::group(['prefix' => 'profiledetail'], function () {
+                Route::get('/', [ProfiledetailController::class, 'index']);
+                Route::post('/list', [ProfiledetailController::class, 'list']);
+                Route::get('/create', [ProfiledetailController::class, 'create']);
+                Route::post('/', [ProfiledetailController::class, 'store']);
+                Route::get('/{id}', [ProfiledetailController::class, 'show']);
+                Route::get('/{id}/edit', [ProfiledetailController::class, 'edit']);
+                Route::put('/{id}', [ProfiledetailController::class, 'update']);
+                Route::delete('/{id}', [ProfiledetailController::class, 'destroy']);
             });
 
             Route::group(['prefix' => 'berita'], function () {

@@ -20,7 +20,7 @@ class ProfiledetailController extends Controller
         ];
 
         $page = (object)[
-            'title' => 'Daftar profile',
+            'title' => 'Daftar profile detail',
         ];
 
         $user = Auth::user(); // Get the logged-in user
@@ -39,10 +39,6 @@ class ProfiledetailController extends Controller
     {
         $groups = ProfiledetailModel::select('id_detail_profile', 'id_profile', 'jenis', 'jenis_eng', 'detail_profile', 'detail_profile_eng')
             ->with('group');
-
-        if ($request->id_profile) {
-            $groups->where('id_profile', $request->id_profile);
-        }
 
         return DataTables::of($groups)
             ->addIndexColumn() // menambahkan kolom index / no urut (default nama kolom: DT_RowIndex)
@@ -74,8 +70,9 @@ class ProfiledetailController extends Controller
             ->get();
 
         $activeMenu = 'profiledetail';
+        $profile = ProfileModel::all();
 
-        return view('member.profiledetail.create', ['breadcrumb' => $breadcrumb, 'page' => $page, 'activeMenu' => $activeMenu, 'menus' => $menus]);
+        return view('member.profiledetail.create', ['breadcrumb' => $breadcrumb, 'page' => $page, 'activeMenu' => $activeMenu, 'profile' => $profile, 'menus' => $menus]);
     }
 
     public function store(Request $request)
@@ -88,7 +85,7 @@ class ProfiledetailController extends Controller
 
         ]);
 
-        ProfileModel::create([
+        ProfiledetailModel::create([
             'jenis' => $request->jenis,
             'jenis_eng' => $request->jenis_eng,
             'detail_profile' => $request->detail_profile,
@@ -144,32 +141,26 @@ class ProfiledetailController extends Controller
 
         $activeMenu = 'profiledetail';
 
-        return view('member.profiledetail.edit', ['breadcrumb' => $breadcrumb, 'page' => $page, 'profile' => $profile, 'activeMenu' => $activeMenu, 'menus' => $menus]);
+        return view('member.profiledetail.edit', ['breadcrumb' => $breadcrumb, 'page' => $page, 'activeMenu' => $activeMenu, 'menus' => $menus]);
     }
 
     public function update(Request $request, $id)
     {
         $request->validate([
-            'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'gambar_eng' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'judul' => 'required | string | max:255',
-            'judul_eng' => 'required | string | max:255',
-            'deskripsi' => 'required | string | max:255',
-            'deskripsi_eng' => 'required | string | max:255',
+            'jenis' => 'required | string | max:255',
+            'jenis_eng' => 'required | string | max:255',
+            'detail_profile' => 'required | string | max:255',
+            'detail_profile_eng' => 'required | string | max:255',
         ]);
 
-        $profile = ProfileModel::findOrFail($id);
-
-        ProfileModel::find($id)->update([
-            'gambar' =>  $gambarPath,
-            'gambar_eng' =>  $gambar_eng_Path,
-            'judul' => $request->judul,
-            'judul_eng' => $request->judul_eng,
-            'deskripsi' => $request->deskripsi,
-            'deskripsi_eng' => $request->deskripsi_eng,
+        ProfiledetailModel::find($id)->update([
+            'jenis' => $request->jenis,
+            'jenis_eng' => $request->jenis_eng,
+            'detail_profile' => $request->detail_profile,
+            'detail_profile_eng' => $request->detail_profile_eng,
         ]);
 
-        return redirect('/member/profile')->with('success', 'Data berhasil diubah!');;
+        return redirect('/member/profiledetail')->with('success', 'Data berhasil diubah!');;
     }
 
     public function destroy($id)
