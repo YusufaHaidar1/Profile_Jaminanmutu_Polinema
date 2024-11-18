@@ -95,8 +95,8 @@ class AkreditasiController extends Controller
         return redirect('/member/akreditasi')->with('success', 'Data berhasil ditambahkan');
     }
 
-    public function show(string $id){
-        $group = AkreditasiModel::find($id);
+    public function show(string $id_akreditasi){
+        $akreditasi = AkreditasiModel::find($id_akreditasi);
 
         $breadcrumb = (object)[
             'title' => 'Detail Akreditasi',
@@ -115,11 +115,11 @@ class AkreditasiController extends Controller
 
         $activeMenu = 'akreditasi';
 
-        return view('member.akreditasi.show', ['breadcrumb' => $breadcrumb, 'page' => $page, 'group' => $group, 'activeMenu' => $activeMenu, 'menus' => $menus]);
+        return view('member.akreditasi.show', ['breadcrumb' => $breadcrumb, 'page' => $page, 'akreditasi' => $akreditasi, 'activeMenu' => $activeMenu, 'menus' => $menus]);
     }
 
     public function edit(string $id){
-        $group = AkreditasiModel::find($id);
+        $akreditasi = AkreditasiModel::find($id);
 
         $breadcrumb = (object)[
             'title' => 'Edit Group',
@@ -138,7 +138,7 @@ class AkreditasiController extends Controller
 
         $activeMenu = 'akreditasi';
 
-        return view('member.akreditasi.edit', ['breadcrumb' => $breadcrumb, 'page' => $page, 'group' => $group, 'activeMenu' => $activeMenu, 'menus' => $menus]);
+        return view('member.akreditasi.edit', ['breadcrumb' => $breadcrumb, 'page' => $page, 'akreditasi' => $akreditasi, 'activeMenu' => $activeMenu, 'menus' => $menus]);
     }
 
     public function update(Request $request, $id){
