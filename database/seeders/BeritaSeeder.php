@@ -23,7 +23,7 @@ class BeritaSeeder extends Seeder
                 'deskripsi' => 'Placeholder (Ganti / Hapus Jika Perlu)',
                 'deskripsi_eng' => 'Placeholder (Ganti / Hapus Jika Perlu)',
                 'gambar' => 'assets/img/berita/1731851602_Screenshot (132).png',
-                'gambarr_eng' => 'assets/img/berita/1731851602_Screenshot (132).png',
+                'gambar_eng' => 'assets/img/berita/1731851602_Screenshot (132).png',
             ],
         ];
         DB::table('berita')->insert($data);

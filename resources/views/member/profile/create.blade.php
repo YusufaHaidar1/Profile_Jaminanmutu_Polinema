@@ -6,7 +6,7 @@
             <div class="card-tools"></div>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{ url('/member/profile') }}" class="form-horizontal">
+            <form method="POST" action="{{ url('/member/profile') }}" class="form-horizontal" enctype="multipart/form-data">
                 @csrf
                 {{-- <div class="form-group row">
                 <label class="col-1 control-label col-form-label">Jenjang</label>
@@ -24,20 +24,19 @@
                 </div>
             </div> --}}
                 <div class="form-group row">
-                    <label class="col-1 control-label col-form-label">gambar</label>
+                    <label class="col-1 control-label col-form-label">Gambar</label>
                     <div class="col-11">
-                        <input type="text" class="form-control" id="gambar" name="gambar" value="{{ old('gambar') }}"
-                            required>
+                        <input type="file" class="form-control" id="gambar" name="gambar" accept="image/*" required>
                         @error('gambar')
                             <small class="form-text text-danger">{{ $message }}</small>
                         @enderror
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-1 control-label col-form-label">gambar_eng</label>
+                    <label class="col-1 control-label col-form-label">Gambar Eng</label>
                     <div class="col-11">
-                        <input type="text" class="form-control" id="gambar_eng" name="gambar_eng"
-                            value="{{ old('gambar_eng') }}" required>
+                        <input type="file" class="form-control" id="gambar_eng" name="gambar_eng" accept="image/*"
+                            required>
                         @error('gambar_eng')
                             <small class="form-text text-danger">{{ $message }}</small>
                         @enderror
