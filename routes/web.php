@@ -10,6 +10,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GroupMenuController;
 use App\Http\Controllers\AkreditasiController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProfiledetailController;
@@ -131,6 +132,17 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::get('/{id}/edit', [BeritaController::class, 'edit']);
                 Route::put('/{id}', [BeritaController::class, 'update']);
                 Route::delete('/{id}', [BeritaController::class, 'destroy']);
+            });
+
+            Route::group(['prefix' => 'beranda'], function () {
+                Route::get('/', [BerandaController::class, 'index']);
+                Route::post('/list', [BerandaController::class, 'list']);
+                Route::get('/create', [BerandaController::class, 'create']);
+                Route::post('/', [BerandaController::class, 'store']);
+                Route::get('/{id}', [BerandaController::class, 'show']);
+                Route::get('/{id}/edit', [BerandaController::class, 'edit']);
+                Route::put('/{id}', [BerandaController::class, 'update']);
+                Route::delete('/{id}', [BerandaController::class, 'destroy']);
             });
         });
         Route::resource('member', MemberController::class);

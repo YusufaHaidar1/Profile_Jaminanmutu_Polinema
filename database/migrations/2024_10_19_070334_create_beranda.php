@@ -13,14 +13,10 @@ return new class extends Migration
     {
         Schema::create('beranda', function (Blueprint $table) {
             $table->id('id_beranda');
-            $table->unsignedBigInteger('id_berita')->index();
             $table->text('judul');
             $table->text('judul_eng');
             $table->text('deskripsi');
             $table->text('deskripsi_eng');
-            $table->text('gambar');
-            $table->enum('tampil', ['ya', 'tidak']);
-            $table->foreign('id_berita')->references('id_berita')->on('berita');
         });
     }
 
