@@ -5,22 +5,22 @@
         <div class="card-header">
             <h3 class="card-title">{{ $page->title }}</h3>
             <div class="card-tools">
-                <a class="btn btn-sm btn-primary mt-1" href="{{ url('/member/akreditasi/create')}}">Tambah</a>
+                <a class="btn btn-sm btn-primary mt-1" href="{{ url('/member/spmi/create')}}">Tambah</a>
             </div>
         </div>
-            <div class="card-body">
-                @if (@session('success'))
-                    <div class="alert alert-success">{{ session('success') }}</div>
-                @endif
-                @if (@session('error'))
-                    <div class="alert alert-danger">{{ session('error') }}</div>
-                @endif
-                <table class="table table-bordered table-striped table-hover table-sm" id="table_akreditasi">
+        <div class="card-body">
+            @if (@session('success'))
+                <div class="alert alert-success">{{ session('success') }}</div>
+            @endif
+            @if (@session('error'))
+                <div class="alert alert-danger">{{ session('error') }}</div>
+            @endif
+            <table class="table table-bordered table-striped table-hover table-sm" id="table_spmi">
                 <thead>
-                    <tr><th>ID</th><th>Jenjang</th><th>SK</th><th>Nama</th><th>Nama_Eng</th><th>Skor</th><th>Masa Berlaku Dari</th><th>Masa Berlaku Sampai</th><th>Dokumen</th><th>Aksi</th></tr>
+                    <tr><th>ID</th><th>SPMI</th><th>File</th><th>Aksi</th></tr>
                 </thead>
-                </table>
-            </div>
+            </table>
+        </div>
     </div>
 @endsection
 
@@ -30,82 +30,49 @@
 
 <script>
     $(document).ready(function() {
-        var dataLevel = $('#table_akreditasi').DataTable({
-            serverSide: true, // serverSide: true, jika ingin menggunakan server side processing
+        var dataTable = $('#table_spmi').DataTable({
+            serverSide: true,
             ajax: {
-            "url": "{{ url('/member/akreditasi/list') }}",
-            "dataType": "json",
-            "type": "POST",
-            "data": function ( d ) {
-                d.id_akreditasi = $('#id_akreditasi').val();
-            }
+                "url": "{{ url('/member/spmi/list') }}",
+                "dataType": "json",
+                "type": "POST",
+                "data": function (d) {
+                    d.id_spmi = $('#id_spmi').val();
+                }
             },
             columns: [
                 {
-                data: "DT_RowIndex", // nomor urut dari laravel datatable addIndexColumn()
-                className: "text-center",
-                orderable: false,
-                searchable: false
+                    data: "DT_RowIndex", // nomor urut
+                    className: "text-center",
+                    orderable: false,
+                    searchable: false
                 },
                 {
-                data: "jenjang",
-                className: "",
-                orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
-                searchable: true // searchable: true, jika ingin kolom ini bisa dicari
+                    data: "spmi",
+                    className: "",
+                    orderable: true,
+                    searchable: true
                 },
                 {
-                data: "sk",
-                className: "",
-                orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
-                searchable: true // searchable: true, jika ingin kolom ini bisa dicari
+                    data: "file",
+                    className: "",
+                    orderable: false,
+                    searchable: false,
+                    render: function (data, type, row) {
+                        return `<a href="/storage/${data}" target="_blank" class="btn btn-info btn-sm">Download</a>`;
+                    }
                 },
                 {
-                data: "nama",
-                className: "",
-                orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
-                searchable: true // searchable: true, jika ingin kolom ini bisa dicari
-                },
-                {
-                data: "nama_eng",
-                className: "",
-                orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
-                searchable: true // searchable: true, jika ingin kolom ini bisa dicari
-                },
-                {
-                data: "skor",
-                className: "",
-                orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
-                searchable: true // searchable: true, jika ingin kolom ini bisa dicari
-                },
-                {
-                data: "masa_berlaku_dari",
-                className: "",
-                orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
-                searchable: true // searchable: true, jika ingin kolom ini bisa dicari
-                },
-                {
-                data: "masa_berlaku_sampai",
-                className: "",
-                orderable: true, // orderable: true, jika ingin kolom ini bisa diurutkan
-                searchable: true // searchable: true, jika ingin kolom ini bisa dicari
-                },
-                {
-                data: "dokumen",
-                className: "",
-                orderable: false, // orderable: true, jika ingin kolom ini bisa diurutkan
-                searchable: false // searchable: true, jika ingin kolom ini bisa dicari
-                },{
-                data: "aksi",
-                className: "",
-                orderable: false, // orderable: true, jika ingin kolom ini bisa diurutkan
-                searchable: false // searchable: true, jika ingin kolom ini bisa dicari
+                    data: "aksi",
+                    className: "",
+                    orderable: false,
+                    searchable: false
                 }
-
             ]
         });
 
-        $('#id_akreditasi').on('change', function() {
-            dataLevel.ajax.reload();
+        $('#id_spmi').on('change', function() {
+            dataTable.ajax.reload();
         });
     });
 </script>

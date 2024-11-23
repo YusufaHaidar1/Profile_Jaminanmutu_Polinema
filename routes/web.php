@@ -12,6 +12,7 @@ use App\Http\Controllers\AkreditasiController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\SpmiController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProfiledetailController;
 use App\Http\Controllers\MemberController;
@@ -143,6 +144,17 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::get('/{id}/edit', [BerandaController::class, 'edit']);
                 Route::put('/{id}', [BerandaController::class, 'update']);
                 Route::delete('/{id}', [BerandaController::class, 'destroy']);
+            });
+
+            Route::group(['prefix' => 'spmi'], function () {
+                Route::get('/', [SpmiController::class, 'index']);
+                Route::post('/list', [SpmiController::class, 'list']);
+                Route::get('/create', [SpmiController::class, 'create']);
+                Route::post('/', [SpmiController::class, 'store']);
+                Route::get('/{id}', [SpmiController::class, 'show']);
+                Route::get('/{id}/edit', [SpmiController::class, 'edit']);
+                Route::put('/{id}', [SpmiController::class, 'update']);
+                Route::delete('/{id}', [SpmiController::class, 'destroy']);
             });
         });
         Route::resource('member', MemberController::class);
