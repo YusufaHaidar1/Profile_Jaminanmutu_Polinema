@@ -54,7 +54,7 @@
 
             .box:hover::after {
                 content: "";
-                background-image: url('./assets/img/aaa.png');
+                
                 background-size: 30px 30px;
                 width: 30px;
                 height: 30px;
@@ -67,7 +67,7 @@
             }
 
             .box .icon-space {
-                background-image: url('./assets/img/logo.png');
+                background-image: url('../assets/img/logo.png');
                 background-size: 50px 50px;
                 width: 50px;
                 height: 50px;
@@ -116,112 +116,154 @@
         <!-- Text -->
 
         <div class="container">
-            <div class="box-row">
-                <a href="{{ route('kepuasanpelanggan.student') }}">
-                    <div class="box">
-                        <div class="icon-space"></div>
-                        <h3>ADMINISTRASI NIAGA</h3>
-                    </div>
-                </a>
-                <a href="./assets/files/SPMI_2015.pdf">
-                    <div class="box">
-                        <div class="icon-space"></div>
-                        <h3>AKUNTANSI</h3>
-                    </div>
-                </a>
-                <a href="./assets/files/SPMI_2017.pdf">
-                    <div class="box">
-                        <div class="icon-space"></div>
-                        <h3>TEKNIK ELEKTRO</h3>
-                    </div>
-                </a>
-                <a href="./assets/files/SPMI_2020.pdf">
-                    <div class="box">
-                        <div class="icon-space"></div>
-                        <h3>TEKNIK KIMIA</h3>
-                    </div>
-                </a>
-                <a href="./assets/files/SPMI_2021.pdf">
-                    <div class="box">
-                        <div class="icon-space"></div>
-                        <h3>TEKNIK MESIN</h3>
-                    </div>
-                </a>
-                <a href="./assets/files/aa.pdf">
-                    <div class="box">
-                        <div class="icon-space"></div>
-                        <h3>TEKNIK SIPIL</h3>
-                    </div>
-                </a>
-                <a href="./assets/files/aa.pdf">
-                    <div class="box">
-                        <div class="icon-space"></div>
-                        <h3>TEKNOLOGI INFORMASI</h3>
-                    </div>
-                </a>
-                <a href="./assets/files/aa.pdf">
-                    <div class="box">
-                        <div class="icon-space"></div>
-                        <h3>PDD BLITAR</h3>
-                    </div>
-                </a>
-                <a href="./assets/files/aa.pdf">
-                    <div class="box">
-                        <div class="icon-space"></div>
-                        <h3>PDD POLINEMA BOJONEGORO</h3>
-                    </div>
-                </a>
-                <a href="./assets/files/aa.pdf">
-                    <div class="box">
-                        <div class="icon-space"></div>
-                        <h3>PDD POLINEMA JEPARA</h3>
-                    </div>
-                </a>
-                <a href="./assets/files/aa.pdf">
-                    <div class="box">
-                        <div class="icon-space"></div>
-                        <h3>PDD POLINEMA LUMAJANG</h3>
-                    </div>
-                </a>
-                <a href="./assets/files/aa.pdf">
-                    <div class="box">
-                        <div class="icon-space"></div>
-                        <h3>PDD POLINEMA PAMEKASAN</h3>
-                    </div>
-                </a>
-                <a href="./assets/files/aa.pdf">
-                    <div class="box">
-                        <div class="icon-space"></div>
-                        <h3>PDD POLINEMA SUMBAWA BARAT</h3>
-                    </div>
-                </a>
-                <a href="./assets/files/aa.pdf">
-                    <div class="box">
-                        <div class="icon-space"></div>
-                        <h3>PDD POLINEMA TRENGGALEK</h3>
-                    </div>
-                </a>
-                <a href="./assets/files/aa.pdf">
-                    <div class="box">
-                        <div class="icon-space"></div>
-                        <h3>PSDKU KEDIRI</h3>
-                    </div>
-                </a>
-                <a href="./assets/files/aa.pdf">
-                    <div class="box">
-                        <div class="icon-space"></div>
-                        <h3>PSDKU LUMAJANG</h3>
-                    </div>
-                </a>
-                <a href="./assets/files/aa.pdf">
-                    <div class="box">
-                        <div class="icon-space"></div>
-                        <h3>PSDKU PAMEKASAN</h3>
-                    </div>
-                </a>
-
-            </div>
+    <div class="row box-row">
+        <div class="col-md-3">
+            <a href="{{ route('kepuasanpelanggan.student') }}">
+                <div class="box">
+                    <div class="icon-space"></div>
+                    <h3>ADMINISTRASI NIAGA</h3>
+                </div>
+            </a>
         </div>
+        <div class="col-md-3">
+            <a href="./assets/files/SPMI_2015.pdf">
+                <div class="box">
+                    <div class="icon-space"></div>
+                    <h3>AKUNTANSI</h3>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="./assets/files/SPMI_2017.pdf">
+                <div class="box">
+                    <div class="icon-space"></div>
+                    <h3>TEKNIK ELEKTRO</h3>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="./assets/files/SPMI_2020.pdf">
+                <div class="box">
+                    <div class="icon-space"></div>
+                    <h3>TEKNIK KIMIA</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="row box-row">
+        <div class="col-md-3">
+            <a href="./assets/files/SPMI_2021.pdf">
+                <div class="box">
+                    <div class="icon-space"></div>
+                    <h3>TEKNIK MESIN</h3>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="./assets/files/aa.pdf">
+                <div class="box">
+                    <div class="icon-space"></div>
+                    <h3>TEKNIK SIPIL</h3>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="./assets/files/aa.pdf">
+                <div class="box">
+                    <div class="icon-space"></div>
+                    <h3>TEKNOLOGI INFORMASI</h3>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="./assets/files/aa.pdf">
+                <div class="box">
+                    <div class="icon-space"></div>
+                    <h3>PDD BLITAR</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="row box-row">
+        <div class="col-md-3">
+            <a href="./assets/files/aa.pdf">
+                <div class="box">
+                    <div class="icon-space"></div>
+                    <h3>PDD POLINEMA BOJONEGORO</h3>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="./assets/files/aa.pdf">
+                <div class="box">
+                    <div class="icon-space"></div>
+                    <h3>PDD POLINEMA JEPARA</h3>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="./assets/files/aa.pdf">
+                <div class="box">
+                    <div class="icon-space"></div>
+                    <h3>PDD POLINEMA LUMAJANG</h3>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="./assets/files/aa.pdf">
+                <div class="box">
+                    <div class="icon-space"></div>
+                    <h3>PDD POLINEMA PAMEKASAN</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="row box-row">
+        <div class="col-md-3">
+            <a href="./assets/files/aa.pdf">
+                <div class="box">
+                    <div class="icon-space"></div>
+                    <h3>PDD POLINEMA SUMBAWA BARAT</h3>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="./assets/files/aa.pdf">
+                <div class="box">
+                    <div class="icon-space"></div>
+                    <h3>PDD POLINEMA TRENGGALEK</h3>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="./assets/files/aa.pdf">
+                <div class="box">
+                    <div class="icon-space"></div>
+                    <h3>PSDKU KEDIRI</h3>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="./assets/files/aa.pdf">
+                <div class="box">
+                    <div class="icon-space"></div>
+                    <h3>PSDKU LUMAJANG</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="row box-row">
+        <div class="col-md-3">
+            <a href="./assets/files/aa.pdf">
+                <div class="box">
+                    <div class="icon-space"></div>
+                    <h3>PSDKU PAMEKASAN</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
 
 
     </body>
